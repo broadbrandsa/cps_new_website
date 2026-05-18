@@ -48,7 +48,7 @@ export function BenefitsSlider({ children }: { children: ReactNode }) {
         className="benefits-slider"
         ref={ref}
         role="region"
-        aria-label="Why learners choose CPS — scrollable cards"
+        aria-label="Why students choose CPS — scrollable cards"
         tabIndex={0}
       >
         {children}

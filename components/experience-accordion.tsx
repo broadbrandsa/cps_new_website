@@ -18,7 +18,7 @@ const orgItems: Item[] = [
   {
     title: "Structured onboarding",
     desc:
-      "Learners are introduced to the programme, platform and expectations before they begin.",
+      "Students are introduced to the programme, platform and expectations before they begin.",
     icon: <Calendar />,
   },
   {
@@ -30,19 +30,19 @@ const orgItems: Item[] = [
   {
     title: "Facilitated learning",
     desc:
-      "Where applicable, learners are supported by facilitators and programme teams who help connect learning to workplace practice.",
+      "Where applicable, students are supported by facilitators and programme teams who help connect learning to workplace practice.",
     icon: <Users />,
   },
   {
     title: "Workplace application",
     desc:
-      "Programmes are designed to help learners apply knowledge and behaviours in real working environments.",
+      "Programmes are designed to help students apply knowledge and behaviours in real working environments.",
     icon: <Briefcase />,
   },
   {
     title: "Progress monitoring",
     desc:
-      "Learner progress can be tracked so risks, delays and support needs are identified earlier.",
+      "Student progress can be tracked so risks, delays and support needs are identified earlier.",
     icon: <TrendingUp />,
   },
   {

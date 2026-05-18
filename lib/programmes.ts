@@ -56,7 +56,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       { label: "202 credits" },
     ],
     lede:
-      "A 12-month qualification designed as a gateway into banking careers. The programme helps learners build foundational banking knowledge, practical financial services understanding and a recognised qualification.",
+      "A 12-month qualification designed as a gateway into banking careers. The programme helps students build foundational banking knowledge, practical financial services understanding and a recognised qualification.",
     meta: [
       { lbl: "Monthly", val: "R2,480", big: true, yellow: true },
       { lbl: "Duration", val: "12 months" },
@@ -342,7 +342,7 @@ export const PROGRAMMES: Record<string, Programme> = {
     audience: [
       "<strong>Active banking employees</strong> in operations and customer-facing roles",
       "<strong>Branch and contact-centre staff</strong> needing formal credentials",
-      "<strong>Employer-sponsored learners</strong> on bank skills programmes",
+      "<strong>Employer-sponsored students</strong> on bank skills programmes",
     ],
     outcomes: [
       "Formal NQF 5 banking credential",

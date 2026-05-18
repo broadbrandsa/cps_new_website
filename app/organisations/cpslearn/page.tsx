@@ -42,14 +42,14 @@ export default function OrganisationsCPSLearn() {
               visibility.
             </p>
             <p style={{ marginTop: 16, color: "var(--muted)", fontSize: 16, maxWidth: 720 }}>
-              For organisations, the value of CPSLearn is not just that learners have somewhere to study.
+              For organisations, the value of CPSLearn is not just that students have somewhere to study.
               It gives programme stakeholders clearer visibility into progress, support needs and
               development across cohorts.
             </p>
           </div>
 
           <div className="hero-stats" style={{ marginTop: 48, maxWidth: 920 }}>
-            <div className="item"><div className="num" style={{ fontSize: 28 }}>2,000–2,700</div><div className="lbl">Active learners</div></div>
+            <div className="item"><div className="num" style={{ fontSize: 28 }}>2,000–2,700</div><div className="lbl">Active students</div></div>
             <div className="item"><div className="num" style={{ fontSize: 28 }}>Proprietary</div><div className="lbl">CPS platform</div></div>
             <div className="item"><div className="num" style={{ fontSize: 28 }}>25 years</div><div className="lbl">of refinement</div></div>
             <div className="item"><div className="num" style={{ fontSize: 28 }}>Regulated</div><div className="lbl">learning environments</div></div>
@@ -60,31 +60,31 @@ export default function OrganisationsCPSLearn() {
       {/* WHAT YOUR STAFF CAN EXPECT */}
       <ExperienceSection variant="organisations" surface="tinted" />
 
-      {/* BUILT FOR REAL LEARNERS — editorial-grid, mirrors learners-side CPSLearn */}
+      {/* BUILT FOR REAL STUDENTS — editorial-grid, mirrors students-side CPSLearn */}
       <section>
         <div className="container">
           <div className="editorial-grid">
             <Reveal as="div" className="editorial-eyebrow">
-              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-purple)" }} /> Built for real learners</span>
+              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-purple)" }} /> Built for real students</span>
             </Reveal>
             <Reveal as="div" className="editorial-headline" delay={120}>
               <h2>It doesn&apos;t assume everyone learns the same way.</h2>
             </Reveal>
             <Reveal as="div" className="editorial-body" delay={200}>
               <p>
-                Not every learner starts at the same level. Some parts feel straightforward. Others don&apos;t.
-                CPSLearn is built to support that reality — helping identify where each learner needs more
+                Not every student starts at the same level. Some parts feel straightforward. Others don&apos;t.
+                CPSLearn is built to support that reality — helping identify where each student needs more
                 focus, so cohort time is spent where it actually matters.
               </p>
               <p style={{ marginTop: 20, color: "var(--ink)", fontWeight: 500 }}>
-                Learners aren&apos;t just moving through content. They&apos;re building capability where
+                Students aren&apos;t just moving through content. They&apos;re building capability where
                 they need it most.
               </p>
             </Reveal>
             <Reveal as="div" className="editorial-aside" delay={280}>
               <div className="editorial-pull">
                 <span className="mono">In other words</span>
-                <p>The platform meets each learner where they are — not where it assumes they should be.</p>
+                <p>The platform meets each student where they are — not where it assumes they should be.</p>
                 <span className="brand-mark" aria-hidden><Lightbulb /></span>
               </div>
             </Reveal>
@@ -120,7 +120,7 @@ export default function OrganisationsCPSLearn() {
               <div><div className="icon" style={{ background: "rgba(255,255,0,0.18)", color: "var(--cps-yellow)" }}><TrendingUp /></div></div>
               <div>
                 <h4>Progress visibility</h4>
-                <p>Learner progress can be tracked through the journey, helping CPS and organisational stakeholders understand completion risk and support needs.</p>
+                <p>Student progress can be tracked through the journey, helping CPS and organisational stakeholders understand completion risk and support needs.</p>
               </div>
             </Reveal></Spotlight>
             <Spotlight as="div"><Reveal as="div" className="feat-card" delay={240}>
@@ -156,7 +156,7 @@ export default function OrganisationsCPSLearn() {
               <h2 style={{ marginTop: 16 }}>Move from attendance to capability tracking.</h2>
               <p style={{ marginTop: 24, fontSize: 17, color: "var(--muted)", lineHeight: 1.55 }}>
                 Many organisations can report that training happened. Fewer can clearly show whether
-                learners progressed, completed and developed the intended capability. CPSLearn helps close
+                students progressed, completed and developed the intended capability. CPSLearn helps close
                 that gap by making the learning journey more visible and manageable.
               </p>
             </Reveal>
@@ -182,7 +182,7 @@ export default function OrganisationsCPSLearn() {
               <h2 style={{ marginTop: 16 }}>Not just another learning platform.</h2>
               <p style={{ marginTop: 24, fontSize: 17, color: "var(--muted)", lineHeight: 1.6 }}>
                 CPSLearn is not a repackaged third-party system. It&apos;s been built and refined over more
-                than two decades, based on how learners actually move through programmes in banking,
+                than two decades, based on how students actually move through programmes in banking,
                 insurance, investment and leadership.
               </p>
               <p style={{ marginTop: 16, fontSize: 17, color: "var(--ink)", lineHeight: 1.6, fontWeight: 500 }}>
@@ -211,7 +211,7 @@ export default function OrganisationsCPSLearn() {
         </div>
       </section>
 
-      {/* A PLATFORM CONNECTED TO SUPPORT — closing band, mirrors learners "What this means for you" */}
+      {/* A PLATFORM CONNECTED TO SUPPORT — closing band, mirrors students "What this means for you" */}
       <div className="cta-band">
         <div className="cta-band-inner">
           <div className="cta-band-grid">
@@ -220,7 +220,7 @@ export default function OrganisationsCPSLearn() {
               <h2 style={{ marginTop: 16 }}>Technology alone does not create outcomes.</h2>
               <p style={{ marginTop: 16 }}>
                 CPSLearn works because it&apos;s part of a broader delivery model. The platform supports
-                the journey, while CPS teams, facilitators and support structures help learners move
+                the journey, while CPS teams, facilitators and support structures help students move
                 through it.
               </p>
               <div className="cta-band-actions" style={{ marginTop: 24 }}>

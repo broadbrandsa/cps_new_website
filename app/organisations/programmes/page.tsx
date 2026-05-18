@@ -138,10 +138,10 @@ const additionalQualifications: Card[] = [
   },
   {
     slug: "higher-certificate-banking",
-    pills: [{ label: "Banking", cls: "pill-blue" }, { label: "NQF 5" }, { label: "Learner pathway" }],
+    pills: [{ label: "Banking", cls: "pill-blue" }, { label: "NQF 5" }, { label: "Student pathway" }],
     title: "Higher Certificate in Banking",
-    desc: "A learner-side qualification that may be relevant for entry-level banking cohorts. Not a primary B2B product.",
-    audience: "Entry-level banking cohorts (learner pathway)",
+    desc: "A student-side qualification that may be relevant for entry-level banking cohorts. Not a primary B2B product.",
+    audience: "Entry-level banking cohorts (student pathway)",
     meta: [
       { val: "NQF 5", lbl: "higher education" },
       { val: "12 months", lbl: "blended" },
@@ -314,7 +314,7 @@ export default function OrganisationsProgrammes() {
               <span className="eyebrow"><span className="dot" /> Additional Qualification Pathways</span>
               <h2>Other qualifications available for cohort delivery.</h2>
               <p>
-                Additional learner-side qualifications and specialist pathways that may be relevant
+                Additional student-side qualifications and specialist pathways that may be relevant
                 depending on your cohort and capability goals.
               </p>
             </div>
@@ -360,7 +360,7 @@ export default function OrganisationsProgrammes() {
               <h2>Need a programme for a team or cohort?</h2>
               <p>
                 CPS can help you match the right qualification or skills programme to your business need,
-                learner group and delivery context.
+                student group and delivery context.
               </p>
             </div>
             <Link href="/contact#partnerships" className="btn btn-yellow btn-lg" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>

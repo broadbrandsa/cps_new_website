@@ -101,7 +101,7 @@ export default function OrganisationsHome() {
               marginTop: 24,
             }}>
               They need a partner who understands regulated financial services environments, can structure
-              learning around business needs, and can support learners through to completion and application.
+              learning around business needs, and can support students through to completion and application.
             </p>
           </Reveal>
         </div>
@@ -119,7 +119,7 @@ export default function OrganisationsHome() {
               <h2>A managed workforce education partner, not a once-off provider.</h2>
               <p>
                 CPS brings together accredited programmes, structured learning journeys, facilitator
-                support, learner tracking and workplace relevance. The result is a more accountable
+                support, student tracking and workplace relevance. The result is a more accountable
                 approach to workforce education.
               </p>
             </div>
@@ -130,7 +130,7 @@ export default function OrganisationsHome() {
               <div><div className="icon"><ClipboardCheck /></div></div>
               <div>
                 <h4>Starts with the business problem</h4>
-                <p>CPS does not begin with a catalogue. We start by understanding the capability gap, the learner audience, the business context and the success measures that matter.</p>
+                <p>CPS does not begin with a catalogue. We start by understanding the capability gap, the student audience, the business context and the success measures that matter.</p>
               </div>
             </Reveal>
             <Reveal as="div" className="feat-card" delay={80}>
@@ -143,8 +143,8 @@ export default function OrganisationsHome() {
             <Reveal as="div" className="feat-card" delay={160}>
               <div><div className="icon" style={{ background: "rgba(255,255,0,0.18)", color: "#6B6B00" }}><TrendingUp /></div></div>
               <div>
-                <h4>Manages learner progress</h4>
-                <p>Learner progress is tracked throughout the journey. This creates visibility and allows support to be directed where it is needed.</p>
+                <h4>Manages student progress</h4>
+                <p>Student progress is tracked throughout the journey. This creates visibility and allows support to be directed where it is needed.</p>
               </div>
             </Reveal>
             <Reveal as="div" className="feat-card" delay={240}>
@@ -183,7 +183,7 @@ export default function OrganisationsHome() {
               <h2>What CPS helps manage for your organisation</h2>
               <p>
                 For organisations, the value of CPS is not only the programme content. It is the structure
-                around the programme: how learners are onboarded, supported, tracked and guided through
+                around the programme: how students are onboarded, supported, tracked and guided through
                 completion.
               </p>
             </div>
@@ -192,8 +192,8 @@ export default function OrganisationsHome() {
           <div className="managed-grid">
             {[
               { title: "Programme alignment", desc: "Programmes are aligned to defined capability needs and workforce goals before launch." },
-              { title: "Cohort onboarding", desc: "Learners are introduced to the programme, platform and expectations together." },
-              { title: "Progress tracking", desc: "Visibility into where learners are in the journey, throughout delivery." },
+              { title: "Cohort onboarding", desc: "Students are introduced to the programme, platform and expectations together." },
+              { title: "Progress tracking", desc: "Visibility into where students are in the journey, throughout delivery." },
               { title: "Facilitator support", desc: "Where applicable, facilitator and programme team support is coordinated across cohorts." },
               { title: "Assessment & moderation", desc: "Structured workflows that meet academic and regulatory requirements." },
               { title: "Completion visibility", desc: "Stakeholders see who is on track, who needs support and who has completed." },
@@ -268,7 +268,7 @@ export default function OrganisationsHome() {
               </p>
               <ul>
                 <li>Programme delivery support</li>
-                <li>Learner progress visibility</li>
+                <li>Student progress visibility</li>
                 <li>Assessment and moderation workflows</li>
                 <li>Platform-supported learning</li>
               </ul>
@@ -445,7 +445,7 @@ export default function OrganisationsHome() {
               <div className="num">01</div>
               <div className="label">Phase 01</div>
               <h3>Strategic alignment</h3>
-              <p>Understand the organisational challenge, learner audience, workforce goals and success metrics. The programme is built around the business problem, not selected from a list.</p>
+              <p>Understand the organisational challenge, student audience, workforce goals and success metrics. The programme is built around the business problem, not selected from a list.</p>
             </Reveal>
             <Reveal as="div" className="phase-track-step" delay={140}>
               <div className="num">02</div>
@@ -457,7 +457,7 @@ export default function OrganisationsHome() {
               <div className="num">03</div>
               <div className="label">Phase 03</div>
               <h3>Active management</h3>
-              <p>Track learner progress, monitor engagement, identify risk and intervene where needed. Completion is treated as a managed outcome, not a hopeful result.</p>
+              <p>Track student progress, monitor engagement, identify risk and intervene where needed. Completion is treated as a managed outcome, not a hopeful result.</p>
             </Reveal>
             <Reveal as="div" className="phase-track-step" delay={420}>
               <div className="num">04</div>
@@ -478,7 +478,7 @@ export default function OrganisationsHome() {
               <h2>Why this matters commercially</h2>
               <p>
                 When learning does not translate into capability, organisations lose more than training
-                budget. They lose time, learner momentum, manager confidence and the opportunity to build
+                budget. They lose time, student momentum, manager confidence and the opportunity to build
                 stronger teams.
               </p>
               <p style={{ marginTop: 12 }}>
@@ -487,7 +487,7 @@ export default function OrganisationsHome() {
               </p>
               <p style={{ marginTop: 12 }}>
                 CPS helps reduce that risk by managing the full learning journey, from programme alignment
-                to learner progress, support, completion and measurement.
+                to student progress, support, completion and measurement.
               </p>
             </div>
           </Reveal>
@@ -499,13 +499,13 @@ export default function OrganisationsHome() {
             </Reveal>
             <Reveal as="div" className="phase" delay={100}>
               <div className="phase-num">IMPACT 02</div>
-              <h3>Improve learner follow-through</h3>
+              <h3>Improve student follow-through</h3>
               <p>Structured journeys and progress visibility help reduce the risk of incomplete learning.</p>
             </Reveal>
             <Reveal as="div" className="phase" delay={200}>
               <div className="phase-num">IMPACT 03</div>
               <h3>Support manager confidence</h3>
-              <p>Clearer visibility gives stakeholders a better understanding of where learners are in the journey.</p>
+              <p>Clearer visibility gives stakeholders a better understanding of where students are in the journey.</p>
             </Reveal>
             <Reveal as="div" className="phase" delay={300}>
               <div className="phase-num">IMPACT 04</div>

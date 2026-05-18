@@ -29,12 +29,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* LEARNER ENQUIRIES */}
+      {/* STUDENT ENQUIRIES */}
       <section id="admissions">
         <div className="container">
           <div className="diff-grid">
             <Reveal as="div">
-              <span className="eyebrow"><span className="dot" /> For learners</span>
+              <span className="eyebrow"><span className="dot" /> For students</span>
               <h2 style={{ marginTop: 16 }}>Talk to admissions.</h2>
               <p style={{ marginTop: 24, fontSize: 17, color: "var(--muted)", lineHeight: 1.55 }}>
                 Speak to admissions if you need help choosing a programme, understanding requirements,
@@ -42,14 +42,11 @@ export default function ContactPage() {
               </p>
 
               <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 8, maxWidth: 480 }}>
-                <a href="tel:+27117891957" className="contact-link primary">
+                <a href="mailto:applications@cps.co.za" className="contact-link primary">
+                  <Mail /> applications@cps.co.za
+                </a>
+                <a href="tel:+27117891957" className="contact-link">
                   <Phone /> +27 11 789 1957
-                </a>
-                <a href="mailto:support@cps.co.za" className="contact-link">
-                  <Mail /> support@cps.co.za
-                </a>
-                <a href="mailto:succeed@cps.co.za" className="contact-link">
-                  <Mail /> succeed@cps.co.za
                 </a>
                 <div className="contact-link" style={{ alignItems: "flex-start", cursor: "default" }}>
                   <MapPin />
@@ -60,10 +57,24 @@ export default function ContactPage() {
                   </span>
                 </div>
               </div>
+
+              <div className="admissions-notice" role="note" aria-label="Important application information">
+                <span className="admissions-notice-label">Important</span>
+                <ul>
+                  <li>
+                    <strong>A R300 application fee</strong> is payable upon completing your application
+                    — not after acceptance.
+                  </li>
+                  <li>
+                    Individual students may apply for <strong>HCIB</strong> and <strong>ACL</strong> only.
+                    Other programmes are delivered through organisations.
+                  </li>
+                </ul>
+              </div>
             </Reveal>
             <Reveal as="div" delay={120}>
               <div style={{ background: "var(--card)", borderRadius: 24, padding: 32, border: "1px solid var(--line)" }}>
-                <span className="mono">What to include in a learner enquiry</span>
+                <span className="mono">What to include in a student enquiry</span>
                 <ul style={{ marginTop: 16, listStyle: "none", display: "flex", flexDirection: "column", gap: 12 }}>
                   <li style={{ color: "var(--muted)", fontSize: 14, paddingLeft: 18, position: "relative" }}>
                     <span style={{ position: "absolute", left: 0, top: 8, width: 6, height: 6, borderRadius: "50%", background: "var(--cps-blue)" }} />
@@ -87,7 +98,7 @@ export default function ContactPage() {
                   </li>
                 </ul>
                 <div style={{ marginTop: 24 }}>
-                  <Link href="/programmes" className="btn btn-yellow" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>Browse learner programmes</Link>
+                  <Link href="/programmes" className="btn btn-yellow" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>Browse student programmes</Link>
                 </div>
               </div>
             </Reveal>
@@ -151,7 +162,7 @@ export default function ContactPage() {
 
                 <label className="sr-only" htmlFor="contact-enquiry">I am enquiring about</label>
                 <select id="contact-enquiry" name="enquiry" defaultValue="Workforce programme">
-                  <option>Learner programme</option>
+                  <option>Student programme</option>
                   <option>Workforce programme</option>
                   <option>Partnership</option>
                   <option>CPSLearn</option>

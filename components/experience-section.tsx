@@ -16,10 +16,10 @@ import {
   ArrowRightLong,
 } from "@/components/icons";
 
-type Variant = "learners" | "organisations";
+type Variant = "students" | "organisations";
 type Card = { title: string; desc: string; icon: ReactElement };
 
-const learnerCards: Card[] = [
+const studentCards: Card[] = [
   {
     title: "A clear programme pathway",
     desc:
@@ -62,7 +62,7 @@ const orgCards: Card[] = [
   {
     title: "Structured onboarding",
     desc:
-      "Learners are introduced to the programme, platform and expectations before they begin.",
+      "Students are introduced to the programme, platform and expectations before they begin.",
     icon: <Calendar />,
   },
   {
@@ -74,19 +74,19 @@ const orgCards: Card[] = [
   {
     title: "Facilitated learning",
     desc:
-      "Where applicable, learners are supported by facilitators and programme teams who help connect learning to workplace practice.",
+      "Where applicable, students are supported by facilitators and programme teams who help connect learning to workplace practice.",
     icon: <Users />,
   },
   {
     title: "Workplace application",
     desc:
-      "Programmes are designed to help learners apply knowledge and behaviours in real working environments.",
+      "Programmes are designed to help students apply knowledge and behaviours in real working environments.",
     icon: <Briefcase />,
   },
   {
     title: "Progress monitoring",
     desc:
-      "Learner progress can be tracked so risks, delays and support needs are identified earlier.",
+      "Student progress can be tracked so risks, delays and support needs are identified earlier.",
     icon: <TrendingUp />,
   },
   {
@@ -107,17 +107,17 @@ type Props = {
  * Asymmetric "What to expect" section. Inspired by editorial / step-by-step
  * landing pages: large display headline + chevron on the left, dense step-card
  * grid on the right. Each card has a brand-yellow corner mark + step label +
- * title + description. Used on Learners Home / Org Home / Learners CPSLearn /
+ * title + description. Used on Students Home / Org Home / Students CPSLearn /
  * Org CPSLearn (variant chooses copy + icons).
  */
 export function ExperienceSection({ variant }: Props) {
-  const isLearners = variant === "learners";
-  const lede = isLearners
+  const isStudents = variant === "students";
+  const lede = isStudents
     ? "A CPS programme is structured so you know what to do, when to do it and where to get support. The goal is to make your learning journey clear, manageable and focused on completion."
     : "CPS programmes are designed to support working professionals through structured, workplace-relevant learning. Your staff are guided through the journey, supported through key milestones and encouraged to apply learning back into their roles.";
-  const headingLead = isLearners ? "Your learning experience" : "Your team's experience";
-  const headingAccent = isLearners ? "step by step" : "from start to finish";
-  const cards = isLearners ? learnerCards : orgCards;
+  const headingLead = isStudents ? "Your learning experience" : "Your team's experience";
+  const headingAccent = isStudents ? "step by step" : "from start to finish";
+  const cards = isStudents ? studentCards : orgCards;
 
   return (
     <section className="experience-section section-dark">

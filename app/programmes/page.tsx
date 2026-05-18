@@ -5,12 +5,12 @@ import { Reveal } from "@/components/reveal";
 import { Spotlight } from "@/components/spotlight";
 
 export const metadata: Metadata = {
-  title: "Programmes for Learners",
+  title: "Programmes for Students",
   description:
     "Explore CPS qualifications and professional development programmes across banking, insurance, investment, leadership and workplace capability.",
 };
 
-export default function LearnersProgrammes() {
+export default function StudentsProgrammes() {
   return (
     <main>
       <section className="page-hero has-photo">
@@ -22,29 +22,29 @@ export default function LearnersProgrammes() {
         <div className="page-hero-overlay" aria-hidden />
         <div className="container">
           <div className="breadcrumbs">
-            <Link href="/">Learners</Link><span className="sep">/</span><span style={{ color: "var(--cps-blue)" }}>Programmes</span>
+            <Link href="/">Students</Link><span className="sep">/</span><span style={{ color: "var(--cps-blue)" }}>Programmes</span>
           </div>
           <div style={{ marginTop: 24, maxWidth: 880 }}>
-            <span className="eyebrow"><span className="dot" /> Learner Programmes</span>
+            <span className="eyebrow"><span className="dot" /> Student Programmes</span>
             <h1>Find the programme that fits your next career move.</h1>
             <p style={{ marginTop: 24, fontSize: 18 }}>
               Explore CPS qualifications and professional development programmes across banking, insurance,
-              investment, leadership and workplace capability. Start with one of our primary learner
+              investment, leadership and workplace capability. Start with one of our primary student
               pathways, or browse additional qualifications designed for specific career directions.
             </p>
           </div>
         </div>
       </section>
 
-      {/* SECTION 1: PRIMARY LEARNER PROGRAMMES — programme + audience-fit pairs */}
+      {/* SECTION 1: PRIMARY STUDENT PROGRAMMES — programme + audience-fit pairs */}
       <section>
         <div className="container">
           <Reveal as="div" className="section-head">
             <div className="left">
-              <span className="eyebrow"><span className="dot" /> Primary Learner Programmes</span>
+              <span className="eyebrow"><span className="dot" /> Primary Student Programmes</span>
               <h2>Two flagship pathways — equal weight, different directions.</h2>
               <p>
-                Our two primary learner programmes serve different career goals: a banking foundation, and a
+                Our two primary student programmes serve different career goals: a banking foundation, and a
                 leadership credential. Both are 12 months, both are higher-education qualifications, and both
                 are designed for working South African professionals. Each programme sits next to a quick
                 guide to help you decide where to start.
@@ -91,7 +91,7 @@ export default function LearnersProgrammes() {
                 <li>Banking career starters</li>
                 <li>Junior banking professionals</li>
                 <li>Career changers entering financial services</li>
-                <li>Learners wanting an NQF Level 5 banking qualification</li>
+                <li>Students wanting an NQF Level 5 banking qualification</li>
               </ul>
             </Reveal>
 
@@ -132,22 +132,22 @@ export default function LearnersProgrammes() {
                 <li>Emerging leaders</li>
                 <li>Team leaders</li>
                 <li>Professionals preparing for management growth</li>
-                <li>Learners wanting an NQF Level 6 leadership qualification</li>
+                <li>Students wanting an NQF Level 6 leadership qualification</li>
               </ul>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* YOUR LEARNER JOURNEY — horizontal timeline (dark surface, mirrors CPSLearn preview) */}
+      {/* YOUR STUDENT JOURNEY — horizontal timeline (dark surface, mirrors CPSLearn preview) */}
       <section className="section-dark">
         <div className="container">
           <Reveal as="div" className="section-head">
             <div className="left">
-              <span className="eyebrow"><span className="dot" /> Your learner journey</span>
+              <span className="eyebrow"><span className="dot" /> Your student journey</span>
               <h2>From enquiry to enrolment, know what happens next.</h2>
               <p>
-                A clear process reduces uncertainty. CPS helps learners understand the programme,
+                A clear process reduces uncertainty. CPS helps students understand the programme,
                 requirements and next step before they commit.
               </p>
             </div>

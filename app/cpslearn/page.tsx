@@ -20,12 +20,12 @@ import { Spotlight } from "@/components/spotlight";
 import { CountUp } from "@/components/count-up";
 
 export const metadata: Metadata = {
-  title: "CPSLearn for Learners",
+  title: "CPSLearn for Students",
   description:
     "CPSLearn is the platform behind how you actually finish your CPS qualification. Clear structure, faster feedback, visible progress and a path built for completion.",
 };
 
-export default function LearnersCPSLearn() {
+export default function StudentsCPSLearn() {
   return (
     <main>
       {/* HERO — photo-backed dark */}
@@ -38,7 +38,7 @@ export default function LearnersCPSLearn() {
         <div className="page-hero-overlay" aria-hidden />
         <div className="container">
           <div className="breadcrumbs">
-            <Link href="/">Learners</Link><span className="sep">/</span><span style={{ color: "var(--cps-blue)" }}>CPSLearn</span>
+            <Link href="/">Students</Link><span className="sep">/</span><span style={{ color: "var(--cps-blue)" }}>CPSLearn</span>
           </div>
           <div style={{ marginTop: 24, maxWidth: 920 }}>
             <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-blue)" }} /> CPSLearn</span>
@@ -50,7 +50,7 @@ export default function LearnersCPSLearn() {
             </p>
             <div style={{ marginTop: 32, display: "flex", flexWrap: "wrap", gap: 12 }}>
               <Link href="/programmes" className="btn btn-yellow btn-lg" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                Browse learner programmes <ArrowRight />
+                Browse student programmes <ArrowRight />
               </Link>
               <Link href="/contact#admissions" className="liquid-glass btn-lg" style={{ borderRadius: 14, padding: "14px 22px", display: "inline-flex", alignItems: "center", gap: 8, color: "#fff" }}>
                 Talk to admissions
@@ -228,14 +228,14 @@ export default function LearnersCPSLearn() {
         <div className="container">
           <div className="editorial-grid">
             <Reveal as="div" className="editorial-eyebrow">
-              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-blue)" }} /> Built for real learners</span>
+              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-blue)" }} /> Built for real students</span>
             </Reveal>
             <Reveal as="div" className="editorial-headline" delay={120}>
               <h2>It doesn&apos;t assume everyone learns the same way.</h2>
             </Reveal>
             <Reveal as="div" className="editorial-body" delay={200}>
               <p>
-                Not every learner starts at the same level. Some parts will feel straightforward.
+                Not every student starts at the same level. Some parts will feel straightforward.
                 Others won&apos;t. CPSLearn is built to support that reality — it helps identify where
                 you need more focus, so your time is spent where it actually matters.
               </p>
@@ -298,7 +298,7 @@ export default function LearnersCPSLearn() {
               <span className="eyebrow"><span className="dot" /> Designed for working professionals</span>
               <h2>It works with your life, not against it.</h2>
               <p>
-                Most learners are not studying full-time. They&apos;re working, managing responsibilities,
+                Most students are not studying full-time. They&apos;re working, managing responsibilities,
                 and trying to build something better at the same time. CPSLearn is designed for that
                 reality.
               </p>
@@ -339,7 +339,7 @@ export default function LearnersCPSLearn() {
               <h2 style={{ marginTop: 16 }}>Not just another learning platform.</h2>
               <p style={{ marginTop: 24, fontSize: 17, color: "var(--muted)", lineHeight: 1.6 }}>
                 CPSLearn is not a repackaged third-party system. It&apos;s been built and refined over more
-                than two decades, based on how learners actually move through programmes in banking,
+                than two decades, based on how students actually move through programmes in banking,
                 insurance, investment and leadership.
               </p>
               <p style={{ marginTop: 16, fontSize: 17, color: "var(--ink)", lineHeight: 1.6, fontWeight: 500 }}>
@@ -377,10 +377,10 @@ export default function LearnersCPSLearn() {
               <h2 style={{ marginTop: 16 }}>Start your programme. Stay on track. Finish it.</h2>
               <p style={{ marginTop: 16 }}>
                 If you strip it back, the goal is simple. CPSLearn supports that by giving you the
-                things that actually help learners complete.
+                things that actually help students complete.
               </p>
               <div className="cta-band-actions" style={{ marginTop: 24 }}>
-                <Link href="/programmes" className="btn btn-yellow btn-lg">Browse learner programmes</Link>
+                <Link href="/programmes" className="btn btn-yellow btn-lg">Browse student programmes</Link>
                 <Link href="/contact#admissions" className="liquid-glass btn-lg" style={{ borderRadius: 14, padding: "14px 22px", display: "inline-flex", alignItems: "center" }}>
                   Talk to admissions <ArrowRight />
                 </Link>

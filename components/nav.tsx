@@ -8,7 +8,7 @@ import { Burger, Close } from "./icons";
 
 type LinkSpec = { href: string; label: string; route: string };
 
-const learnerLinks: LinkSpec[] = [
+const studentLinks: LinkSpec[] = [
   { href: "/programmes", label: "Programmes", route: "programmes" },
   { href: "/cpslearn", label: "CPSLearn", route: "platform" },
 ];
@@ -30,9 +30,9 @@ const routeForPath = (p: string): string => {
   return "other";
 };
 
-type Audience = "learners" | "organisations";
+type Audience = "students" | "organisations";
 const audienceForPath = (p: string): Audience =>
-  p.startsWith("/organisations") ? "organisations" : "learners";
+  p.startsWith("/organisations") ? "organisations" : "students";
 
 export function Nav() {
   const pathname = usePathname();
@@ -51,7 +51,7 @@ export function Nav() {
   // Close mobile menu on route change
   useEffect(() => setOpen(false), [pathname]);
 
-  const visibleLinks = audience === "organisations" ? orgLinks : learnerLinks;
+  const visibleLinks = audience === "organisations" ? orgLinks : studentLinks;
 
   // Audience-aware nav CTAs
   const primaryCtaHref = audience === "organisations" ? "/organisations/programmes" : "/programmes";
@@ -67,10 +67,10 @@ export function Nav() {
           <Link
             href="/"
             role="tab"
-            aria-selected={audience === "learners"}
-            className={`audience-tab ${audience === "learners" ? "active" : ""}`}
+            aria-selected={audience === "students"}
+            className={`audience-tab ${audience === "students" ? "active" : ""}`}
           >
-            For Learners
+            For Students
           </Link>
           <Link
             href="/organisations"
@@ -115,6 +115,15 @@ export function Nav() {
         </nav>
 
         <div className={`nav-cta ${open ? "open" : ""}`}>
+          {/* Login button — placeholder until CPSLearn auth goes live */}
+          <button
+            type="button"
+            className="nav-login"
+            aria-label="Log in"
+            title="Log in"
+          >
+            Log in
+          </button>
           <Link href={primaryCtaHref} className="liquid-glass">{primaryCtaLabel}</Link>
           <Link href={secondaryCtaHref} className="btn btn-yellow">{secondaryCtaLabel}</Link>
         </div>

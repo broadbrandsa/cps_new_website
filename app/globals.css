@@ -516,7 +516,7 @@ section { padding: var(--pad-section) 0; }
 .prog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 @media (max-width: 980px) { .prog-grid { grid-template-columns: 1fr; } }
 
-/* Equal-weight flagship pair (HCIB + ACL6 on Learners Home / Programmes) */
+/* Equal-weight flagship pair (HCIB + ACL6 on Students Home / Programmes) */
 .prog-featured-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 @media (max-width: 980px) { .prog-featured-pair { grid-template-columns: 1fr; } }
 /* Make sure each card fills its grid cell — the Spotlight wrapper inside a grid
@@ -1883,7 +1883,7 @@ footer { background: var(--bg-1); color: var(--muted); padding: 80px 0 32px; bor
 @media (max-width: 520px) { .career-value .career-grid { grid-template-columns: 1fr; } }
 
 /* ---------- MANAGED DELIVERY — image-backed (mirrors .career-value) ---------- */
-/* Same visual treatment as the learners' career-value section: full-bleed photo,
+/* Same visual treatment as the students' career-value section: full-bleed photo,
    dark gradient overlay, heading at the top, blocks pinned to the bottom. Uses
    the good-faces image for warmth on the org-side. */
 .managed-delivery {
@@ -2251,7 +2251,7 @@ footer { background: var(--bg-1); color: var(--muted); padding: 80px 0 32px; bor
 }
 
 /* ---------- TIMELINE — horizontal step progression ---------- */
-/* Used for multi-step journeys (e.g. "How your learner journey works").
+/* Used for multi-step journeys (e.g. "How your student journey works").
    Visual: numbered circles connected by a horizontal gradient line, with
    title + description stacked below each. Falls back to a vertical line
    layout on tablet/mobile. */
@@ -2482,8 +2482,8 @@ footer { background: var(--bg-1); color: var(--muted); padding: 80px 0 32px; bor
 /* ---------- EXPERIENCE SECTION (Spintip-style asymmetric layout) ---------- */
 /* Left column: lede paragraph + display headline + brand-yellow chevron.
    Right column: dense 3x2 grid of step-cards, each with a yellow brand-mark dot,
-   "Step N" mono label, title and description. Used on Learners Home + Org Home
-   + Learners CPSLearn + Org CPSLearn (variant via copy). */
+   "Step N" mono label, title and description. Used on Students Home + Org Home
+   + Students CPSLearn + Org CPSLearn (variant via copy). */
 .experience-section { padding: var(--pad-section) 0; }
 .experience-layout {
   display: grid;
@@ -3600,4 +3600,96 @@ footer .pill {
   .path-card:hover .arrow svg, .prog-card:hover .prog-cta svg { transform: none; }
   .stat-card::after { display: none; }
   .prog-card:not(.hero-card):not(.companion-card):not(.featured)::before { display: none; }
+}
+
+/* Admissions notice — sits below the contact info on the Contact page.
+   Important info about R300 application fee + HCIB/ACL-only eligibility.
+   Blue-tinted to read as informational, not as a destructive warning. */
+.admissions-notice {
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: rgba(19, 162, 217, 0.08);
+  border: 1px solid rgba(19, 162, 217, 0.22);
+  border-left: 3px solid var(--cps-blue);
+  border-radius: 14px;
+  max-width: 480px;
+}
+.admissions-notice-label {
+  display: inline-block;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cps-blue);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.admissions-notice ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.admissions-notice li {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.55;
+  padding-left: 16px;
+  position: relative;
+}
+.admissions-notice li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cps-blue);
+}
+.admissions-notice strong { color: var(--ink); font-weight: 600; }
+
+/* Nav login button — quiet outlined style, sits before the primary CTAs.
+   Placeholder until CPSLearn auth lands; visually behaves like a tertiary link. */
+.nav-login {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--f-body);
+  color: rgba(255, 255, 255, 0.85);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  letter-spacing: -0.005em;
+}
+.nav-login:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.40);
+  background: rgba(255, 255, 255, 0.06);
+}
+.nav-login:focus-visible {
+  outline: 2px solid var(--cps-yellow);
+  outline-offset: 2px;
+}
+/* Light-theme overrides for the scrolled state + non-hero pages */
+.nav-wrap.scrolled .nav-login,
+body:not([data-route="home"]):not([data-route="organisations"]) .nav-login {
+  color: var(--ink);
+  border-color: var(--line);
+}
+.nav-wrap.scrolled .nav-login:hover,
+body:not([data-route="home"]):not([data-route="organisations"]) .nav-login:hover {
+  border-color: var(--cps-blue);
+  color: var(--cps-blue);
+  background: rgba(19, 162, 217, 0.06);
+}
+/* Mobile — collapses into the dropdown alongside other CTAs */
+@media (max-width: 880px) {
+  .nav-cta.open .nav-login { width: 100%; justify-content: center; }
 }

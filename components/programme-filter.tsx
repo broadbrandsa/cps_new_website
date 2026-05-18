@@ -7,7 +7,7 @@ import type { ProgrammeCategory } from "@/lib/programmes";
 
 type Filter = "all" | ProgrammeCategory;
 
-const learnerFilters: Array<{ value: Filter; label: string }> = [
+const studentFilters: Array<{ value: Filter; label: string }> = [
   { value: "all", label: "All" },
   { value: "banking", label: "Banking" },
   { value: "insurance", label: "Insurance" },
@@ -39,12 +39,12 @@ export type IndexCard = {
 
 export function ProgrammeFilter({
   cards,
-  audience = "learners",
+  audience = "students",
 }: {
   cards: IndexCard[];
-  audience?: "learners" | "organisations";
+  audience?: "students" | "organisations";
 }) {
-  const filters = audience === "organisations" ? orgFilters : learnerFilters;
+  const filters = audience === "organisations" ? orgFilters : studentFilters;
   const [active, setActive] = useState<Filter>("all");
   const visible = active === "all" ? cards : cards.filter((c) => c.cat === active);
 

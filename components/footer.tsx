@@ -22,8 +22,8 @@ export function Footer() {
           </div>
 
           <div className="footer-col">
-            <h5>Learners</h5>
-            <Link href="/">Learners Home</Link>
+            <h5>Students</h5>
+            <Link href="/">Students Home</Link>
             <Link href="/programmes">Programmes</Link>
             <Link href="/cpslearn">CPSLearn</Link>
             <Link href="/contact#admissions">Admissions Contact</Link>

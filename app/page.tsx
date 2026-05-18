@@ -13,7 +13,7 @@ import { Reveal } from "@/components/reveal";
 import { CountUp } from "@/components/count-up";
 import { Spotlight } from "@/components/spotlight";
 
-export default function LearnersHome() {
+export default function StudentsHome() {
   return (
     <main>
       {/* HERO */}
@@ -39,7 +39,7 @@ export default function LearnersHome() {
 
             <div className="hero-cta-row hero-fade-in">
               <Link href="/programmes" className="btn btn-yellow btn-lg" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                Browse learner programmes <ArrowRight />
+                Browse student programmes <ArrowRight />
               </Link>
               <Link href="/contact#admissions" className="liquid-glass btn-lg" style={{ borderRadius: 14, padding: "14px 22px", display: "inline-flex", alignItems: "center", gap: 8 }}>
                 Talk to admissions
@@ -51,7 +51,7 @@ export default function LearnersHome() {
       </section>
 
       {/* CLIENT LOGOS */}
-      <ClientLogos label="CPS has worked with learners, teams or programmes connected to leading South African and international financial services organisations." />
+      <ClientLogos label="CPS has worked with students, teams or programmes connected to leading South African and international financial services organisations." />
 
       {/* SUPPORTING PARAGRAPH BAND — centered, breathing room above + below */}
       <section style={{ padding: "120px 0 120px" }}>
@@ -86,8 +86,8 @@ export default function LearnersHome() {
 
       <CredentialsBand />
 
-      {/* WHAT TO EXPECT AS A CPS LEARNER */}
-      <ExperienceSection variant="learners" surface="tinted" />
+      {/* WHAT TO EXPECT AS A CPS STUDENT */}
+      <ExperienceSection variant="students" surface="tinted" />
 
       {/* CAREER VALUE — image-backed section, blocks pinned to bottom */}
       <section className="career-value">
@@ -119,17 +119,17 @@ export default function LearnersHome() {
         </div>
       </section>
 
-      {/* FEATURED LEARNER PROGRAMMES — 2 primary equal + 6 secondary */}
+      {/* FEATURED STUDENT PROGRAMMES — 2 primary equal + 6 secondary */}
       <section>
         <div className="container">
           <Reveal as="div" className="section-head">
             <div className="left">
-              <span className="eyebrow"><span className="dot" /> Featured learner programmes</span>
+              <span className="eyebrow"><span className="dot" /> Featured student programmes</span>
               <h2>Two primary pathways. Specialist options for your next step.</h2>
               <p>
-                Start with one of our two flagship learner pathways: banking foundations or leadership
+                Start with one of our two flagship student pathways: banking foundations or leadership
                 development. Both are 12-month higher education qualifications designed for working
-                South African professionals. Additional qualifications are available for learners building
+                South African professionals. Additional qualifications are available for students building
                 specialist capability in insurance, investment, business banking and risk.
               </p>
             </div>
@@ -207,9 +207,9 @@ export default function LearnersHome() {
             <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-blue)" }} /> Why completion matters</span>
             <h2 style={{ marginTop: 16 }}>Starting is important. Finishing is what changes your future.</h2>
             <p style={{ marginTop: 16, fontSize: 17 }}>
-              A qualification only creates value when learners complete it and can apply what they have
+              A qualification only creates value when students complete it and can apply what they have
               learned. CPS places strong emphasis on structured journeys, support and progress tracking
-              because these are the things that help learners stay committed through the full programme.
+              because these are the things that help students stay committed through the full programme.
             </p>
           </Reveal>
           <div className="stats-grid">
@@ -252,7 +252,7 @@ export default function LearnersHome() {
               </p>
             </div>
             <Link href="/cpslearn" className="liquid-glass btn-lg" style={{ borderRadius: 14, padding: "14px 22px", display: "inline-flex", alignItems: "center", gap: 8 }}>
-              Explore CPSLearn for learners <ArrowRight />
+              Explore CPSLearn for students <ArrowRight />
             </Link>
           </Reveal>
 
@@ -271,7 +271,7 @@ export default function LearnersHome() {
             </Reveal></Spotlight>
             <Spotlight as="div"><Reveal as="div" className="feat-card" delay={240}>
               <div><div className="icon"><ClipboardCheck /></div></div>
-              <div><h4>Support tracking</h4><p>Visibility helps CPS identify where learners may need extra support.</p></div>
+              <div><h4>Support tracking</h4><p>Visibility helps CPS identify where students may need extra support.</p></div>
             </Reveal></Spotlight>
             <Spotlight as="div"><Reveal as="div" className="feat-card" delay={320}>
               <div><div className="icon" style={{ background: "rgba(144,19,254,0.22)", color: "#C5A0FF" }}><Check /></div></div>
@@ -336,7 +336,7 @@ export default function LearnersHome() {
                 programme, requirements and next step.
               </p>
               <div className="cta-band-actions">
-                <Link href="/programmes" className="btn btn-yellow btn-lg">Browse learner programmes</Link>
+                <Link href="/programmes" className="btn btn-yellow btn-lg">Browse student programmes</Link>
               </div>
             </Reveal>
             <Reveal as="div" delay={140}>

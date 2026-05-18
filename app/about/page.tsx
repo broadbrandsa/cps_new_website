@@ -175,7 +175,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   This insight powers our approach to education. Rather than simply delivering content,
-                  we mediate learning — guiding learners through experiences that develop deeper
+                  we mediate learning — guiding students through experiences that develop deeper
                   cognitive structures and lasting capability.
                 </p>
               </div>
@@ -193,7 +193,7 @@ export default function AboutPage() {
               <h2>What we stand for.</h2>
               <p>
                 Three convictions shape everything we build, every programme we design, and every
-                learner we serve.
+                student we serve.
               </p>
             </div>
           </Reveal>
@@ -224,7 +224,7 @@ export default function AboutPage() {
               <span className="value-num">VALUE 03</span>
               <h3>A Path With Heart</h3>
               <p>
-                Everything we build, every programme we design, and every learner we serve is guided by
+                Everything we build, every programme we design, and every student we serve is guided by
                 empathy, respect, and a deep belief in human potential.
               </p>
             </Reveal>

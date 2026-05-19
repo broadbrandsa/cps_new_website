@@ -27,6 +27,7 @@ const routeForPath = (p: string): string => {
   if (p.startsWith("/cpslearn")) return "platform";
   if (p.startsWith("/about")) return "about";
   if (p.startsWith("/contact")) return "contact";
+  if (p.startsWith("/blog")) return "blog";
   return "other";
 };
 
@@ -86,6 +87,12 @@ export function Nav() {
             className={`audience-tab audience-tab-meta ${active === "about" ? "active" : ""}`}
           >
             About
+          </Link>
+          <Link
+            href="/blog"
+            className={`audience-tab audience-tab-meta ${active === "blog" ? "active" : ""}`}
+          >
+            Journal
           </Link>
           <Link
             href="/contact"

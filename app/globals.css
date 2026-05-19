@@ -3653,47 +3653,51 @@ footer .pill {
 }
 .admissions-notice strong { color: var(--ink); font-weight: 600; }
 
-/* Nav login button — quiet outlined style, sits before the primary CTAs.
-   Placeholder until CPSLearn auth lands; visually behaves like a tertiary link. */
-.nav-login {
+/* Audience-tab Login button — sits at the far right of the top strip.
+   margin-left: auto pushes it past the divider + About/Journal/Contact so
+   the strip reads as: [audience switchers]  |  [meta links]  …  [Log in].
+   Placeholder until CPSLearn auth lands. */
+.audience-tab-login {
+  margin-left: auto;
   display: inline-flex;
   align-items: center;
-  padding: 10px 16px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: 500;
-  font-family: var(--f-body);
+  height: 28px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.85);
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.20);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   cursor: pointer;
   transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-  letter-spacing: -0.005em;
 }
-.nav-login:hover {
+.audience-tab-login:hover {
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.40);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.08);
 }
-.nav-login:focus-visible {
+.audience-tab-login:focus-visible {
   outline: 2px solid var(--cps-yellow);
   outline-offset: 2px;
 }
 /* Light-theme overrides for the scrolled state + non-hero pages */
-.nav-wrap.scrolled .nav-login,
-body:not([data-route="home"]):not([data-route="organisations"]) .nav-login {
+.nav-wrap.scrolled .audience-tab-login,
+body:not([data-route="home"]):not([data-route="organisations"]) .audience-tab-login {
   color: var(--ink);
-  border-color: var(--line);
+  border-color: rgba(10, 12, 28, 0.20);
 }
-.nav-wrap.scrolled .nav-login:hover,
-body:not([data-route="home"]):not([data-route="organisations"]) .nav-login:hover {
+.nav-wrap.scrolled .audience-tab-login:hover,
+body:not([data-route="home"]):not([data-route="organisations"]) .audience-tab-login:hover {
   border-color: var(--cps-blue);
   color: var(--cps-blue);
   background: rgba(19, 162, 217, 0.06);
 }
-/* Mobile — collapses into the dropdown alongside other CTAs */
-@media (max-width: 880px) {
-  .nav-cta.open .nav-login { width: 100%; justify-content: center; }
+@media (max-width: 640px) {
+  .audience-tab-login { height: 24px; padding: 0 10px; font-size: 10px; }
 }
 
 /* ---------- BLOG / JOURNAL ----------

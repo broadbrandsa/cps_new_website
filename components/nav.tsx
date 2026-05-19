@@ -100,6 +100,15 @@ export function Nav() {
           >
             Contact
           </Link>
+          {/* Login — pushed to the far right of the strip. Placeholder until CPSLearn auth goes live. */}
+          <button
+            type="button"
+            className="audience-tab-login"
+            aria-label="Log in"
+            title="Log in"
+          >
+            Log in
+          </button>
         </div>
       </div>
 
@@ -122,15 +131,6 @@ export function Nav() {
         </nav>
 
         <div className={`nav-cta ${open ? "open" : ""}`}>
-          {/* Login button — placeholder until CPSLearn auth goes live */}
-          <button
-            type="button"
-            className="nav-login"
-            aria-label="Log in"
-            title="Log in"
-          >
-            Log in
-          </button>
           <Link href={primaryCtaHref} className="liquid-glass">{primaryCtaLabel}</Link>
           <Link href={secondaryCtaHref} className="btn btn-yellow">{secondaryCtaLabel}</Link>
         </div>

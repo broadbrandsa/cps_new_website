@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Founded in 1999, Cornerstone Performance Solutions builds learning that emancipates. A small band of doers on a path with heart, building a bridge between potential and opportunity.",
+    "Founded in 1999, Cornerstone Performance Solutions builds learning that emancipates. A small band of doers driven by belief, building a bridge between potential and opportunity.",
 };
 
 export default function AboutPage() {
@@ -31,7 +31,7 @@ export default function AboutPage() {
             <Reveal as="div" delay={120} className="about-hero-text">
               <h1 className="about-display">Our story.</h1>
               <p className="about-lede">
-                Founded by a small band of doers, on a path with heart - building a bridge between
+                Founded by a small band of doers, driven by belief - building a bridge between
                 potential and opportunity.
               </p>
             </Reveal>
@@ -39,13 +39,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* A PATH WITH HEART - narrative editorial */}
+      {/* ORIGIN - narrative editorial */}
       <section className="about-narrative">
         <div className="container">
           <div className="narrative-grid">
             <Reveal as="div" className="narrative-side">
               <span className="eyebrow"><span className="dot" /> Origin</span>
-              <h2>A Path With Heart</h2>
+              <h2>Born From A Belief</h2>
               <span className="narrative-marker">01</span>
             </Reveal>
             <Reveal as="div" className="narrative-body" delay={140}>
@@ -222,7 +222,7 @@ export default function AboutPage() {
             <Reveal as="div" className="value-card value-purple" delay={240}>
               <span className="value-mark" aria-hidden><Briefcase /></span>
               <span className="value-num">VALUE 03</span>
-              <h3>A Path With Heart</h3>
+              <h3>Belief In Potential</h3>
               <p>
                 Everything we build, every programme we design, and every student we serve is guided by
                 empathy, respect, and a deep belief in human potential.

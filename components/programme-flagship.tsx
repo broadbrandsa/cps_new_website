@@ -37,6 +37,8 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
   const credits = p.meta.find((m) => /credit/i.test(m.lbl))?.val ?? "";
   const saqa = p.meta.find((m) => /saqa/i.test(m.lbl))?.val;
   const awardingBody = p.meta.find((m) => /awarded/i.test(m.lbl))?.val;
+  const startDate = p.meta.find((m) => /^start/i.test(m.lbl))?.val;
+  const applicationsClose = p.meta.find((m) => /applications close|close/i.test(m.lbl))?.val;
 
   const mailSubject = `Application: ${p.title}`;
   const mailInfoSubject = `Info pack: ${p.title}`;
@@ -148,6 +150,40 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
           </div>
         </div>
       </section>
+
+      {/* ===== NEXT INTAKE — start date + applications close ===== */}
+      {(startDate || applicationsClose) && (
+        <section className={`flagship-intake accent-${accent}`} aria-label="Next intake">
+          <div className="container">
+            <div className="flagship-intake-card">
+              <span className="flagship-intake-label">Next intake</span>
+              <div className="flagship-intake-grid">
+                {startDate && (
+                  <div className="flagship-intake-item">
+                    <span className="flagship-intake-item-label">Start date</span>
+                    <span className="flagship-intake-item-value">{startDate}</span>
+                  </div>
+                )}
+                {applicationsClose && (
+                  <div className="flagship-intake-item urgent">
+                    <span className="flagship-intake-item-label">Applications close</span>
+                    <span className="flagship-intake-item-value">{applicationsClose}</span>
+                  </div>
+                )}
+                {duration && (
+                  <div className="flagship-intake-item">
+                    <span className="flagship-intake-item-label">Duration</span>
+                    <span className="flagship-intake-item-value">{duration}</span>
+                  </div>
+                )}
+              </div>
+              <a href="#apply" className="flagship-intake-cta">
+                Apply now <ArrowRight />
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ===== TWO-COLUMN BODY (content + sticky sidebar) ===== */}
       <div className="flagship-body container">
@@ -341,6 +377,12 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
               <span className="suffix">/month</span>
             </div>
             <ul className="flagship-sticky-facts">
+              {startDate && (
+                <li><CheckSmall /> <strong>Starts {startDate}</strong></li>
+              )}
+              {applicationsClose && (
+                <li className="urgent"><CheckSmall /> Apply by {applicationsClose}</li>
+              )}
               <li><CheckSmall /> {duration} · {nqf ? `NQF ${nqf}` : "Higher Education"}</li>
               <li><CheckSmall /> {credits} credits{saqa ? ` · SAQA ${saqa}` : ""}</li>
               <li><CheckSmall /> R300 application fee on submission</li>

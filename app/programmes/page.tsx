@@ -71,7 +71,7 @@ export default function StudentsProgrammes() {
                 <div className="prog-meta">
                   <div><strong>R2,480</strong><span>per month</span></div>
                   <div><strong>12 months</strong><span>blended</span></div>
-                  <div><strong>NQF 5</strong><span>202 credits</span></div>
+                  <div><strong>NQF 5</strong><span>120 credits</span></div>
                 </div>
                 <span className="prog-cta">View HCIB <ArrowRight /></span>
               </Link>

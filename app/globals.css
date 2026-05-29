@@ -5821,3 +5821,117 @@ body:not([data-route="home"]):not([data-route="organisations"]) .audience-tab-lo
 @media (max-width: 560px) {
   .legal-contact > div { grid-template-columns: 1fr; gap: 2px; }
 }
+
+/* ---------- FLAGSHIP NEXT INTAKE — start date / applications close strip ----
+   Sits between the at-a-glance stats and the two-column body.
+   Brand-coloured gradient card; "Applications close" item highlights urgent
+   with a yellow corner accent. */
+.flagship-intake { padding: 32px 0 0; }
+.flagship-intake-card {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+  overflow: hidden;
+}
+.flagship-intake-card::before {
+  content: "";
+  position: absolute;
+  top: -40%; right: -10%;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.10), transparent 70%);
+  pointer-events: none;
+}
+.flagship-intake-label {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+  white-space: nowrap;
+  position: relative;
+  padding-right: 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.20);
+}
+.flagship-intake-grid {
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.flagship-intake-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.flagship-intake-item-label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+.flagship-intake-item-value {
+  font-family: var(--f-display);
+  font-size: clamp(18px, 1.7vw, 22px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  color: #fff;
+}
+.flagship-intake-item.urgent .flagship-intake-item-value { color: var(--cps-yellow); }
+.flagship-intake-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--accent-text-on-light);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.flagship-intake-cta:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.92);
+}
+@media (max-width: 880px) {
+  .flagship-intake-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+  .flagship-intake-label {
+    padding-right: 0;
+    padding-bottom: 16px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+  }
+  .flagship-intake-grid { gap: 20px; }
+  .flagship-intake-cta { justify-content: center; width: 100%; }
+}
+
+/* Urgent sidebar fact — yellow accent on "Apply by [date]" */
+.flagship-sticky-facts li.urgent {
+  color: var(--accent-text-on-light);
+  font-weight: 600;
+}
+.flagship-sticky-facts li.urgent svg { color: var(--cps-yellow); }
+.flagship-sticky-facts li strong { font-weight: 600; color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .flagship-intake-cta:hover { transform: none; }
+}

@@ -121,7 +121,7 @@ export const posts: Post[] = [
       { kind: "h2", text: "HCIB - for entering or growing in banking" },
       {
         kind: "p",
-        text: "HCIB is an NQF Level 5 qualification (202 credits) built around the foundations of South African banking. It covers banking knowledge, financial services context, client understanding, ethics, compliance, and practical problem-solving.",
+        text: "HCIB is an NQF Level 5 qualification (120 credits) built around the foundations of South African banking. It covers banking knowledge, financial services context, client understanding, ethics, compliance, and practical problem-solving.",
       },
       {
         kind: "p",

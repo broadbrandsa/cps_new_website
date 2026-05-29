@@ -9,7 +9,7 @@ import { posts, formatPostDate } from "@/lib/posts";
 export const metadata: Metadata = {
   title: "Journal",
   description:
-    "The CPS Journal — perspectives on completion, banking education, qualification frameworks and the realities of learning while you work.",
+    "The CPS Journal - perspectives on completion, banking education, qualification frameworks and the realities of learning while you work.",
 };
 
 export default function BlogIndex() {
@@ -19,7 +19,7 @@ export default function BlogIndex() {
 
   return (
     <main>
-      {/* HERO — photo-backed, dark */}
+      {/* HERO - photo-backed, dark */}
       <section className="page-hero has-photo">
         <div
           className="page-hero-photo"
@@ -37,14 +37,14 @@ export default function BlogIndex() {
             <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-blue)" }} /> Journal</span>
             <h1>Perspectives on learning that actually finishes.</h1>
             <p style={{ marginTop: 24, fontSize: 18 }}>
-              Notes from inside CPS — on completion, banking education, qualification frameworks
+              Notes from inside CPS - on completion, banking education, qualification frameworks
               and the realities of learning while you work.
             </p>
           </div>
         </div>
       </section>
 
-      {/* FEATURED POST — large card */}
+      {/* FEATURED POST - large card */}
       <section style={{ paddingTop: 96 }}>
         <div className="container">
           <Reveal>
@@ -85,7 +85,7 @@ export default function BlogIndex() {
         </div>
       </section>
 
-      {/* LATEST — 3-up grid */}
+      {/* LATEST - 3-up grid */}
       <section style={{ paddingTop: 96, paddingBottom: 96 }}>
         <div className="container">
           <Reveal as="div" className="section-head">
@@ -93,7 +93,7 @@ export default function BlogIndex() {
               <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-purple)" }} /> Latest</span>
               <h2>More from the journal.</h2>
               <p>
-                Practical, considered perspectives — for students choosing a programme, for organisations
+                Practical, considered perspectives - for students choosing a programme, for organisations
                 building workforce capability, and for anyone curious about how recognised qualifications
                 actually work.
               </p>

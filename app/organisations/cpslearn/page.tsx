@@ -60,7 +60,7 @@ export default function OrganisationsCPSLearn() {
       {/* WHAT YOUR STAFF CAN EXPECT */}
       <ExperienceSection variant="organisations" surface="tinted" />
 
-      {/* BUILT FOR REAL STUDENTS — editorial-grid, mirrors students-side CPSLearn */}
+      {/* BUILT FOR REAL STUDENTS - editorial-grid, mirrors students-side CPSLearn */}
       <section>
         <div className="container">
           <div className="editorial-grid">
@@ -73,7 +73,7 @@ export default function OrganisationsCPSLearn() {
             <Reveal as="div" className="editorial-body" delay={200}>
               <p>
                 Not every student starts at the same level. Some parts feel straightforward. Others don&apos;t.
-                CPSLearn is built to support that reality — helping identify where each student needs more
+                CPSLearn is built to support that reality - helping identify where each student needs more
                 focus, so cohort time is spent where it actually matters.
               </p>
               <p style={{ marginTop: 20, color: "var(--ink)", fontWeight: 500 }}>
@@ -84,7 +84,7 @@ export default function OrganisationsCPSLearn() {
             <Reveal as="div" className="editorial-aside" delay={280}>
               <div className="editorial-pull">
                 <span className="mono">In other words</span>
-                <p>The platform meets each student where they are — not where it assumes they should be.</p>
+                <p>The platform meets each student where they are - not where it assumes they should be.</p>
                 <span className="brand-mark" aria-hidden><Lightbulb /></span>
               </div>
             </Reveal>
@@ -173,7 +173,7 @@ export default function OrganisationsCPSLearn() {
         </div>
       </section>
 
-      {/* HERITAGE — split: text + dark stat card */}
+      {/* HERITAGE - split: text + dark stat card */}
       <section>
         <div className="container">
           <div className="cpslearn-heritage">
@@ -186,7 +186,7 @@ export default function OrganisationsCPSLearn() {
                 insurance, investment and leadership.
               </p>
               <p style={{ marginTop: 16, fontSize: 17, color: "var(--ink)", lineHeight: 1.6, fontWeight: 500 }}>
-                That matters — because it means the system is shaped by real behaviour, not assumptions.
+                That matters - because it means the system is shaped by real behaviour, not assumptions.
               </p>
             </Reveal>
 
@@ -211,7 +211,7 @@ export default function OrganisationsCPSLearn() {
         </div>
       </section>
 
-      {/* A PLATFORM CONNECTED TO SUPPORT — closing band, mirrors students "What this means for you" */}
+      {/* A PLATFORM CONNECTED TO SUPPORT - closing band, mirrors students "What this means for you" */}
       <div className="cta-band">
         <div className="cta-band-inner">
           <div className="cta-band-grid">

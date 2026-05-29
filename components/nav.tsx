@@ -66,7 +66,7 @@ export function Nav() {
 
   return (
     <div className={`nav-wrap ${scrolled ? "scrolled" : ""}`}>
-      {/* Audience tab strip — also hosts shared meta links (About / Contact) */}
+      {/* Audience tab strip - also hosts shared meta links (About / Contact) */}
       <div className="audience-tabs">
         <div className="container audience-tabs-inner" role="tablist" aria-label="Audience">
           <Link
@@ -104,7 +104,7 @@ export function Nav() {
           >
             Contact
           </Link>
-          {/* Login — pushed to the far right of the strip. Routes to /login. */}
+          {/* Login - pushed to the far right of the strip. Routes to /login. */}
           <Link
             href="/login"
             className="audience-tab-login"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Facebook, Twitter, LinkedIn, YouTube } from "./icons";
 
 export function Footer() {
   return (
@@ -19,6 +20,49 @@ export function Footer() {
               <span className="pill">CHE accredited</span>
               <span className="pill">QCTO accredited</span>
             </div>
+
+            <ul className="footer-social" aria-label="CPS on social media">
+              <li>
+                <a
+                  href="https://facebook.com/cornerstoneperformancesolutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="CPS on Facebook"
+                >
+                  <Facebook width={16} height={16} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/cpslearning"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="CPS on X (formerly Twitter)"
+                >
+                  <Twitter width={16} height={16} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/company/cornerstone-performance-solutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="CPS on LinkedIn"
+                >
+                  <LinkedIn width={16} height={16} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://youtube.com/channel/UCCXudZLfGPao_dR77w2n6LQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="CPS on YouTube"
+                >
+                  <YouTube width={16} height={16} />
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div className="footer-col">
@@ -41,7 +85,9 @@ export function Footer() {
           <div className="footer-col">
             <h5>Company</h5>
             <Link href="/about">About CPS</Link>
+            <Link href="/blog">Journal</Link>
             <Link href="/contact">Contact</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
           </div>
 
           <div className="footer-col">
@@ -54,7 +100,10 @@ export function Footer() {
 
         <div className="footer-bottom">
           <div>© {new Date().getFullYear()} Cornerstone Performance Solutions (Pty) Ltd. All rights reserved.</div>
-          <div className="badge">#ShapeYourFuture</div>
+          <div className="footer-bottom-links">
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <span className="badge">#ShapeYourFuture</span>
+          </div>
         </div>
       </div>
     </footer>

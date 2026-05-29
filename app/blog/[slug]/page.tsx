@@ -37,7 +37,7 @@ function BlockRenderer({ block }: { block: Block }) {
       return (
         <blockquote>
           <p>{block.text}</p>
-          {block.attribution && <cite>— {block.attribution}</cite>}
+          {block.attribution && <cite>- {block.attribution}</cite>}
         </blockquote>
       );
     case "list":
@@ -71,7 +71,7 @@ export default async function BlogPost({
 
   return (
     <main>
-      {/* HERO — photo-backed, dark */}
+      {/* HERO - photo-backed, dark */}
       <section className="page-hero has-photo post-hero">
         <div
           className="page-hero-photo"
@@ -101,7 +101,7 @@ export default async function BlogPost({
         </div>
       </section>
 
-      {/* ARTICLE BODY — centred prose */}
+      {/* ARTICLE BODY - centred prose */}
       <article className="post-article">
         <div className="container">
           <Reveal>

@@ -41,7 +41,7 @@ export type Programme = {
   flagship?: boolean;
   /** Hero background image path (used by the flagship template). */
   heroImage?: string;
-  /** Brand accent for the flagship template — blue, purple, or green. */
+  /** Brand accent for the flagship template - blue, purple, or green. */
   accent?: "blue" | "purple" | "green";
   /** FAQ data for the flagship template. */
   faqs?: ProgrammeFAQ[];
@@ -76,12 +76,12 @@ export const PROGRAMMES: Record<string, Programme> = {
       { lbl: "Awarded by", val: "Higher Education (CHE)" },
     ],
     about:
-      "The Higher Certificate in Banking is a 12-month, NQF Level 5 higher education qualification designed to launch banking careers with strong, comprehensive foundations. Practical banking knowledge is taught alongside applied client-solutioning, ethics and compliance — by people who actually work in the sector.",
+      "The Higher Certificate in Banking is a 12-month, NQF Level 5 higher education qualification designed to launch banking careers with strong, comprehensive foundations. Practical banking knowledge is taught alongside applied client-solutioning, ethics and compliance - by people who actually work in the sector.",
     benefits: [
       "<strong>Recognised by SA's biggest banks</strong> for entry-level recruitment",
-      "<strong>Study while you work</strong> — flexible blended delivery",
-      "<strong>Mobile-friendly platform</strong> — CPSLearn adapts to your schedule and device",
-      "<strong>Industry practitioner teaching</strong> — not just textbook theory",
+      "<strong>Study while you work</strong> - flexible blended delivery",
+      "<strong>Mobile-friendly platform</strong> - CPSLearn adapts to your schedule and device",
+      "<strong>Industry practitioner teaching</strong> - not just textbook theory",
     ],
     modules: [
       "Academic Literacy",
@@ -115,15 +115,15 @@ export const PROGRAMMES: Record<string, Programme> = {
       },
       {
         q: "Is there an upfront fee?",
-        a: "There is no upfront fee. A R300 application fee is payable upon completing your application — not after acceptance. Tuition is billed monthly at R2,480 over the 12-month duration.",
+        a: "There is no upfront fee. A R300 application fee is payable upon completing your application - not after acceptance. Tuition is billed monthly at R2,480 over the 12-month duration.",
       },
       {
         q: "Will I be able to study while I work?",
-        a: "Yes — HCIB is delivered through CPSLearn with flexible, mobile-friendly access. The programme is designed for working professionals, so you can log in around your schedule and pick up where you left off.",
+        a: "Yes - HCIB is delivered through CPSLearn with flexible, mobile-friendly access. The programme is designed for working professionals, so you can log in around your schedule and pick up where you left off.",
       },
       {
         q: "How is the programme assessed?",
-        a: "Assessments are integrated throughout each module — not stacked at the end. Most assessments are returned with feedback within minutes through CPSLearn so the learning loop stays tight.",
+        a: "Assessments are integrated throughout each module - not stacked at the end. Most assessments are returned with feedback within minutes through CPSLearn so the learning loop stays tight.",
       },
       {
         q: "Is HCIB recognised by the major South African banks?",
@@ -149,7 +149,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       { label: "120 credits" },
     ],
     lede:
-      "Develop leaders who consistently deliver strategic outcomes. The next-step credential for ambitious professionals — built on Brandon Hall award-winning methodology.",
+      "Develop leaders who consistently deliver strategic outcomes. The next-step credential for ambitious professionals - built on Brandon Hall award-winning methodology.",
     meta: [
       { lbl: "Monthly", val: "R2,688", big: true, yellow: true },
       { lbl: "Duration", val: "12 months" },
@@ -161,9 +161,9 @@ export const PROGRAMMES: Record<string, Programme> = {
     about:
       "Leadership Agility in the Financial Markets is the flagship next-step qualification for professionals who have outgrown technical mastery and are now leading teams, projects or change. Built on the methodology that won Brandon Hall recognition, it develops decision-making, paradigm shifts and applied leadership behaviour.",
     benefits: [
-      "<strong>Brandon Hall award-winning methodology</strong> — internationally recognised approach",
-      "<strong>Built for working leaders</strong> — fully online, study in evenings and weekends",
-      "<strong>Direct application</strong> — every module ends in workplace-applied competency",
+      "<strong>Brandon Hall award-winning methodology</strong> - internationally recognised approach",
+      "<strong>Built for working leaders</strong> - fully online, study in evenings and weekends",
+      "<strong>Direct application</strong> - every module ends in workplace-applied competency",
       "<strong>NQF 6 credential</strong> recognised across financial services",
     ],
     modules: [
@@ -192,27 +192,27 @@ export const PROGRAMMES: Record<string, Programme> = {
     faqs: [
       {
         q: "Do I need prior leadership experience?",
-        a: "ACL is designed for professionals 3–7 years into their career — typically newly promoted team leads, mid-career professionals, or high-potential employees on a succession track. Formal leadership experience helps, but the programme is built to formalise emerging leadership capability, not to require it upfront.",
+        a: "ACL is designed for professionals 3–7 years into their career - typically newly promoted team leads, mid-career professionals, or high-potential employees on a succession track. Formal leadership experience helps, but the programme is built to formalise emerging leadership capability, not to require it upfront.",
       },
       {
         q: "Is there an upfront fee?",
-        a: "There is no upfront fee. A R300 application fee is payable upon completing your application — not after acceptance. Tuition is billed monthly at R2,688 over the 12-month duration.",
+        a: "There is no upfront fee. A R300 application fee is payable upon completing your application - not after acceptance. Tuition is billed monthly at R2,688 over the 12-month duration.",
       },
       {
         q: "How is ACL delivered?",
-        a: "Fully online through CPSLearn. The programme is designed for working leaders — you can study in the evenings and on weekends, log in from any device, and pick up where you left off without re-orienting.",
+        a: "Fully online through CPSLearn. The programme is designed for working leaders - you can study in the evenings and on weekends, log in from any device, and pick up where you left off without re-orienting.",
       },
       {
         q: "What makes ACL different from a generic leadership course?",
-        a: "ACL is built on Brandon Hall award-winning methodology and is an NQF Level 6 higher-education qualification (CHE accredited, SAQA ID 120160) — not a short course. Every module ends in workplace-applied competency, so you leave with behaviour change, not just theory.",
+        a: "ACL is built on Brandon Hall award-winning methodology and is an NQF Level 6 higher-education qualification (CHE accredited, SAQA ID 120160) - not a short course. Every module ends in workplace-applied competency, so you leave with behaviour change, not just theory.",
       },
       {
         q: "Will ACL help me get promoted?",
-        a: "ACL is positioned for professionals stepping into formal team leadership, project leadership, or change roles. The programme develops the decision-making, paradigm-shift and applied leadership behaviour those roles require — and provides a recognised NQF 6 credential to back it up.",
+        a: "ACL is positioned for professionals stepping into formal team leadership, project leadership, or change roles. The programme develops the decision-making, paradigm-shift and applied leadership behaviour those roles require - and provides a recognised NQF 6 credential to back it up.",
       },
       {
         q: "Can my employer pay for it?",
-        a: "Yes — many organisations sponsor ACL for high-potential employees. Speak to admissions if your employer would like to sponsor your enrolment, or if you'd like an info pack to present internally.",
+        a: "Yes - many organisations sponsor ACL for high-potential employees. Speak to admissions if your employer would like to sponsor your enrolment, or if you'd like an info pack to present internally.",
       },
     ],
   },
@@ -247,7 +247,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       "<strong>Built for working business bankers</strong> with active client portfolios",
       "<strong>Credit and risk fundamentals</strong> applied to SA SME context",
       "<strong>Relationship-led advisory</strong> at the heart of the curriculum",
-      "<strong>QCTO occupational qualification</strong> — recognised pathway into senior commercial banking",
+      "<strong>QCTO occupational qualification</strong> - recognised pathway into senior commercial banking",
     ],
     modules: [
       "Business Banking Fundamentals",
@@ -293,7 +293,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       { lbl: "Format", val: "Workplace-integrated" },
     ],
     about:
-      "The Investment Advisor qualification is for professionals working with wealth, investment portfolios and structured products. It builds on prior advisory experience and develops the technical and ethical capability needed for higher-stakes client conversations — with workplace evidence carrying real weight in the assessment.",
+      "The Investment Advisor qualification is for professionals working with wealth, investment portfolios and structured products. It builds on prior advisory experience and develops the technical and ethical capability needed for higher-stakes client conversations - with workplace evidence carrying real weight in the assessment.",
     benefits: [
       "<strong>NQF 6 credential</strong> recognised in wealth and investment",
       "<strong>Designed for working professionals</strong> already in advisory roles",
@@ -348,9 +348,9 @@ export const PROGRAMMES: Record<string, Programme> = {
       "The Long-Term Insurance Advisor qualification gives you the regulated credential and practical capability to advise clients on long-term insurance products. Workplace-integrated delivery means your day job becomes part of your evidence portfolio.",
     benefits: [
       "<strong>Regulator-recognised</strong> credential for long-term insurance advisors",
-      "<strong>Workplace-integrated</strong> — your live work counts as evidence",
+      "<strong>Workplace-integrated</strong> - your live work counts as evidence",
       "<strong>Industry-experienced facilitators</strong> who have sold the product themselves",
-      "<strong>QCTO occupational qualification</strong> — formal credibility across SA insurance",
+      "<strong>QCTO occupational qualification</strong> - formal credibility across SA insurance",
     ],
     modules: [
       "Insurance Principles",
@@ -393,11 +393,11 @@ export const PROGRAMMES: Record<string, Programme> = {
       { lbl: "Awarded by", val: "QCTO" },
     ],
     about:
-      "The Agile Banking Professional qualification is a workplace-integrated occupational pathway. It is designed for active banking employees who want to formalise their experience, develop stronger banking capability and earn a recognised NQF Level 5 credential — typically supported by their employer.",
+      "The Agile Banking Professional qualification is a workplace-integrated occupational pathway. It is designed for active banking employees who want to formalise their experience, develop stronger banking capability and earn a recognised NQF Level 5 credential - typically supported by their employer.",
     benefits: [
-      "<strong>Workplace-integrated</strong> — your day-to-day work counts as evidence",
-      "<strong>Employer-led enrolment</strong> — typically supported by your bank",
-      "<strong>Recognised credential</strong> — a formal NQF Level 5 banking qualification",
+      "<strong>Workplace-integrated</strong> - your day-to-day work counts as evidence",
+      "<strong>Employer-led enrolment</strong> - typically supported by your bank",
+      "<strong>Recognised credential</strong> - a formal NQF Level 5 banking qualification",
       "<strong>Designed for working professionals</strong> who want to keep moving while studying",
     ],
     modules: [
@@ -442,7 +442,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       "The Insurance Underwriter qualification develops the technical and judgement capability that underwriting demands. It blends product knowledge, regulatory grounding and risk assessment into a coherent qualification recognised across South African insurance.",
     benefits: [
       "<strong>Technical depth</strong> in product, regulation and risk",
-      "<strong>Judgement-focused</strong> — case-based learning, not rote",
+      "<strong>Judgement-focused</strong> - case-based learning, not rote",
       "<strong>Designed for working underwriters</strong> with active books",
       "<strong>Recognised pathway</strong> into senior underwriting roles",
     ],
@@ -488,9 +488,9 @@ export const PROGRAMMES: Record<string, Programme> = {
     about:
       "The Organisational Risk Practitioner qualification develops the formal capability that today's risk landscape demands. Designed for practitioners in banking, insurance and regulated industries, it integrates workplace evidence with structured learning into a single QCTO-awarded credential.",
     benefits: [
-      "<strong>NQF 6 occupational qualification</strong> — recognised in regulated industries",
-      "<strong>Workplace logbook</strong> integration — your live work is your evidence",
-      "<strong>Cross-domain</strong> — operational, compliance, conduct and enterprise risk",
+      "<strong>NQF 6 occupational qualification</strong> - recognised in regulated industries",
+      "<strong>Workplace logbook</strong> integration - your live work is your evidence",
+      "<strong>Cross-domain</strong> - operational, compliance, conduct and enterprise risk",
       "<strong>Pathway into</strong> senior risk and compliance leadership",
     ],
     modules: [
@@ -554,7 +554,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       { lbl: "Designed for", val: "Relationship managers" },
     ],
     about:
-      "The Relationship Manager Development Programme strengthens the advisory and behavioural skills that move RMs from product-pushers to genuine business partners — measured by client retention, account depth and net-new revenue.",
+      "The Relationship Manager Development Programme strengthens the advisory and behavioural skills that move RMs from product-pushers to genuine business partners - measured by client retention, account depth and net-new revenue.",
   },
   "thrive-track-workplace-development": {
     slug: "thrive-track-workplace-development",
@@ -567,7 +567,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       { label: "Early career" },
     ],
     lede:
-      "Launch careers with practical skills and workplace confidence. An entry-level programme that turns potential into performance — fast.",
+      "Launch careers with practical skills and workplace confidence. An entry-level programme that turns potential into performance - fast.",
     meta: [
       { lbl: "Format", val: "Skills Programme" },
       { lbl: "Duration", val: "3–6 months" },
@@ -596,7 +596,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       { lbl: "Designed for", val: "Branch leaders" },
     ],
     about:
-      "The Branch Manager Development Programme equips frontline retail-banking leaders with the operational, performance-management and people-leadership skills required to deliver consistently — even under pressure from digital transformation, channel shift and changing customer expectations.",
+      "The Branch Manager Development Programme equips frontline retail-banking leaders with the operational, performance-management and people-leadership skills required to deliver consistently - even under pressure from digital transformation, channel shift and changing customer expectations.",
   },
   "digital-transformation": {
     slug: "digital-transformation",
@@ -617,7 +617,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       { lbl: "Designed for", val: "Transformation teams" },
     ],
     about:
-      "The Digital Transformation Programme is for cross-functional teams responsible for redesigning how an organisation operates — replatforming, channel modernisation, data uplift and digital capability. It focuses on the disciplines that turn slideware into measurable outcomes.",
+      "The Digital Transformation Programme is for cross-functional teams responsible for redesigning how an organisation operates - replatforming, channel modernisation, data uplift and digital capability. It focuses on the disciplines that turn slideware into measurable outcomes.",
   },
   "digital-innovation": {
     slug: "digital-innovation",
@@ -638,7 +638,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       { lbl: "Designed for", val: "Product, ops and tech leaders" },
     ],
     about:
-      "The Digital Innovation Programme equips product, operations and technology leaders with applied methods for testing, validating and scaling new propositions — without losing the discipline that financial services demands.",
+      "The Digital Innovation Programme equips product, operations and technology leaders with applied methods for testing, validating and scaling new propositions - without losing the discipline that financial services demands.",
   },
   "sales-and-client-experience": {
     slug: "sales-and-client-experience",
@@ -659,7 +659,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       { lbl: "Designed for", val: "Service & sales teams" },
     ],
     about:
-      "Sales and Client Experience Excellence builds the cultural and behavioural fabric required to deliver consistently differentiated CX — from first contact through resolution. Aligned to the metrics your executives care about.",
+      "Sales and Client Experience Excellence builds the cultural and behavioural fabric required to deliver consistently differentiated CX - from first contact through resolution. Aligned to the metrics your executives care about.",
   },
   "principles-of-sustainable-investments": {
     slug: "principles-of-sustainable-investments",

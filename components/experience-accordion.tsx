@@ -55,7 +55,7 @@ const orgItems: Item[] = [
 
 /**
  * Single accordion row. Uses a ref + scrollHeight to drive a smooth
- * max-height transition on open/close — gives proper height-aware animation
+ * max-height transition on open/close - gives proper height-aware animation
  * without the snap of native <details>/<summary>.
  */
 function AccordionRow({

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function OrganisationsHome() {
   return (
     <main>
-      {/* HERO — Microsoft 365 image */}
+      {/* HERO - Microsoft 365 image */}
       <section className="hero">
         <div className="hero-fallback" />
         <div className="hero-photo hero-photo-org" />
@@ -77,7 +77,7 @@ export default function OrganisationsHome() {
       {/* CLIENT LOGOS */}
       <ClientLogos label="Experience across South African and international financial services environments." />
 
-      {/* SUPPORTING PARAGRAPH BAND — centered, breathing room above + below */}
+      {/* SUPPORTING PARAGRAPH BAND - centered, breathing room above + below */}
       <section style={{ padding: "120px 0 120px" }}>
         <div className="container" style={{ maxWidth: 880 }}>
           <Reveal>
@@ -172,7 +172,7 @@ export default function OrganisationsHome() {
         </div>
       </section>
 
-      {/* MANAGED DELIVERY — image-backed, blocks pinned to the bottom */}
+      {/* MANAGED DELIVERY - image-backed, blocks pinned to the bottom */}
       <section className="managed-delivery">
         <div className="managed-delivery-photo" aria-hidden />
         <div className="managed-delivery-overlay" aria-hidden />
@@ -210,7 +210,7 @@ export default function OrganisationsHome() {
         </div>
       </section>
 
-      {/* WHAT YOUR STAFF CAN EXPECT — accordion */}
+      {/* WHAT YOUR STAFF CAN EXPECT - accordion */}
       <ExperienceAccordion />
 
       {/* WHO CPS WORKS WITH */}
@@ -277,7 +277,7 @@ export default function OrganisationsHome() {
         </div>
       </section>
 
-      {/* PRIMARY ORGANISATIONAL PROGRAMMES — 6 cards focused on workforce capability.
+      {/* PRIMARY ORGANISATIONAL PROGRAMMES - 6 cards focused on workforce capability.
           HCIB and ACL6 are intentionally NOT featured here. */}
       <section>
         <div className="container">
@@ -308,7 +308,7 @@ export default function OrganisationsHome() {
                 <h3 className="prog-title">Business Banking Practitioner</h3>
                 <p className="prog-desc">A workplace-integrated qualification for organisations developing SME and commercial banking professionals.</p>
                 <p className="prog-desc" style={{ fontSize: 13, color: "rgba(255,255,255,0.65)", marginTop: -8 }}>
-                  <strong style={{ color: "rgba(255,255,255,0.85)" }}>Why organisations use it:</strong> Business banking teams need more than product knowledge — they need relationship capability, client insight and confidence in business growth conversations.
+                  <strong style={{ color: "rgba(255,255,255,0.85)" }}>Why organisations use it:</strong> Business banking teams need more than product knowledge - they need relationship capability, client insight and confidence in business growth conversations.
                 </p>
                 <div className="prog-meta">
                   <div><strong>NQF 6</strong><span>QCTO</span></div>
@@ -425,7 +425,7 @@ export default function OrganisationsHome() {
         </div>
       </section>
 
-      {/* PARTNERSHIP MODEL — anchor target */}
+      {/* PARTNERSHIP MODEL - anchor target */}
       <section id="partnership-model" className="section-dark">
         <div className="container">
           <Reveal as="div" className="section-head">
@@ -469,7 +469,7 @@ export default function OrganisationsHome() {
         </div>
       </section>
 
-      {/* COMMERCIAL IMPACT — why this matters commercially */}
+      {/* COMMERCIAL IMPACT - why this matters commercially */}
       <section>
         <div className="container">
           <Reveal as="div" className="section-head">

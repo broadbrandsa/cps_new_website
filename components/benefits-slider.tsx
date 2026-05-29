@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 
 /**
  * Horizontal scroll-snap slider with prev/next nav buttons.
- * Cards are children — each becomes a flex item with snap alignment.
+ * Cards are children - each becomes a flex item with snap alignment.
  * Buttons disable themselves at the start / end of the scroll range so the
  * affordance feels honest. Falls back to a plain horizontal scroll on
  * touch devices and reduced-motion users.
@@ -48,7 +48,7 @@ export function BenefitsSlider({ children }: { children: ReactNode }) {
         className="benefits-slider"
         ref={ref}
         role="region"
-        aria-label="Why students choose CPS — scrollable cards"
+        aria-label="Why students choose CPS - scrollable cards"
         tabIndex={0}
       >
         {children}

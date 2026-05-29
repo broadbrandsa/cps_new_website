@@ -53,7 +53,7 @@ export default function StudentsHome() {
       {/* CLIENT LOGOS */}
       <ClientLogos label="CPS has worked with students, teams or programmes connected to leading South African and international financial services organisations." />
 
-      {/* SUPPORTING PARAGRAPH BAND — centered, breathing room above + below */}
+      {/* SUPPORTING PARAGRAPH BAND - centered, breathing room above + below */}
       <section style={{ padding: "120px 0 120px" }}>
         <div className="container" style={{ maxWidth: 880 }}>
           <Reveal>
@@ -89,7 +89,7 @@ export default function StudentsHome() {
       {/* WHAT TO EXPECT AS A CPS STUDENT */}
       <ExperienceSection variant="students" surface="tinted" />
 
-      {/* CAREER VALUE — image-backed section, blocks pinned to bottom */}
+      {/* CAREER VALUE - image-backed section, blocks pinned to bottom */}
       <section className="career-value">
         <div className="career-value-photo" aria-hidden />
         <div className="career-value-overlay" aria-hidden />
@@ -119,7 +119,7 @@ export default function StudentsHome() {
         </div>
       </section>
 
-      {/* FEATURED STUDENT PROGRAMMES — 2 primary equal + 6 secondary */}
+      {/* FEATURED STUDENT PROGRAMMES - 2 primary equal + 6 secondary */}
       <section>
         <div className="container">
           <Reveal as="div" className="section-head">
@@ -138,7 +138,7 @@ export default function StudentsHome() {
             </Link>
           </Reveal>
 
-          {/* Primary pair — equal weight */}
+          {/* Primary pair - equal weight */}
           <div className="prog-featured-pair">
             <Spotlight as="div">
               <Link href="/programmes/higher-certificate-banking" className="prog-card hero-card" style={{ display: "flex" }}>
@@ -238,7 +238,7 @@ export default function StudentsHome() {
         </div>
       </section>
 
-      {/* CPSLEARN PREVIEW — DARK */}
+      {/* CPSLEARN PREVIEW - DARK */}
       <section className="section-dark">
         <div className="container">
           <Reveal as="div" className="section-head">
@@ -285,7 +285,7 @@ export default function StudentsHome() {
         </div>
       </section>
 
-      {/* BEFORE YOU APPLY — reassurance + checklist (white surface) */}
+      {/* BEFORE YOU APPLY - reassurance + checklist (white surface) */}
       <section>
         <div className="container">
           <div className="diff-grid">

@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <ul>
                   <li>
                     <strong>A R300 application fee</strong> is payable upon completing your application
-                    — not after acceptance.
+                    - not after acceptance.
                   </li>
                   <li>
                     Individual students may apply for <strong>HCIB</strong> and <strong>ACL</strong> only.
@@ -109,7 +109,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ORGANISATION ENQUIRIES — partner form */}
+      {/* ORGANISATION ENQUIRIES - partner form */}
       <Spotlight as="div" className="cta-band dark" style={{ background: "linear-gradient(135deg, #9013FE 0%, #5C0AA8 100%)" }}>
         <div id="partnerships" className="cta-band-inner">
           <div className="cta-band-grid">

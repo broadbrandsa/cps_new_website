@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      {/* HERO — quiet, tinted, no photo */}
+      {/* HERO - quiet, tinted, no photo */}
       <section className="page-hero about-hero">
         <div className="container">
           <div className="breadcrumbs">
@@ -31,7 +31,7 @@ export default function AboutPage() {
             <Reveal as="div" delay={120} className="about-hero-text">
               <h1 className="about-display">Our story.</h1>
               <p className="about-lede">
-                Founded by a small band of doers, on a path with heart — building a bridge between
+                Founded by a small band of doers, on a path with heart - building a bridge between
                 potential and opportunity.
               </p>
             </Reveal>
@@ -39,7 +39,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* A PATH WITH HEART — narrative editorial */}
+      {/* A PATH WITH HEART - narrative editorial */}
       <section className="about-narrative">
         <div className="container">
           <div className="narrative-grid">
@@ -56,7 +56,7 @@ export default function AboutPage() {
               </p>
               <p>
                 From the very beginning, Cornerstone set out to create learning experiences that
-                emancipate people from the disadvantage of limited opportunity — opening doors that had
+                emancipate people from the disadvantage of limited opportunity - opening doors that had
                 long been closed and proving that, given the right conditions, anyone can thrive.
               </p>
             </Reveal>
@@ -64,7 +64,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* DR INDIRA BHAGALOO — profile card */}
+      {/* DR INDIRA BHAGALOO - profile card */}
       <section className="section-tinted">
         <div className="container">
           <div className="ceo-grid">
@@ -92,7 +92,7 @@ export default function AboutPage() {
 
               <p>
                 As CEO of Cornerstone Performance Solutions, Dr Indira Bhagaloo leads a team of top-tier
-                learning and development professionals — defining and executing the academic and vocational
+                learning and development professionals - defining and executing the academic and vocational
                 strategy, driving business development and relations, expanding product and reach, and
                 building scalable delivery capability.
               </p>
@@ -117,7 +117,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* OUR PHILOSOPHY — massive quote display */}
+      {/* OUR PHILOSOPHY - massive quote display */}
       <section className="section-dark philosophy-section">
         <div className="container">
           <Reveal as="div" className="philosophy-block">
@@ -133,7 +133,7 @@ export default function AboutPage() {
             <div className="philosophy-body">
               <p>
                 This belief is the cornerstone of everything we do. We see potential where others see
-                limitation. We design learning experiences that don&apos;t just transfer knowledge — they
+                limitation. We design learning experiences that don&apos;t just transfer knowledge - they
                 transform lives.
               </p>
               <p>
@@ -145,7 +145,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* INSPIRED BY REUVEN FEUERSTEIN — asymmetric quote with attribution card */}
+      {/* INSPIRED BY REUVEN FEUERSTEIN - asymmetric quote with attribution card */}
       <section className="feuerstein-section">
         <div className="container">
           <div className="feuerstein-grid">
@@ -160,7 +160,7 @@ export default function AboutPage() {
                 <p>
                   Thinking is a skill that can be modified through mediation.
                 </p>
-                <cite>— Reuven Feuerstein</cite>
+                <cite>- Reuven Feuerstein</cite>
               </blockquote>
             </Reveal>
 
@@ -169,13 +169,13 @@ export default function AboutPage() {
                 <span className="mono">Why this matters</span>
                 <p>
                   The work of Professor Reuven Feuerstein has been a foundational inspiration for
-                  Cornerstone. Feuerstein demonstrated that cognitive ability is not fixed — that
+                  Cornerstone. Feuerstein demonstrated that cognitive ability is not fixed - that
                   thinking itself is a skill that can be developed, strengthened, and refined through
                   deliberate mediation.
                 </p>
                 <p>
                   This insight powers our approach to education. Rather than simply delivering content,
-                  we mediate learning — guiding students through experiences that develop deeper
+                  we mediate learning - guiding students through experiences that develop deeper
                   cognitive structures and lasting capability.
                 </p>
               </div>
@@ -184,7 +184,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* WHAT WE STAND FOR — three value cards with brand accents */}
+      {/* WHAT WE STAND FOR - three value cards with brand accents */}
       <section className="section-tinted">
         <div className="container">
           <Reveal as="div" className="section-head">
@@ -215,7 +215,7 @@ export default function AboutPage() {
               <h3>Science as Love&apos;s Greatest Ally</h3>
               <p>
                 We believe rigorous, evidence-based learning design is the most compassionate thing we
-                can do — because science ensures our care translates into real outcomes.
+                can do - because science ensures our care translates into real outcomes.
               </p>
             </Reveal>
 
@@ -232,7 +232,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* OUR VISION — three big numbered visions stacked */}
+      {/* OUR VISION - three big numbered visions stacked */}
       <section className="section-dark vision-section">
         <div className="container">
           <Reveal as="div" className="vision-head">

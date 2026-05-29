@@ -36,13 +36,13 @@ export default function StudentsProgrammes() {
         </div>
       </section>
 
-      {/* SECTION 1: PRIMARY STUDENT PROGRAMMES — programme + audience-fit pairs */}
+      {/* SECTION 1: PRIMARY STUDENT PROGRAMMES - programme + audience-fit pairs */}
       <section>
         <div className="container">
           <Reveal as="div" className="section-head">
             <div className="left">
               <span className="eyebrow"><span className="dot" /> Primary Student Programmes</span>
-              <h2>Two flagship pathways — equal weight, different directions.</h2>
+              <h2>Two flagship pathways - equal weight, different directions.</h2>
               <p>
                 Our two primary student programmes serve different career goals: a banking foundation, and a
                 leadership credential. Both are 12 months, both are higher-education qualifications, and both
@@ -139,7 +139,7 @@ export default function StudentsProgrammes() {
         </div>
       </section>
 
-      {/* YOUR STUDENT JOURNEY — horizontal timeline (dark surface, mirrors CPSLearn preview) */}
+      {/* YOUR STUDENT JOURNEY - horizontal timeline (dark surface, mirrors CPSLearn preview) */}
       <section className="section-dark">
         <div className="container">
           <Reveal as="div" className="section-head">
@@ -167,7 +167,7 @@ export default function StudentsProgrammes() {
             <Reveal as="div" className="timeline-step" delay={240}>
               <div className="marker">03</div>
               <h3>Apply or enquire</h3>
-              <p>Apply directly or request information first — move forward with clarity, not pressure.</p>
+              <p>Apply directly or request information first - move forward with clarity, not pressure.</p>
             </Reveal>
             <Reveal as="div" className="timeline-step" delay={360}>
               <div className="marker">04</div>

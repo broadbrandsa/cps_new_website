@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Programme } from "@/lib/programmes";
 import { ArrowRightSmall } from "./icons";
 
-/** Secondary / related programme card — used on home and programme detail */
+/** Secondary / related programme card - used on home and programme detail */
 export function SecondaryProgrammeCard({ programme }: { programme: Programme }) {
   const lede = programme.lede.split(".")[0] + ".";
   return (

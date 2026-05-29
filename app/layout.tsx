@@ -23,13 +23,13 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://cps.co.za"),
   title: {
-    default: "CPS — Cornerstone Performance Solutions",
+    default: "CPS - Cornerstone Performance Solutions",
     template: "%s · CPS",
   },
   description:
-    "Accredited banking, insurance and leadership qualifications, plus the proprietary CPSLearn platform — built for South African professionals and the companies who employ them.",
+    "Accredited banking, insurance and leadership qualifications, plus the proprietary CPSLearn platform - built for South African professionals and the companies who employ them.",
   openGraph: {
-    title: "CPS — Cornerstone Performance Solutions",
+    title: "CPS - Cornerstone Performance Solutions",
     description:
       "Education that moves careers and businesses forward. Accredited qualifications and a proprietary learning platform.",
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CPS — Cornerstone Performance Solutions",
+    title: "CPS - Cornerstone Performance Solutions",
     description:
       "Education that moves careers and businesses forward. Accredited qualifications and a proprietary learning platform.",
   },

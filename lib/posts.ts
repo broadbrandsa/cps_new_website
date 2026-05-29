@@ -1,5 +1,5 @@
 /**
- * Blog post data. Static for now — when there's a CMS, swap this for a
+ * Blog post data. Static for now - when there's a CMS, swap this for a
  * fetcher. Each post is a small structured doc rather than a markdown string
  * so the typography stays under our control.
  */
@@ -42,16 +42,16 @@ export const posts: Post[] = [
     body: [
       {
         kind: "p",
-        text: "Every year, thousands of working professionals enrol in qualifications they will never finish. It is one of the quieter problems in education — easier to measure how many people started than how many actually completed and applied what they learned. But this gap is where careers stall, where employer trust frays, and where promising learning investments quietly disappear.",
+        text: "Every year, thousands of working professionals enrol in qualifications they will never finish. It is one of the quieter problems in education - easier to measure how many people started than how many actually completed and applied what they learned. But this gap is where careers stall, where employer trust frays, and where promising learning investments quietly disappear.",
       },
       {
         kind: "p",
-        text: "At CPS, we have spent more than two decades watching this play out across banking, insurance, investment and leadership programmes. What we have learned is that completion is rarely about talent. It is about structure, support, and momentum — three things that are easy to underestimate when you are designing a programme on paper.",
+        text: "At CPS, we have spent more than two decades watching this play out across banking, insurance, investment and leadership programmes. What we have learned is that completion is rarely about talent. It is about structure, support, and momentum - three things that are easy to underestimate when you are designing a programme on paper.",
       },
       { kind: "h2", text: "Enrolment is a moment. Completion is a process." },
       {
         kind: "p",
-        text: "When someone signs up for a qualification, they are making a decision in a single afternoon. When they finish that qualification, they have made hundreds of smaller decisions across many months — to log in tonight, to submit an assessment by Friday, to ask for help when something does not click, to keep going after a setback.",
+        text: "When someone signs up for a qualification, they are making a decision in a single afternoon. When they finish that qualification, they have made hundreds of smaller decisions across many months - to log in tonight, to submit an assessment by Friday, to ask for help when something does not click, to keep going after a setback.",
       },
       {
         kind: "p",
@@ -65,15 +65,15 @@ export const posts: Post[] = [
       { kind: "h2", text: "What changes when you design for completion" },
       {
         kind: "p",
-        text: "Designing for completion is not the same as making the content easier or removing assessments. It is about making the path visible and the next step obvious — so when a learner has fifteen minutes between meetings, they know exactly what to do with them.",
+        text: "Designing for completion is not the same as making the content easier or removing assessments. It is about making the path visible and the next step obvious - so when a learner has fifteen minutes between meetings, they know exactly what to do with them.",
       },
       {
         kind: "list",
         items: [
-          "Modules are sequenced so each one builds on the last — no orphaned content.",
+          "Modules are sequenced so each one builds on the last - no orphaned content.",
           "Milestones are visible upfront, so learners can plan around their real lives.",
           "Feedback returns within minutes, while the work is still in mind.",
-          "Progress is shown honestly — what is done, what is outstanding, what needs attention next.",
+          "Progress is shown honestly - what is done, what is outstanding, what needs attention next.",
           "Support is offered before learners ask for it, not only after they fall behind.",
         ],
       },
@@ -89,7 +89,7 @@ export const posts: Post[] = [
       { kind: "h2", text: "Where to start" },
       {
         kind: "p",
-        text: "If you are considering a qualification — for yourself or for a team — the most important question is not what content is included. It is what happens after the first month. Who is tracking progress? What is the response time on feedback? When something starts to slip, what changes?",
+        text: "If you are considering a qualification - for yourself or for a team - the most important question is not what content is included. It is what happens after the first month. Who is tracking progress? What is the response time on feedback? When something starts to slip, what changes?",
       },
       {
         kind: "p",
@@ -101,7 +101,7 @@ export const posts: Post[] = [
     slug: "choosing-between-hcib-and-acl",
     title: "Choosing between HCIB and ACL: which path fits your career?",
     excerpt:
-      "Both are 12-month higher-education qualifications. Both are recognised. But they serve different people at different career stages — here is how to tell them apart.",
+      "Both are 12-month higher-education qualifications. Both are recognised. But they serve different people at different career stages - here is how to tell them apart.",
     category: "Students",
     author: "CPS Admissions",
     authorRole: "Student admissions team",
@@ -112,13 +112,13 @@ export const posts: Post[] = [
     body: [
       {
         kind: "p",
-        text: "The Higher Certificate in Banking (HCIB) and the Advanced Certificate in Leadership (ACL) are the two flagship qualifications most individual students start with at CPS. They are similar in shape — 12 months, blended or online delivery, recognised credentials — but they are designed for very different career moves.",
+        text: "The Higher Certificate in Banking (HCIB) and the Advanced Certificate in Leadership (ACL) are the two flagship qualifications most individual students start with at CPS. They are similar in shape - 12 months, blended or online delivery, recognised credentials - but they are designed for very different career moves.",
       },
       {
         kind: "p",
         text: "If you are unsure which one fits, this guide should help you decide where to start. If you are still unsure after reading, the admissions team is the best next step.",
       },
-      { kind: "h2", text: "HCIB — for entering or growing in banking" },
+      { kind: "h2", text: "HCIB - for entering or growing in banking" },
       {
         kind: "p",
         text: "HCIB is an NQF Level 5 qualification (202 credits) built around the foundations of South African banking. It covers banking knowledge, financial services context, client understanding, ethics, compliance, and practical problem-solving.",
@@ -137,7 +137,7 @@ export const posts: Post[] = [
           "Students who want an NQF Level 5 banking qualification on their CV",
         ],
       },
-      { kind: "h2", text: "ACL — for moving from experience into leadership" },
+      { kind: "h2", text: "ACL - for moving from experience into leadership" },
       {
         kind: "p",
         text: "ACL is an NQF Level 6 qualification (CHE-accredited) focused on leadership capability. It covers decision-making, leading teams, building accountability, and developing the judgement that more senior roles demand.",
@@ -178,7 +178,7 @@ export const posts: Post[] = [
       },
       {
         kind: "p",
-        text: "Speak to admissions if you need help making the call — succeed@cps.co.za, or +27 11 789 1957.",
+        text: "Speak to admissions if you need help making the call - succeed@cps.co.za, or +27 11 789 1957.",
       },
     ],
   },
@@ -186,7 +186,7 @@ export const posts: Post[] = [
     slug: "what-makes-a-banking-qualification-recognised",
     title: "What makes a banking qualification recognised in South Africa.",
     excerpt:
-      "CHE, QCTO, SAQA, NQF levels — the acronyms matter because they tell employers your credential is real. Here is a plain-English guide to the framework.",
+      "CHE, QCTO, SAQA, NQF levels - the acronyms matter because they tell employers your credential is real. Here is a plain-English guide to the framework.",
     category: "Industry",
     author: "CPS Academic Team",
     authorRole: "Academic & accreditation",
@@ -197,18 +197,18 @@ export const posts: Post[] = [
     body: [
       {
         kind: "p",
-        text: "If you have ever looked at a qualification and wondered whether it actually carries weight in the South African market, you have probably encountered an alphabet soup of regulators — CHE, QCTO, SAQA, NQF — without much explanation of what they do. This piece is a plain-English map of how the system works, and why CPS programmes sit inside it.",
+        text: "If you have ever looked at a qualification and wondered whether it actually carries weight in the South African market, you have probably encountered an alphabet soup of regulators - CHE, QCTO, SAQA, NQF - without much explanation of what they do. This piece is a plain-English map of how the system works, and why CPS programmes sit inside it.",
       },
-      { kind: "h2", text: "SAQA and the NQF — the spine of the system" },
+      { kind: "h2", text: "SAQA and the NQF - the spine of the system" },
       {
         kind: "p",
-        text: "The South African Qualifications Authority (SAQA) maintains the National Qualifications Framework (NQF) — a 10-level ladder that classifies every recognised qualification in the country. Level 1 is general schooling. Level 10 is a doctorate. Everything else sits somewhere in between.",
+        text: "The South African Qualifications Authority (SAQA) maintains the National Qualifications Framework (NQF) - a 10-level ladder that classifies every recognised qualification in the country. Level 1 is general schooling. Level 10 is a doctorate. Everything else sits somewhere in between.",
       },
       {
         kind: "p",
         text: "When you see a qualification described as 'NQF Level 5' or 'NQF Level 6', that is a SAQA classification. It tells employers and other institutions, in a single number, roughly how demanding the programme is and what kind of knowledge it expects you to walk away with.",
       },
-      { kind: "h2", text: "CHE — for higher education programmes" },
+      { kind: "h2", text: "CHE - for higher education programmes" },
       {
         kind: "p",
         text: "The Council on Higher Education (CHE) is responsible for the quality assurance of higher education in South Africa. If a qualification is described as 'CHE-accredited', it means CHE has assessed it against academic standards and found it acceptable to register on the NQF.",
@@ -217,19 +217,19 @@ export const posts: Post[] = [
         kind: "p",
         text: "CPS's Higher Certificate in Banking and Advanced Certificate in Leadership both fall under CHE oversight as higher education programmes.",
       },
-      { kind: "h2", text: "QCTO — for occupational qualifications" },
+      { kind: "h2", text: "QCTO - for occupational qualifications" },
       {
         kind: "p",
-        text: "The Quality Council for Trades and Occupations (QCTO) sits alongside CHE but governs occupational qualifications — credentials designed around the specific tasks, knowledge and behaviours an occupation requires, rather than academic study.",
+        text: "The Quality Council for Trades and Occupations (QCTO) sits alongside CHE but governs occupational qualifications - credentials designed around the specific tasks, knowledge and behaviours an occupation requires, rather than academic study.",
       },
       {
         kind: "p",
-        text: "Many of CPS's organisational workforce programmes — Business Banking Practitioner, Long-Term Insurance Advisor, Investment Advisor — sit under QCTO. They are workplace-integrated by design, meaning learners build capability while doing the actual work.",
+        text: "Many of CPS's organisational workforce programmes - Business Banking Practitioner, Long-Term Insurance Advisor, Investment Advisor - sit under QCTO. They are workplace-integrated by design, meaning learners build capability while doing the actual work.",
       },
       { kind: "h2", text: "Credits, hours and what they mean" },
       {
         kind: "p",
-        text: "Each qualification also has a credit value. One SAQA credit represents around 10 notional hours of learning — reading, assessments, workplace application, the whole journey. A 202-credit qualification means roughly 2,020 hours of structured learning across the programme.",
+        text: "Each qualification also has a credit value. One SAQA credit represents around 10 notional hours of learning - reading, assessments, workplace application, the whole journey. A 202-credit qualification means roughly 2,020 hours of structured learning across the programme.",
       },
       {
         kind: "p",
@@ -238,14 +238,14 @@ export const posts: Post[] = [
       {
         kind: "callout",
         label: "Why the framework matters",
-        text: "When a qualification sits inside this system, your credential is recognised across employers, sectors, and institutions — not just at the place you studied.",
+        text: "When a qualification sits inside this system, your credential is recognised across employers, sectors, and institutions - not just at the place you studied.",
       },
       { kind: "h2", text: "What to look for in a qualification" },
       {
         kind: "list",
         items: [
-          "A clear NQF level — not a vague 'certificate' label",
-          "Named accreditation — CHE or QCTO (or both, where relevant)",
+          "A clear NQF level - not a vague 'certificate' label",
+          "Named accreditation - CHE or QCTO (or both, where relevant)",
           "A SAQA ID number you can look up on the SAQA website",
           "Credit value disclosed transparently",
           "A registered provider with quality assurance processes",
@@ -261,7 +261,7 @@ export const posts: Post[] = [
     slug: "inside-cpslearn-what-to-expect-on-day-one",
     title: "Inside CPSLearn: what to expect on day one.",
     excerpt:
-      "A short walk-through of how the first week of a CPS programme actually feels — from welcome email to your first module to your first piece of feedback.",
+      "A short walk-through of how the first week of a CPS programme actually feels - from welcome email to your first module to your first piece of feedback.",
     category: "Inside CPS",
     author: "CPS Learning Team",
     authorRole: "Programme delivery & support",
@@ -277,16 +277,16 @@ export const posts: Post[] = [
       { kind: "h2", text: "Before the start date" },
       {
         kind: "p",
-        text: "Once you are enrolled, you receive a welcome from the admissions team confirming your programme, start date, and what to expect in the first session. We do not bury anything in fine print — if there is something you need to prepare or bring, it is in this message.",
+        text: "Once you are enrolled, you receive a welcome from the admissions team confirming your programme, start date, and what to expect in the first session. We do not bury anything in fine print - if there is something you need to prepare or bring, it is in this message.",
       },
-      { kind: "h2", text: "Day one — getting into CPSLearn" },
+      { kind: "h2", text: "Day one - getting into CPSLearn" },
       {
         kind: "p",
         text: "Your access to CPSLearn arrives ahead of the start date. The first time you log in, you see your programme laid out as a sequence of modules, milestones and assessments. Nothing is hidden behind locked content. You can scroll through and see what the next twelve months actually looks like.",
       },
       {
         kind: "p",
-        text: "This matters because the most common moment of doubt — am I going to get through this? — happens when learners cannot see the shape of what is ahead. With the path visible, the programme stops feeling like an unknown commitment and starts feeling like a navigable journey.",
+        text: "This matters because the most common moment of doubt - am I going to get through this? - happens when learners cannot see the shape of what is ahead. With the path visible, the programme stops feeling like an unknown commitment and starts feeling like a navigable journey.",
       },
       { kind: "h2", text: "Your first module" },
       {
@@ -296,12 +296,12 @@ export const posts: Post[] = [
       {
         kind: "callout",
         label: "Pace yourself",
-        text: "Most of our students fit study around work, family and life. The programme is built for that. You do not need to clear your evenings — you need to log in consistently, even briefly.",
+        text: "Most of our students fit study around work, family and life. The programme is built for that. You do not need to clear your evenings - you need to log in consistently, even briefly.",
       },
       { kind: "h2", text: "Your first piece of feedback" },
       {
         kind: "p",
-        text: "Within the first week or two, you will submit something that gets feedback returned to you — usually within minutes, while you are still thinking about the work. This is deliberate. The longer the gap between effort and feedback, the more the learning evaporates.",
+        text: "Within the first week or two, you will submit something that gets feedback returned to you - usually within minutes, while you are still thinking about the work. This is deliberate. The longer the gap between effort and feedback, the more the learning evaporates.",
       },
       {
         kind: "p",
@@ -310,7 +310,7 @@ export const posts: Post[] = [
       { kind: "h2", text: "If something starts to slip" },
       {
         kind: "p",
-        text: "We track progress through the journey. If a learner falls behind, support is offered before things get serious — not after. That is the difference between a managed programme and a self-serve LMS.",
+        text: "We track progress through the journey. If a learner falls behind, support is offered before things get serious - not after. That is the difference between a managed programme and a self-serve LMS.",
       },
       {
         kind: "p",
@@ -319,7 +319,7 @@ export const posts: Post[] = [
       { kind: "h2", text: "By the end of week one" },
       {
         kind: "p",
-        text: "You should know how to log in, what your first month looks like, where to ask for help, and how feedback works. If any of those are unclear by Friday, that is a signal — and one we want you to flag to us.",
+        text: "You should know how to log in, what your first month looks like, where to ask for help, and how feedback works. If any of those are unclear by Friday, that is a signal - and one we want you to flag to us.",
       },
       {
         kind: "p",

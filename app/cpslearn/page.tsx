@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function StudentsCPSLearn() {
   return (
     <main>
-      {/* HERO — photo-backed dark */}
+      {/* HERO - photo-backed dark */}
       <section className="page-hero has-photo">
         <div
           className="page-hero-photo"
@@ -44,7 +44,7 @@ export default function StudentsCPSLearn() {
             <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-blue)" }} /> CPSLearn</span>
             <h1>The system behind how you actually finish your qualification.</h1>
             <p style={{ marginTop: 24, fontSize: 18 }}>
-              CPSLearn is where your programme happens. Not just the content — the structure, the
+              CPSLearn is where your programme happens. Not just the content - the structure, the
               assessments, the feedback, your progress. Everything that moves you from starting to
               completing.
             </p>
@@ -60,7 +60,7 @@ export default function StudentsCPSLearn() {
         </div>
       </section>
 
-      {/* STATEMENT BAND — centered, the core claim */}
+      {/* STATEMENT BAND - centered, the core claim */}
       <section style={{ padding: "120px 0 120px" }}>
         <div className="container" style={{ maxWidth: 880 }}>
           <Reveal>
@@ -89,7 +89,7 @@ export default function StudentsCPSLearn() {
         </div>
       </section>
 
-      {/* SECTION 1 — "You won't be left guessing what to do next" */}
+      {/* SECTION 1 - "You won't be left guessing what to do next" */}
       <section className="section-dark">
         <div className="container">
           <div className="experience-layout">
@@ -113,7 +113,7 @@ export default function StudentsCPSLearn() {
                 <span className="brand-mark" aria-hidden><Layers /></span>
                 <span className="step-label">Modules</span>
                 <h3>Organised in a way that makes sense</h3>
-                <p>Your programme is broken into modules so the path is visible from day one — not a folder of files to figure out alone.</p>
+                <p>Your programme is broken into modules so the path is visible from day one - not a folder of files to figure out alone.</p>
               </Reveal>
               <Reveal as="div" className="exp-step-card" delay={80}>
                 <span className="brand-mark" aria-hidden><Compass /></span>
@@ -132,7 +132,7 @@ export default function StudentsCPSLearn() {
         </div>
       </section>
 
-      {/* SECTION 3 — "Feedback while it still matters" — split + comparison */}
+      {/* SECTION 3 - "Feedback while it still matters" - split + comparison */}
       <section>
         <div className="container">
           <div className="diff-grid">
@@ -145,7 +145,7 @@ export default function StudentsCPSLearn() {
               </p>
               <p style={{ marginTop: 16, fontSize: 17, color: "var(--muted)", lineHeight: 1.6 }}>
                 That gap slows learning down. CPSLearn closes it. You&apos;re still in the context of
-                the work — you can see what went wrong, adjust, and carry on.
+                the work - you can see what went wrong, adjust, and carry on.
               </p>
               <p style={{ marginTop: 16, fontSize: 17, color: "var(--ink)", lineHeight: 1.6, fontWeight: 500 }}>
                 The learning loop stays tight, and that makes a real difference over time.
@@ -181,7 +181,7 @@ export default function StudentsCPSLearn() {
         </div>
       </section>
 
-      {/* SECTION 4 — "See your progress" — image-backed, blocks pinned to bottom */}
+      {/* SECTION 4 - "See your progress" - image-backed, blocks pinned to bottom */}
       <section className="career-value">
         <div className="career-value-photo" aria-hidden style={{ backgroundImage: "url('/good-faces-DavJROC1lBM-unsplash.jpg')" }} />
         <div className="career-value-overlay" aria-hidden />
@@ -192,7 +192,7 @@ export default function StudentsCPSLearn() {
               <h2>You can see your progress, not just hope for it.</h2>
               <p style={{ color: "rgba(255, 255, 255, 0.85)" }}>
                 There&apos;s a big difference between feeling busy and actually moving forward. CPSLearn
-                shows you exactly where you are — and removes the guesswork. When progress is visible,
+                shows you exactly where you are - and removes the guesswork. When progress is visible,
                 it becomes easier to stay accountable to yourself.
               </p>
             </div>
@@ -202,28 +202,28 @@ export default function StudentsCPSLearn() {
             <Reveal as="div" className="phase" delay={0}>
               <div className="phase-num">VIEW 01</div>
               <h3>What you&apos;ve completed</h3>
-              <p>A clear record of what&apos;s already done — the wins you&apos;ve banked.</p>
+              <p>A clear record of what&apos;s already done - the wins you&apos;ve banked.</p>
             </Reveal>
             <Reveal as="div" className="phase" delay={100}>
               <div className="phase-num">VIEW 02</div>
               <h3>What&apos;s outstanding</h3>
-              <p>An honest view of what&apos;s still to go — no surprises, no hidden runway.</p>
+              <p>An honest view of what&apos;s still to go - no surprises, no hidden runway.</p>
             </Reveal>
             <Reveal as="div" className="phase" delay={200}>
               <div className="phase-num">VIEW 03</div>
               <h3>What needs attention next</h3>
-              <p>The next deliberate step — so your time goes where it counts.</p>
+              <p>The next deliberate step - so your time goes where it counts.</p>
             </Reveal>
             <Reveal as="div" className="phase" delay={300}>
               <div className="phase-num">VIEW 04</div>
               <h3>Where you stand overall</h3>
-              <p>The shape of your journey at a glance — momentum made visible.</p>
+              <p>The shape of your journey at a glance - momentum made visible.</p>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* SECTION 5 — "Doesn't assume everyone learns the same way" — single editorial block */}
+      {/* SECTION 5 - "Doesn't assume everyone learns the same way" - single editorial block */}
       <section className="section-tinted">
         <div className="container">
           <div className="editorial-grid">
@@ -236,7 +236,7 @@ export default function StudentsCPSLearn() {
             <Reveal as="div" className="editorial-body" delay={200}>
               <p>
                 Not every student starts at the same level. Some parts will feel straightforward.
-                Others won&apos;t. CPSLearn is built to support that reality — it helps identify where
+                Others won&apos;t. CPSLearn is built to support that reality - it helps identify where
                 you need more focus, so your time is spent where it actually matters.
               </p>
               <p style={{ marginTop: 20, color: "var(--ink)", fontWeight: 500 }}>
@@ -247,7 +247,7 @@ export default function StudentsCPSLearn() {
             <Reveal as="div" className="editorial-aside" delay={280}>
               <div className="editorial-pull">
                 <span className="mono">In other words</span>
-                <p>The platform meets you where you are — not where it assumes you should be.</p>
+                <p>The platform meets you where you are - not where it assumes you should be.</p>
                 <span className="brand-mark" aria-hidden><Lightbulb /></span>
               </div>
             </Reveal>
@@ -255,7 +255,7 @@ export default function StudentsCPSLearn() {
         </div>
       </section>
 
-      {/* SECTION 6 — "Built for real qualifications" — outcome-pills + context */}
+      {/* SECTION 6 - "Built for real qualifications" - outcome-pills + context */}
       <section>
         <div className="container">
           <Reveal as="div" className="section-head">
@@ -264,7 +264,7 @@ export default function StudentsCPSLearn() {
               <h2>Not casual learning. Real qualifications.</h2>
               <p>
                 CPSLearn isn&apos;t designed for casual or once-off learning. It supports the way formal
-                qualifications actually work — not a simplified version of it.
+                qualifications actually work - not a simplified version of it.
               </p>
             </div>
           </Reveal>
@@ -290,7 +290,7 @@ export default function StudentsCPSLearn() {
         </div>
       </section>
 
-      {/* SECTION 7 — "Works with your life" — dark phases-grid */}
+      {/* SECTION 7 - "Works with your life" - dark phases-grid */}
       <section className="section-dark">
         <div className="container">
           <Reveal as="div" className="section-head">
@@ -314,7 +314,7 @@ export default function StudentsCPSLearn() {
             <Reveal as="div" className="phase" delay={100}>
               <div className="phase-num">WAY 02</div>
               <h3>Pick up where you left off</h3>
-              <p>Come back days later and the path is still clear — no scrambling to remember where you were.</p>
+              <p>Come back days later and the path is still clear - no scrambling to remember where you were.</p>
             </Reveal>
             <Reveal as="div" className="phase" delay={200}>
               <div className="phase-num">WAY 03</div>
@@ -330,7 +330,7 @@ export default function StudentsCPSLearn() {
         </div>
       </section>
 
-      {/* SECTION 8 — "Not just another platform" — split: text + stat */}
+      {/* SECTION 8 - "Not just another platform" - split: text + stat */}
       <section>
         <div className="container">
           <div className="cpslearn-heritage">
@@ -343,7 +343,7 @@ export default function StudentsCPSLearn() {
                 insurance, investment and leadership.
               </p>
               <p style={{ marginTop: 16, fontSize: 17, color: "var(--ink)", lineHeight: 1.6, fontWeight: 500 }}>
-                That matters — because it means the system is shaped by real behaviour, not assumptions.
+                That matters - because it means the system is shaped by real behaviour, not assumptions.
               </p>
             </Reveal>
 
@@ -368,7 +368,7 @@ export default function StudentsCPSLearn() {
         </div>
       </section>
 
-      {/* SECTION 9 — "What this means for you" — closing CTA with checklist */}
+      {/* SECTION 9 - "What this means for you" - closing CTA with checklist */}
       <div className="cta-band">
         <div className="cta-band-inner">
           <div className="cta-band-grid">

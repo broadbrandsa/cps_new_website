@@ -241,3 +241,29 @@ export const Rocket = (props: IconProps) => (
     <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
   </svg>
 );
+
+/* ---------- Social ---------- */
+export const Facebook = (props: IconProps) => (
+  <svg {...props} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+    <path d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.19 8.44 9.93v-7.02H7.9v-2.91h2.54V9.84c0-2.51 1.49-3.9 3.78-3.9 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.74 8.44-4.91 8.44-9.93z" />
+  </svg>
+);
+
+export const Twitter = (props: IconProps) => (
+  <svg {...props} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+    {/* X logo */}
+    <path d="M18.244 2H21.5l-7.5 8.57L23 22h-7.094l-5.55-7.26L3.99 22H.733l8.02-9.17L1 2h7.27l5.012 6.63L18.244 2Zm-1.24 18.07h1.799L7.07 3.84H5.14l11.864 16.23Z" />
+  </svg>
+);
+
+export const LinkedIn = (props: IconProps) => (
+  <svg {...props} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.34 18.34v-7.96H5.67v7.96h2.67ZM7 9.27a1.55 1.55 0 1 0 0-3.09 1.55 1.55 0 0 0 0 3.09Zm11.34 9.07v-4.36c0-2.31-1.23-3.39-2.88-3.39-1.33 0-1.92.73-2.26 1.25v-1.07h-2.67c.04.75 0 7.96 0 7.96h2.67v-4.45c0-.24.02-.48.09-.65.19-.48.63-.98 1.36-.98.96 0 1.34.73 1.34 1.8v4.28h2.35Z" />
+  </svg>
+);
+
+export const YouTube = (props: IconProps) => (
+  <svg {...props} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+    <path d="M23.5 6.5a3 3 0 0 0-2.12-2.12C19.5 4 12 4 12 4s-7.5 0-9.38.38A3 3 0 0 0 .5 6.5C.12 8.38.12 12 .12 12s0 3.62.38 5.5A3 3 0 0 0 2.62 19.62C4.5 20 12 20 12 20s7.5 0 9.38-.38a3 3 0 0 0 2.12-2.12C23.88 15.62 23.88 12 23.88 12s0-3.62-.38-5.5Zm-13.88 9V8.5L15.62 12l-6 3.5Z" />
+  </svg>
+);

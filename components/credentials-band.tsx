@@ -47,7 +47,7 @@ export function CredentialsBand() {
               <figure className="award-badge">
                 <Image
                   src="/award-brandon-hall-hcm-gold.png"
-                  alt="Brandon Hall Group HCM Excellence Award — Gold"
+                  alt="Brandon Hall Group HCM Excellence Award - Gold"
                   width={120}
                   height={120}
                 />
@@ -61,7 +61,7 @@ export function CredentialsBand() {
               <figure className="award-badge">
                 <Image
                   src="/award-brandon-hall-ld-silver.png"
-                  alt="Brandon Hall Group Learning &amp; Development Excellence Award — Silver"
+                  alt="Brandon Hall Group Learning &amp; Development Excellence Award - Silver"
                   width={120}
                   height={120}
                 />

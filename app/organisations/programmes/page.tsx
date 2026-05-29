@@ -180,7 +180,7 @@ export default function OrganisationsProgrammes() {
         </div>
       </section>
 
-      {/* SECTION 1: PRIMARY WORKFORCE QUALIFICATIONS — 3 cards leading with BBP, IA, LTIA */}
+      {/* SECTION 1: PRIMARY WORKFORCE QUALIFICATIONS - 3 cards leading with BBP, IA, LTIA */}
       <section>
         <div className="container">
           <Reveal as="div" className="section-head">

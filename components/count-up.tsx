@@ -12,7 +12,7 @@ type Props = {
   locale?: string | false;
   prefix?: string;
   suffix?: string;
-  /** Custom formatter — overrides decimals/locale */
+  /** Custom formatter - overrides decimals/locale */
   format?: (value: number) => string;
   /** className for the wrapping span */
   className?: string;

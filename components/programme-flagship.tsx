@@ -21,7 +21,7 @@ import { Spotlight } from "@/components/spotlight";
 import type { Programme } from "@/lib/programmes";
 
 /**
- * Flagship programme detail layout — used by HCIB + ACL.
+ * Flagship programme detail layout - used by HCIB + ACL.
  *
  * Built around the conversion path: hero key facts → why → curriculum → who →
  * where it takes you → process → FAQ → apply. A sticky brand-coloured apply
@@ -44,11 +44,11 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
   const infoHref = `mailto:succeed@cps.co.za?subject=${encodeURIComponent(mailInfoSubject)}`;
   const shortTitle = p.shortTitle ?? p.title;
 
-  // Persona icons — used in "Who it's for"
+  // Persona icons - used in "Who it's for"
   const audienceIcons = [Users, Briefcase, Rocket];
-  // Pathway icons — used in "Career pathways" (HCIB)
+  // Pathway icons - used in "Career pathways" (HCIB)
   const pathwayIcons = [Compass, Briefcase, Workflow, TrendingUp];
-  // Benefit icons — used in "Why this programme"
+  // Benefit icons - used in "Why this programme"
   const benefitIcons = [ClipboardCheck, Calendar, Lightbulb, Award];
 
   return (
@@ -95,7 +95,7 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
           </div>
         </div>
 
-        {/* Accreditation badges — bottom-right of the hero. Filtered white to
+        {/* Accreditation badges - bottom-right of the hero. Filtered white to
             sit cleanly on the dark photo. Hidden on small screens to keep the
             headline + CTAs uncluttered. */}
         <div className="flagship-hero-badges" aria-label="Accreditations and certifications">
@@ -103,7 +103,7 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
           <div className="flagship-hero-badges-row">
             <Image
               src="/badge-che.png"
-              alt="Council on Higher Education — Accredited course"
+              alt="Council on Higher Education - Accredited course"
               width={120}
               height={120}
               className="flagship-hero-badge"
@@ -242,7 +242,7 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
               <div className="flagship-audiences">
                 {p.audience.map((a, i) => {
                   const Icon = audienceIcons[i % audienceIcons.length];
-                  // Audience copy in data is HTML — split first <strong> as title, rest as description.
+                  // Audience copy in data is HTML - split first <strong> as title, rest as description.
                   const strongMatch = a.match(/<strong>([^<]+)<\/strong>(.*)/);
                   const title = strongMatch ? strongMatch[1] : a;
                   const tail = strongMatch ? strongMatch[2].trim() : "";
@@ -369,7 +369,7 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
               <span className="flagship-apply-eyebrow">Ready to start?</span>
               <h2>Apply for {p.title}.</h2>
               <p>
-                No upfront tuition. A R300 application fee is payable upon completing your application — not
+                No upfront tuition. A R300 application fee is payable upon completing your application - not
                 after acceptance. The admissions team will respond within 3 business days.
               </p>
             </div>

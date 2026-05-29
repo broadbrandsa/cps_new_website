@@ -235,7 +235,7 @@ export default async function ProgrammeDetailPage({ params }: { params: Promise<
               <div />
             </div>
             <div className="pd-step-row">
-              <div className="pd-step"><div className="step-num">01</div><h4>Apply</h4><p>Simple application — no upfront fee. R300 application fee only on acceptance.</p></div>
+              <div className="pd-step"><div className="step-num">01</div><h4>Apply</h4><p>Simple application - no upfront fee. R300 application fee only on acceptance.</p></div>
               <div className="pd-step"><div className="step-num" style={{ color: "#7B2EFF" }}>02</div><h4>Learn</h4><p>Personalised pathways on CPSLearn with stewardship support and instant feedback.</p></div>
               <div className="pd-step"><div className="step-num" style={{ color: "#0B6E94" }}>03</div><h4>Graduate</h4><p>Walk away with a recognised qualification, evidence of competency and a community of practice.</p></div>
             </div>

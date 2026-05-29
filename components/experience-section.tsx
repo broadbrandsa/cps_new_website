@@ -99,7 +99,7 @@ const orgCards: Card[] = [
 
 type Props = {
   variant: Variant;
-  /** Kept for backwards compatibility — the section is always rendered on a dark surface now. */
+  /** Kept for backwards compatibility - the section is always rendered on a dark surface now. */
   surface?: "white" | "tinted";
 };
 

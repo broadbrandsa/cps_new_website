@@ -52,6 +52,10 @@ export function Nav() {
   // Close mobile menu on route change
   useEffect(() => setOpen(false), [pathname]);
 
+  // Hide the marketing nav entirely on standalone routes like /login.
+  // Comes AFTER all hook calls per Rules of Hooks.
+  if (pathname.startsWith("/login")) return null;
+
   const visibleLinks = audience === "organisations" ? orgLinks : studentLinks;
 
   // Audience-aware nav CTAs
@@ -100,15 +104,14 @@ export function Nav() {
           >
             Contact
           </Link>
-          {/* Login — pushed to the far right of the strip. Placeholder until CPSLearn auth goes live. */}
-          <button
-            type="button"
+          {/* Login — pushed to the far right of the strip. Routes to /login. */}
+          <Link
+            href="/login"
             className="audience-tab-login"
-            aria-label="Log in"
-            title="Log in"
+            aria-label="Log in to CPSLearn"
           >
             Log in
-          </button>
+          </Link>
         </div>
       </div>
 

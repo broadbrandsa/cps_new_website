@@ -3,7 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 import { Nav } from "@/components/nav";
-import { Footer } from "@/components/footer";
+import { FooterGate } from "@/components/footer-gate";
 import { RouteAttribute } from "@/components/route-attribute";
 
 const inter = Inter({
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div id="main-content" tabIndex={-1} style={{ outline: "none" }}>
           {children}
         </div>
-        <Footer />
+        <FooterGate />
       </body>
     </html>
   );

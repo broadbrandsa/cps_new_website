@@ -12,6 +12,8 @@ const routeMap: Array<{ test: (p: string) => boolean; route: string }> = [
   { test: (p) => p.startsWith("/cpslearn"), route: "platform" },
   { test: (p) => p.startsWith("/about"), route: "about" },
   { test: (p) => p.startsWith("/contact"), route: "contact" },
+  { test: (p) => p.startsWith("/blog"), route: "blog" },
+  { test: (p) => p.startsWith("/login"), route: "login" },
 ];
 
 export function RouteAttribute() {

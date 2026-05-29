@@ -43,8 +43,8 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
 
   const mailSubject = `Application: ${p.title}`;
   const mailInfoSubject = `Info pack: ${p.title}`;
-  const applyHref = `mailto:succeed@cps.co.za?subject=${encodeURIComponent(mailSubject)}`;
-  const infoHref = `mailto:succeed@cps.co.za?subject=${encodeURIComponent(mailInfoSubject)}`;
+  const applyHref = `mailto:applications@cps.co.za?subject=${encodeURIComponent(mailSubject)}`;
+  const infoHref = `mailto:applications@cps.co.za?subject=${encodeURIComponent(mailInfoSubject)}`;
   const shortTitle = p.shortTitle ?? p.title;
 
   // Persona icons - used in "Who it's for"
@@ -407,7 +407,7 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
             <p className="flagship-sticky-note">
               Speak to admissions on{" "}
               <a href="tel:+27117891957">+27 11 789 1957</a> or{" "}
-              <a href="mailto:succeed@cps.co.za">succeed@cps.co.za</a>
+              <a href="mailto:applications@cps.co.za">applications@cps.co.za</a>
             </p>
           </div>
         </aside>

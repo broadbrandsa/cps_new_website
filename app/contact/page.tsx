@@ -48,8 +48,8 @@ export default function ContactPage() {
                 <a href="mailto:support@cps.co.za" className="contact-link">
                   <Mail /> support@cps.co.za
                 </a>
-                <a href="mailto:succeed@cps.co.za" className="contact-link">
-                  <Mail /> succeed@cps.co.za
+                <a href="mailto:applications@cps.co.za" className="contact-link">
+                  <Mail /> applications@cps.co.za
                 </a>
                 <div className="contact-link" style={{ alignItems: "flex-start", cursor: "default" }}>
                   <MapPin />

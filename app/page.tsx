@@ -347,8 +347,8 @@ export default function StudentsHome() {
             </Reveal>
             <Reveal as="div" delay={140}>
               <div className="mono" style={{ marginBottom: 12 }}>Talk to admissions</div>
-              <a href="mailto:succeed@cps.co.za" className="contact-link primary" style={{ marginBottom: 8 }}>
-                <Mail /> succeed@cps.co.za
+              <a href="mailto:applications@cps.co.za" className="contact-link primary" style={{ marginBottom: 8 }}>
+                <Mail /> applications@cps.co.za
               </a>
               <a href="tel:+27117891957" className="contact-link">
                 <Phone /> +27 11 789 1957

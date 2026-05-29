@@ -18,6 +18,7 @@ import {
 } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
 import { Spotlight } from "@/components/spotlight";
+import { HeroVideo } from "@/components/hero-video";
 import type { Programme } from "@/lib/programmes";
 
 /**
@@ -57,11 +58,20 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
     <main className={`flagship flagship-${accent}`}>
       {/* ===== HERO ===== */}
       <section className="flagship-hero">
-        <div
-          className="flagship-hero-photo"
-          aria-hidden
-          style={{ backgroundImage: `url('${heroImage}')` }}
-        />
+        {p.heroVideo ? (
+          <HeroVideo
+            src={p.heroVideo}
+            poster={heroImage}
+            playbackRate={p.heroVideoSpeed ?? 1}
+            className="flagship-hero-photo flagship-hero-video"
+          />
+        ) : (
+          <div
+            className="flagship-hero-photo"
+            aria-hidden
+            style={{ backgroundImage: `url('${heroImage}')` }}
+          />
+        )}
         <div className="flagship-hero-overlay" aria-hidden />
         <div className="container">
           <div className="breadcrumbs">

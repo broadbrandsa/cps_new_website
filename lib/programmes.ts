@@ -39,8 +39,16 @@ export type Programme = {
   outcomes?: string[];
   /** Marks flagship programmes that render with the richer detail template. */
   flagship?: boolean;
-  /** Hero background image path (used by the flagship template). */
+  /** Hero background image path (used by the flagship template).
+   *  Also acts as the poster image while .heroVideo is loading. */
   heroImage?: string;
+  /** Optional hero background video. When set, replaces the photo on the
+   *  flagship hero. Use a muted, loopable MP4. Autoplay-muted is allowed by
+   *  browsers; prefers-reduced-motion users keep the static heroImage. */
+  heroVideo?: string;
+  /** Playback rate for heroVideo (1 = native speed). Useful to slow stock
+   *  footage to a calmer, more cinematic pace. */
+  heroVideoSpeed?: number;
   /** Brand accent for the flagship template - blue, purple, or green. */
   accent?: "blue" | "purple" | "green";
   /** FAQ data for the flagship template. */
@@ -108,6 +116,8 @@ export const PROGRAMMES: Record<string, Programme> = {
     ],
     flagship: true,
     heroImage: "/brooke-cagle-JBwcenOuRCg-unsplash.jpg",
+    heroVideo: "/14324724_1280_720_24fps.mp4",
+    heroVideoSpeed: 0.75,
     accent: "blue",
     faqs: [
       {
@@ -190,6 +200,8 @@ export const PROGRAMMES: Record<string, Programme> = {
     ],
     flagship: true,
     heroImage: "/microsoft-365-kTFmwxkF5bQ-unsplash.jpg",
+    heroVideo: "/3248065-hd_1280_720_25fps.mp4",
+    heroVideoSpeed: 0.75,
     accent: "purple",
     faqs: [
       {

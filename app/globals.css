@@ -4207,6 +4207,16 @@ body:not([data-route="home"]):not([data-route="organisations"]) .audience-tab-lo
   transform: scale(1.06);
   z-index: -2;
 }
+/* When the photo slot is filled with a <video> instead of a div, the same
+   filter/scale rules apply but we also need object-fit to make the video
+   crop like a background-image cover would. */
+video.flagship-hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  pointer-events: none;
+}
 .flagship-hero-overlay {
   position: absolute; inset: 0;
   background:

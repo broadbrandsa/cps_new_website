@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Check,
@@ -91,6 +92,31 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
               <Check width={14} height={14} />
               <span>R300 application fee on submission · No upfront tuition · 3-business-day response</span>
             </div>
+          </div>
+        </div>
+
+        {/* Accreditation badges — bottom-right of the hero. Filtered white to
+            sit cleanly on the dark photo. Hidden on small screens to keep the
+            headline + CTAs uncluttered. */}
+        <div className="flagship-hero-badges" aria-label="Accreditations and certifications">
+          <span className="flagship-hero-badges-label">Accredited by</span>
+          <div className="flagship-hero-badges-row">
+            <Image
+              src="/badge-che.png"
+              alt="Council on Higher Education — Accredited course"
+              width={120}
+              height={120}
+              className="flagship-hero-badge"
+              sizes="(max-width: 880px) 0px, 64px"
+            />
+            <Image
+              src="/badge-qcto.png"
+              alt="Quality Council for Trades and Occupations"
+              width={120}
+              height={120}
+              className="flagship-hero-badge"
+              sizes="(max-width: 880px) 0px, 64px"
+            />
           </div>
         </div>
       </section>

@@ -68,7 +68,7 @@ export default async function ProgrammeDetailPage({ params }: { params: Promise<
                   </Link>
                 ) : (
                   <a
-                    href={`mailto:succeed@cps.co.za?subject=${encodeURIComponent(`Info pack: ${p.title}`)}`}
+                    href={`mailto:organisations@cps.co.za?subject=${encodeURIComponent(`Info pack: ${p.title}`)}`}
                     className="liquid-glass btn-lg"
                     style={{ borderRadius: 14, padding: "14px 22px", display: "inline-flex", alignItems: "center" }}
                   >
@@ -252,7 +252,7 @@ export default async function ProgrammeDetailPage({ params }: { params: Promise<
               <p>{ctaDesc}</p>
             </div>
             <div className="actions">
-              <a className="btn-yellow" href={`mailto:succeed@cps.co.za?subject=${encodeURIComponent(mailSubject)}`}>{primaryCtaLabel}</a>
+              <a className="btn-yellow" href={`mailto:organisations@cps.co.za?subject=${encodeURIComponent(mailSubject)}`}>{primaryCtaLabel}</a>
               <Link href="/programmes" style={{ background: "rgba(255,255,255,0.08)", color: "white", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.18)" }}>Compare all programmes</Link>
             </div>
           </Spotlight>

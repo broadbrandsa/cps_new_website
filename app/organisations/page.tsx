@@ -566,7 +566,7 @@ export default function OrganisationsHome() {
             </div>
             <div>
               <div className="mono" style={{ color: "rgba(255,255,255,0.6)", marginBottom: 12 }}>Direct contact</div>
-              <a className="contact-link" href="mailto:succeed@cps.co.za" style={{ marginBottom: 8 }}>succeed@cps.co.za</a>
+              <a className="contact-link" href="mailto:organisations@cps.co.za" style={{ marginBottom: 8 }}>organisations@cps.co.za</a>
               <a className="contact-link" href="tel:+27117891957">+27 11 789 1957</a>
             </div>
           </div>

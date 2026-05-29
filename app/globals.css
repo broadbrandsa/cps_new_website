@@ -409,15 +409,22 @@ section { padding: var(--pad-section) 0; }
 .hero h1 {
   margin: 28px 0 28px;
   font-weight: 500;
-  /* Slightly smaller max so wide phrases like "Transform your people" stay on one line
-     comfortably and never collide with the right edge or the parallax framing. */
-  font-size: clamp(42px, 6.0vw, 84px);
+  /* Conservative max so the longest phrase ("that moves your career" / "into
+     your strategic edge") always fits within the container without horizontal
+     overflow at any viewport above 1100px. */
+  font-size: clamp(40px, 5.6vw, 76px);
   /* Tight line-height per design spec. .hero-line padding-bottom adds the
      descender buffer below so q/y/g don't clip at the upper clamp range. */
   line-height: 1.1;
   letter-spacing: -0.035em;
   color: #fff;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+  /* Defensive: if the layout would force long words off the right edge,
+     break the word rather than overflow the container. */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
 }
 /* Each animated line is a block — give it explicit bottom padding so the
    bottom of any descender (q, g, y, p) has visible buffer and so the slide-in
@@ -439,8 +446,11 @@ section { padding: var(--pad-section) 0; }
   -webkit-text-fill-color: transparent;
   font-style: italic;
   font-weight: 600;
+  display: inline;            /* explicit — wraps at word boundaries */
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .hero-sub { font-size: clamp(17px, 1.4vw, 21px); color: rgba(255, 255, 255, 0.78); max-width: 620px; margin-bottom: 44px; line-height: 1.5; }
 

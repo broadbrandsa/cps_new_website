@@ -262,15 +262,16 @@ export default function OrganisationsHome() {
               </ul>
             </div>
             <div className="audience-card">
-              <div className="head-row"><h3>Education partners</h3><span className="tag pill">Platform</span></div>
+              <div className="head-row"><h3>Risk &amp; compliance</h3><span className="tag pill pill-purple">Regulated</span></div>
               <p style={{ color: "var(--muted)", fontSize: 14, marginBottom: 20 }}>
-                For partners who need structured delivery infrastructure, learning journey management and platform-supported education.
+                For risk, compliance and assurance teams in regulated financial services environments
+                that need capability development tied to recognised qualifications and demonstrable competency.
               </p>
               <ul>
-                <li>Programme delivery support</li>
-                <li>Student progress visibility</li>
-                <li>Assessment and moderation workflows</li>
-                <li>Platform-supported learning</li>
+                <li>Organisational risk practitioner pathways</li>
+                <li>Compliance-aligned learning journeys</li>
+                <li>Competency tracking and reporting</li>
+                <li>Workforce capability evidence for regulators</li>
               </ul>
             </div>
           </BenefitsSlider>

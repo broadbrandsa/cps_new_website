@@ -2,9 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArrowRightSmall, CheckSmall } from "@/components/icons";
-import { SecondaryProgrammeCard } from "@/components/programme-card";
 import { Spotlight } from "@/components/spotlight";
-import { PROGRAMMES, PROGRAMME_SLUGS, getRelatedProgrammes } from "@/lib/programmes";
+import { PROGRAMMES, PROGRAMME_SLUGS } from "@/lib/programmes";
 
 type Params = { slug: string };
 
@@ -27,7 +26,6 @@ export default async function ProgrammeDetailPage({ params }: { params: Promise<
   const p = PROGRAMMES[slug];
   if (!p) notFound();
 
-  const related = getRelatedProgrammes(slug, 3);
   const isSkillsProgramme = p.kind === "skills-programme";
 
   // Primary CTA copy adapts to programme kind
@@ -254,24 +252,6 @@ export default async function ProgrammeDetailPage({ params }: { params: Promise<
           </Spotlight>
         </div>
       </section>
-
-      {related.length > 0 && (
-        <section style={{ borderTop: "1px solid var(--line)" }}>
-          <div className="container">
-            <div className="section-head">
-              <div className="left">
-                <span className="eyebrow"><span className="dot" /> Other programmes</span>
-                <h2>Explore related programmes</h2>
-              </div>
-            </div>
-            <div className="pd-related">
-              {related.map((r) => (
-                <SecondaryProgrammeCard key={r.slug} programme={r} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       <div style={{ height: 96 }} />
     </main>

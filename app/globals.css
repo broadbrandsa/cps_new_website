@@ -451,6 +451,13 @@ section { padding: var(--pad-section) 0; }
   box-decoration-break: clone;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  /* Italic glyphs slant right — their rightmost ink can sit a few pixels
+     past the standard em-box. Adding horizontal padding extends the
+     background-clip render area so the gradient covers the full inked
+     extent of every italic letter, including the right-edge curl of "r"
+     in "career" and "strategic". */
+  padding: 0.05em 0.12em;
+  margin: 0 -0.12em;          /* negative margin cancels the visual width gain so layout stays identical */
 }
 .hero-sub { font-size: clamp(17px, 1.4vw, 21px); color: rgba(255, 255, 255, 0.78); max-width: 620px; margin-bottom: 44px; line-height: 1.5; }
 

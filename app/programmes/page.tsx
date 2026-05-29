@@ -26,11 +26,11 @@ export default function StudentsProgrammes() {
           </div>
           <div style={{ marginTop: 24, maxWidth: 880 }}>
             <span className="eyebrow"><span className="dot" /> Student Programmes</span>
-            <h1>Find the programme that fits your next career move.</h1>
+            <h1>Two pathways. Pick the one that fits your next step.</h1>
             <p style={{ marginTop: 24, fontSize: 18 }}>
-              Explore CPS qualifications and professional development programmes across banking, insurance,
-              investment, leadership and workplace capability. Start with one of our primary student
-              pathways, or browse additional qualifications designed for specific career directions.
+              Two 12-month higher-education qualifications designed for working South African
+              professionals. One builds banking foundations. The other builds leadership capability.
+              Both are recognised, structured for completion, and end in a credential employers know.
             </p>
           </div>
         </div>

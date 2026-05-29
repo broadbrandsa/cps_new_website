@@ -412,9 +412,9 @@ section { padding: var(--pad-section) 0; }
   /* Slightly smaller max so wide phrases like "Transform your people" stay on one line
      comfortably and never collide with the right edge or the parallax framing. */
   font-size: clamp(42px, 6.0vw, 84px);
-  /* Generous line-height so descenders (q, y, p, g) never clip at the upper
-     clamp range. Pairs with the explicit .hero-line bottom padding below. */
-  line-height: 1.25;
+  /* Tight line-height per design spec. .hero-line padding-bottom adds the
+     descender buffer below so q/y/g don't clip at the upper clamp range. */
+  line-height: 1.1;
   letter-spacing: -0.035em;
   color: #fff;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
@@ -422,13 +422,15 @@ section { padding: var(--pad-section) 0; }
 /* Each animated line is a block — give it explicit bottom padding so the
    bottom of any descender (q, g, y, p) has visible buffer and so the slide-in
    animation never reveals a clipped tail at large viewports. */
-.hero-line { padding-bottom: 0.22em; }
+.hero-line { padding-bottom: 0.18em; }
 /* Italic gradient accent word — uses background-clip: text + transparent fill
-   to show the linear-gradient through the glyphs. Two things matter for the
-   clip to render the full glyph: (1) display: inline-block gives the span its
-   own box so the gradient extends to the box bottom, not just the em-box;
-   (2) -webkit-text-fill-color: transparent renders the full inked extent of
-   italic letters where `color: transparent` alone clips them at the em-box. */
+   to show the linear-gradient through the glyphs.
+   - display: inline (not inline-block) so the phrase wraps naturally inside
+     the line block and never overflows the right edge.
+   - -webkit-text-fill-color: transparent renders the full inked extent of
+     italic letters where `color: transparent` alone clips them at the em-box.
+   - box-decoration-break: clone keeps the background-clip rendering consistent
+     across line breaks. */
 .hero h1 .accent-word {
   background: linear-gradient(120deg, #57c8ff 0%, #c79bff 100%);
   -webkit-background-clip: text;
@@ -437,9 +439,8 @@ section { padding: var(--pad-section) 0; }
   -webkit-text-fill-color: transparent;
   font-style: italic;
   font-weight: 600;
-  display: inline-block;
-  padding-bottom: 0.08em;
-  line-height: 1.18;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .hero-sub { font-size: clamp(17px, 1.4vw, 21px); color: rgba(255, 255, 255, 0.78); max-width: 620px; margin-bottom: 44px; line-height: 1.5; }
 

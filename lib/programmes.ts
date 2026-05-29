@@ -53,6 +53,10 @@ export type Programme = {
   accent?: "blue" | "purple" | "green";
   /** FAQ data for the flagship template. */
   faqs?: ProgrammeFAQ[];
+  /** Small explanatory note rendered as a footnote beneath the About
+   *  paragraph. HTML allowed - typically used to expand on a term or
+   *  acronym mentioned in the about copy (e.g. "Brandon Hall recognition"). */
+  aboutFootnote?: string;
 };
 
 /**
@@ -172,6 +176,8 @@ export const PROGRAMMES: Record<string, Programme> = {
     ],
     about:
       "Leadership Agility in the Financial Markets is the flagship next-step qualification for professionals who have outgrown technical mastery and are now leading teams, projects or change. Built on the methodology that won Brandon Hall recognition, it develops decision-making, paradigm shifts and applied leadership behaviour.",
+    aboutFootnote:
+      "<strong>What's Brandon Hall?</strong> The Brandon Hall Group HCM Excellence Awards are one of the most respected international recognitions in learning and talent development - awarded to programmes that demonstrate measurable impact on people and performance. <a href=\"https://brandonhall.com/excellence-awards/\" target=\"_blank\" rel=\"noopener noreferrer\">See the awards programme ↗</a>",
     benefits: [
       "<strong>Brandon Hall award-winning methodology</strong> - internationally recognised approach",
       "<strong>Built for working leaders</strong> - fully online, study in evenings and weekends",

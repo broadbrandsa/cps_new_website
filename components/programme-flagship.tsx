@@ -205,6 +205,13 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
             </span>
             <h2 className="flagship-section-title">What this programme is for.</h2>
             <p className="flagship-prose-lead">{p.about}</p>
+            {p.aboutFootnote && (
+              <aside
+                className="flagship-about-footnote"
+                role="note"
+                dangerouslySetInnerHTML={{ __html: p.aboutFootnote }}
+              />
+            )}
           </Reveal>
 
           {/* WHY THIS PROGRAMME (benefits) */}

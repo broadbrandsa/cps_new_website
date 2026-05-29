@@ -413,7 +413,10 @@ video.hero-photo {
 }
 .hero > .container { position: relative; z-index: 2; width: 100%; }
 
-.hero-grid { display: grid; grid-template-columns: 1fr; gap: 0; max-width: 1100px; margin: 0 auto; text-align: left; }
+/* Left-aligned with the container's content edge so the hero copy sits on
+   the same vertical line as the logo, audience tabs and main nav. The
+   max-width caps the line length without recentring the block. */
+.hero-grid { display: grid; grid-template-columns: 1fr; gap: 0; max-width: 1100px; margin: 0; text-align: left; }
 
 .hero h1 {
   margin: 28px 0 28px;

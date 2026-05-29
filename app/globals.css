@@ -4209,6 +4209,17 @@ body:not([data-route="home"]):not([data-route="organisations"]) .audience-tab-lo
   position: relative;
   z-index: 1;
 }
+/* Breadcrumb trail reads white on the dark photo hero. The current-page span
+   uses its own brand-coloured override below (with !important) so it stays
+   blue/purple/green even when the rest of the trail is white. */
+.flagship-hero .breadcrumbs,
+.flagship-hero .breadcrumbs a,
+.flagship-hero .breadcrumbs .sep {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+.flagship-hero .breadcrumbs a:hover {
+  color: #fff !important;
+}
 .flagship-crumb-current.accent-blue   { color: #5ECEFF !important; }
 .flagship-crumb-current.accent-purple { color: #B07CFF !important; }
 .flagship-crumb-current.accent-green  { color: #34D399 !important; }

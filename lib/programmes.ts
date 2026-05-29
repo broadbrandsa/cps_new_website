@@ -19,6 +19,8 @@ export type ProgrammeMeta = {
   suffix?: string;
 };
 
+export type ProgrammeFAQ = { q: string; a: string };
+
 export type Programme = {
   slug: string;
   cat: ProgrammeCategory;
@@ -35,6 +37,14 @@ export type Programme = {
   pathways?: string[];
   audience?: string[];
   outcomes?: string[];
+  /** Marks flagship programmes that render with the richer detail template. */
+  flagship?: boolean;
+  /** Hero background image path (used by the flagship template). */
+  heroImage?: string;
+  /** Brand accent for the flagship template — blue, purple, or green. */
+  accent?: "blue" | "purple" | "green";
+  /** FAQ data for the flagship template. */
+  faqs?: ProgrammeFAQ[];
 };
 
 /**
@@ -95,6 +105,35 @@ export const PROGRAMMES: Record<string, Programme> = {
       "Junior banking professional positions",
       "Progression into specialist banking functions",
     ],
+    flagship: true,
+    heroImage: "/brooke-cagle-JBwcenOuRCg-unsplash.jpg",
+    accent: "blue",
+    faqs: [
+      {
+        q: "Do I need to be working in a bank already to apply?",
+        a: "No. HCIB is designed both as a gateway for matric graduates and career-changers, and as a formal credential for junior banking staff already in the sector. Anyone with matric (or equivalent) can apply.",
+      },
+      {
+        q: "Is there an upfront fee?",
+        a: "There is no upfront fee. A R300 application fee is payable upon completing your application — not after acceptance. Tuition is billed monthly at R2,480 over the 12-month duration.",
+      },
+      {
+        q: "Will I be able to study while I work?",
+        a: "Yes — HCIB is delivered through CPSLearn with flexible, mobile-friendly access. The programme is designed for working professionals, so you can log in around your schedule and pick up where you left off.",
+      },
+      {
+        q: "How is the programme assessed?",
+        a: "Assessments are integrated throughout each module — not stacked at the end. Most assessments are returned with feedback within minutes through CPSLearn so the learning loop stays tight.",
+      },
+      {
+        q: "Is HCIB recognised by the major South African banks?",
+        a: "Yes. HCIB is an NQF Level 5 higher-education qualification accredited through the CHE and registered on the SAQA framework (SAQA ID 111129). It is recognised by South Africa's major banks for entry-level recruitment.",
+      },
+      {
+        q: "What happens after I apply?",
+        a: "Our admissions team will be in touch within 3 business days to confirm your application, walk you through the requirements, and answer any questions before you commit.",
+      },
+    ],
   },
 
   "advanced-certificate-leadership": {
@@ -146,6 +185,35 @@ export const PROGRAMMES: Record<string, Programme> = {
       "Project and programme leadership",
       "Change and transformation positions",
       "Pipeline into senior leadership development",
+    ],
+    flagship: true,
+    heroImage: "/microsoft-365-kTFmwxkF5bQ-unsplash.jpg",
+    accent: "purple",
+    faqs: [
+      {
+        q: "Do I need prior leadership experience?",
+        a: "ACL is designed for professionals 3–7 years into their career — typically newly promoted team leads, mid-career professionals, or high-potential employees on a succession track. Formal leadership experience helps, but the programme is built to formalise emerging leadership capability, not to require it upfront.",
+      },
+      {
+        q: "Is there an upfront fee?",
+        a: "There is no upfront fee. A R300 application fee is payable upon completing your application — not after acceptance. Tuition is billed monthly at R2,688 over the 12-month duration.",
+      },
+      {
+        q: "How is ACL delivered?",
+        a: "Fully online through CPSLearn. The programme is designed for working leaders — you can study in the evenings and on weekends, log in from any device, and pick up where you left off without re-orienting.",
+      },
+      {
+        q: "What makes ACL different from a generic leadership course?",
+        a: "ACL is built on Brandon Hall award-winning methodology and is an NQF Level 6 higher-education qualification (CHE accredited, SAQA ID 120160) — not a short course. Every module ends in workplace-applied competency, so you leave with behaviour change, not just theory.",
+      },
+      {
+        q: "Will ACL help me get promoted?",
+        a: "ACL is positioned for professionals stepping into formal team leadership, project leadership, or change roles. The programme develops the decision-making, paradigm-shift and applied leadership behaviour those roles require — and provides a recognised NQF 6 credential to back it up.",
+      },
+      {
+        q: "Can my employer pay for it?",
+        a: "Yes — many organisations sponsor ACL for high-potential employees. Speak to admissions if your employer would like to sponsor your enrolment, or if you'd like an info pack to present internally.",
+      },
     ],
   },
 

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArrowRightSmall, CheckSmall } from "@/components/icons";
 import { Spotlight } from "@/components/spotlight";
+import { FlagshipProgrammeDetail } from "@/components/programme-flagship";
 import { PROGRAMMES, PROGRAMME_SLUGS } from "@/lib/programmes";
 
 type Params = { slug: string };
@@ -25,6 +26,11 @@ export default async function ProgrammeDetailPage({ params }: { params: Promise<
   const { slug } = await params;
   const p = PROGRAMMES[slug];
   if (!p) notFound();
+
+  // Flagship programmes (HCIB + ACL) render with the richer detail template.
+  if (p.flagship) {
+    return <FlagshipProgrammeDetail p={p} />;
+  }
 
   const isSkillsProgramme = p.kind === "skills-programme";
 

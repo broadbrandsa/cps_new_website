@@ -9,6 +9,7 @@ import {
 import { CredentialsBand } from "@/components/credentials-band";
 import { ClientLogos } from "@/components/client-logos";
 import { ExperienceSection } from "@/components/experience-section";
+import { HeroVideo } from "@/components/hero-video";
 import { Reveal } from "@/components/reveal";
 import { CountUp } from "@/components/count-up";
 import { Spotlight } from "@/components/spotlight";
@@ -19,7 +20,12 @@ export default function StudentsHome() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-fallback" />
-        <div className="hero-photo" />
+        <HeroVideo
+          src="/7147176-hd_1280_720_25fps.mp4"
+          poster="/hero-bg.jpg"
+          playbackRate={0.75}
+          className="hero-photo"
+        />
         <div className="hero-bg" />
 
         <div className="container">

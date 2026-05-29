@@ -353,6 +353,15 @@ section { padding: var(--pad-section) 0; }
   filter: saturate(0.95) contrast(1.05) brightness(0.78);
   will-change: transform;
 }
+/* When .hero-photo is a <video> instead of a div, the background-image rule
+   above is irrelevant (video pixels cover it). We need object-fit so the
+   video crops like a background-image cover would, and pointer-events: none
+   so the video never intercepts clicks above the hero content. */
+video.hero-photo {
+  object-fit: cover;
+  object-position: center 30%;
+  pointer-events: none;
+}
 /* Organisations hero - different photo, slightly darker treatment for legibility */
 .hero-photo.hero-photo-org {
   background-image: url('/microsoft-365-kTFmwxkF5bQ-unsplash.jpg');

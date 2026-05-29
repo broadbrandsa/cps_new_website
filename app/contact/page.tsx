@@ -42,11 +42,14 @@ export default function ContactPage() {
               </p>
 
               <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 8, maxWidth: 480 }}>
-                <a href="mailto:applications@cps.co.za" className="contact-link primary">
-                  <Mail /> applications@cps.co.za
-                </a>
-                <a href="tel:+27117891957" className="contact-link">
+                <a href="tel:+27117891957" className="contact-link primary">
                   <Phone /> +27 11 789 1957
+                </a>
+                <a href="mailto:support@cps.co.za" className="contact-link">
+                  <Mail /> support@cps.co.za
+                </a>
+                <a href="mailto:succeed@cps.co.za" className="contact-link">
+                  <Mail /> succeed@cps.co.za
                 </a>
                 <div className="contact-link" style={{ alignItems: "flex-start", cursor: "default" }}>
                   <MapPin />
@@ -175,7 +178,7 @@ export default function ContactPage() {
                 <label className="sr-only" htmlFor="contact-prefer">Preferred contact method</label>
                 <select id="contact-prefer" name="preferred" defaultValue="Email">
                   <option>Email</option>
-                  <option>WhatsApp</option>
+                  <option>Phone</option>
                   <option>Phone</option>
                 </select>
 

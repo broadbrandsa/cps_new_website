@@ -46,9 +46,9 @@ export function Footer() {
 
           <div className="footer-col">
             <h5>Get in touch</h5>
-            <a href="mailto:applications@cps.co.za">applications@cps.co.za</a>
-            <a href="mailto:Lukekah@cps.co.za">Lukekah@cps.co.za</a>
-            <a href="tel:+27730629344">+27 73 062 9344</a>
+            <a href="tel:+27117891957">+27 11 789 1957</a>
+            <a href="mailto:support@cps.co.za">support@cps.co.za</a>
+            <a href="mailto:succeed@cps.co.za">succeed@cps.co.za</a>
           </div>
         </div>
 

@@ -178,7 +178,7 @@ export const posts: Post[] = [
       },
       {
         kind: "p",
-        text: "Speak to admissions if you need help making the call — applications@cps.co.za, or +27 11 789 1957.",
+        text: "Speak to admissions if you need help making the call — succeed@cps.co.za, or +27 11 789 1957.",
       },
     ],
   },

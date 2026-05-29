@@ -39,7 +39,7 @@ export default function StudentsHome() {
               <span className="hero-line">forward.</span>
             </h1>
             <p className="hero-sub hero-fade-in">
-              Study accredited banking, insurance and leadership programmes designed for South African
+              Study accredited banking, insurance, financial services and leadership programmes designed for South African
               professionals who want recognised credentials, practical knowledge and a clearer path forward.
             </p>
 

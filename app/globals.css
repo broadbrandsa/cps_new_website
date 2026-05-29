@@ -4205,9 +4205,19 @@ body:not([data-route="home"]):not([data-route="organisations"]) .audience-tab-lo
 .flagship-hero {
   position: relative;
   padding: 200px 0 96px;
+  /* Lock both flagship heroes (HCIB + ACL) to the same height. 90vh is
+     ~10vh taller than the previous natural render and gives both pages
+     an identical, near-full-viewport hero regardless of copy length. */
+  min-height: 90vh;
   isolation: isolate;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+/* The container that holds breadcrumbs + headline is the flex item; flex:
+   0 0 auto lets it sit at its natural height inside the centred flex
+   layout. Photo + overlay + badges keep their absolute positioning. */
 .flagship-hero-photo {
   position: absolute; inset: 0;
   background-size: cover;
@@ -4245,6 +4255,7 @@ video.flagship-hero-video {
 .flagship-hero > .container {
   position: relative;
   z-index: 1;
+  flex: 0 0 auto;
 }
 /* Breadcrumb trail reads white on the dark photo hero. The current-page span
    uses its own brand-coloured override below (with !important) so it stays

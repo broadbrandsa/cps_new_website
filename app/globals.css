@@ -424,7 +424,7 @@ video.hero-photo {
   font-size: clamp(40px, 5.6vw, 76px);
   /* Tight line-height per design spec. .hero-line padding-bottom adds the
      descender buffer below so q/y/g don't clip at the upper clamp range. */
-  line-height: 1.1;
+  line-height: 1;
   letter-spacing: -0.035em;
   color: #fff;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);

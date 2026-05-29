@@ -225,7 +225,7 @@ export default function OrganisationsCPSLearn() {
               </p>
               <div className="cta-band-actions" style={{ marginTop: 24 }}>
                 <Link href="/contact#partnerships" className="btn btn-yellow btn-lg" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                  Discuss CPSLearn for your organisation <ArrowRight />
+                  Discuss your team&apos;s learning journey <ArrowRight />
                 </Link>
                 <Link href="/organisations/programmes" className="liquid-glass btn-lg" style={{ borderRadius: 14, padding: "14px 22px", display: "inline-flex", alignItems: "center" }}>
                   See workforce programmes

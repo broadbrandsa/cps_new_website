@@ -40,7 +40,7 @@ export function HeroVideo({ src, poster, playbackRate = 1, className }: Props) {
       try {
         v.playbackRate = playbackRate;
       } catch {
-        // Some browsers throw if set before metadata; ignore — the metadata handler will retry.
+        // Some browsers throw if set before metadata; ignore - the metadata handler will retry.
       }
     };
     apply();

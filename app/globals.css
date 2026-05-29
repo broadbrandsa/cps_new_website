@@ -5884,7 +5884,7 @@ video.flagship-hero-video {
   .legal-contact > div { grid-template-columns: 1fr; gap: 2px; }
 }
 
-/* ---------- FLAGSHIP NEXT INTAKE — start date / applications close strip ----
+/* ---------- FLAGSHIP NEXT INTAKE - start date / applications close strip ----
    Sits between the at-a-glance stats and the two-column body.
    Brand-coloured gradient card; "Applications close" item highlights urgent
    with a yellow corner accent. */
@@ -5986,7 +5986,7 @@ video.flagship-hero-video {
   .flagship-intake-cta { justify-content: center; width: 100%; }
 }
 
-/* Urgent sidebar fact — yellow accent on "Apply by [date]" */
+/* Urgent sidebar fact - yellow accent on "Apply by [date]" */
 .flagship-sticky-facts li.urgent {
   color: var(--accent-text-on-light);
   font-weight: 600;

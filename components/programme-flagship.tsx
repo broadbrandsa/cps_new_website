@@ -161,7 +161,7 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
         </div>
       </section>
 
-      {/* ===== NEXT INTAKE — start date + applications close ===== */}
+      {/* ===== NEXT INTAKE - start date + applications close ===== */}
       {(startDate || applicationsClose) && (
         <section className={`flagship-intake accent-${accent}`} aria-label="Next intake">
           <div className="container">

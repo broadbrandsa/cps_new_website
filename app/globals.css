@@ -934,8 +934,8 @@ footer { background: var(--bg-1); color: var(--muted); padding: 80px 0 32px; bor
   font-size: 13px; color: var(--muted-2);
 }
 .footer-bottom .badge {
-  font-family: var(--f-mono); font-size: 11px; color: var(--cps-yellow);
-  letter-spacing: 0.08em; text-transform: uppercase;
+  font-family: var(--f-mono); font-size: 11px; color: var(--ink);
+  letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
 }
 
 /* ---------- B2C/B2B PAGES ---------- */
@@ -5660,11 +5660,12 @@ video.flagship-hero-video {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--ink);
+  font-weight: 600;
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.footer-bottom-links a:hover { color: rgba(255, 255, 255, 0.85); }
+.footer-bottom-links a:hover { color: var(--cps-blue); }
 @media (prefers-reduced-motion: reduce) {
   .footer-social a:hover { transform: none; }
 }

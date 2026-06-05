@@ -77,7 +77,7 @@ export function Footer() {
             <h5>Organisations</h5>
             <Link href="/organisations">Organisations Home</Link>
             <Link href="/organisations/programmes">Workforce Programmes</Link>
-            <Link href="/organisations/cpslearn">CPSLearn for Organisations</Link>
+            <Link href="/organisations/cpslearn">CPSLearn Platform</Link>
             <Link href="/organisations#partnership-model">Partnership Model</Link>
             <Link href="/contact#partnerships">Contact Partnerships</Link>
           </div>

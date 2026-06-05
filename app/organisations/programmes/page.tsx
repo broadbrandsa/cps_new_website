@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight } from "@/components/icons";
+import { ExperienceSection } from "@/components/experience-section";
 import { Reveal } from "@/components/reveal";
 import { Spotlight } from "@/components/spotlight";
 
@@ -189,6 +190,9 @@ export default function OrganisationsProgrammes() {
           </div>
         </div>
       </section>
+
+      {/* WHAT YOUR STAFF CAN EXPECT - moved from /organisations/cpslearn */}
+      <ExperienceSection variant="organisations" surface="tinted" />
 
       {/* SECTION 1: OCCUPATIONAL QUALIFICATIONS - QCTO-aligned, workplace-integrated */}
       <section id="occupational">

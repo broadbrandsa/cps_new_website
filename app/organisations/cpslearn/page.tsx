@@ -14,15 +14,14 @@ import {
   Workflow,
   BarChart3,
 } from "@/components/icons";
-import { ExperienceSection } from "@/components/experience-section";
 import { Reveal } from "@/components/reveal";
 import { Spotlight } from "@/components/spotlight";
 import { CountUp } from "@/components/count-up";
 
 export const metadata: Metadata = {
-  title: "CPSLearn for Organisations",
+  title: "CPSLearn Platform",
   description:
-    "The proprietary platform behind CPS programme delivery. Structured learning journeys, assessment workflows, moderation, progress tracking and reporting visibility.",
+    "The CPSLearn Platform - the proprietary platform behind CPS programme delivery. Structured learning journeys, assessment workflows, moderation, progress tracking and reporting visibility.",
 };
 
 export default function OrganisationsCPSLearn() {
@@ -31,10 +30,10 @@ export default function OrganisationsCPSLearn() {
       <section className="page-hero">
         <div className="container">
           <div className="breadcrumbs">
-            <Link href="/organisations">Organisations</Link><span className="sep">/</span><span>CPSLearn</span>
+            <Link href="/organisations">Organisations</Link><span className="sep">/</span><span>CPSLearn Platform</span>
           </div>
           <div style={{ marginTop: 24, maxWidth: 880 }}>
-            <span className="eyebrow"><span className="dot" /> CPSLearn for Organisations</span>
+            <span className="eyebrow"><span className="dot" /> CPSLearn Platform</span>
             <h1>The platform that helps turn learning into visibility.</h1>
             <p style={{ marginTop: 24, fontSize: 18, maxWidth: 720 }}>
               CPSLearn is the proprietary platform behind CPS programme delivery. It supports structured
@@ -56,9 +55,6 @@ export default function OrganisationsCPSLearn() {
           </div>
         </div>
       </section>
-
-      {/* WHAT YOUR STAFF CAN EXPECT */}
-      <ExperienceSection variant="organisations" surface="tinted" />
 
       {/* BUILT FOR REAL STUDENTS - editorial-grid, mirrors students-side CPSLearn */}
       <section>

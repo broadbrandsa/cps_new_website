@@ -144,7 +144,7 @@ export default function AboutPage() {
           <div className="team-grid">
             {[
               { slug: "indira",    name: "Dr Indira Bhagaloo", role: "Chief Executive Officer" },
-              { slug: "cliff",     name: "Cliff Brunette",     role: "Executive: Learning & Teaching - People & Culture" },
+              { slug: "cliff",     name: "Dr Cliff Brunette",  role: "Executive: Learning & Teaching - People & Culture" },
               { slug: "karen-b",   name: "Karen Blore",        role: "Executive: Strategy & Technology" },
               { slug: "karen-v",   name: "Karen Vester",       role: "Registrar & Educational Compliance Lead" },
               { slug: "susan",     name: "Susan Nel",          role: "Learning Operations Lead" },

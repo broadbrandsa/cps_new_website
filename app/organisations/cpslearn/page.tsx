@@ -56,6 +56,44 @@ export default function OrganisationsCPSLearn() {
         </div>
       </section>
 
+      {/* HERITAGE - split: text + dark stat card. Sits directly under the hero */}
+      <section>
+        <div className="container">
+          <div className="cpslearn-heritage">
+            <Reveal as="div" className="heritage-text">
+              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-purple)" }} /> Heritage</span>
+              <h2 style={{ marginTop: 16 }}>Not just another learning platform.</h2>
+              <p style={{ marginTop: 24, fontSize: 17, color: "var(--muted)", lineHeight: 1.6 }}>
+                CPSLearn is not a repackaged third-party system. It&apos;s been built and refined over more
+                than two decades, based on how students actually move through programmes in banking,
+                insurance, investment and leadership.
+              </p>
+              <p style={{ marginTop: 16, fontSize: 17, color: "var(--ink)", lineHeight: 1.6, fontWeight: 500 }}>
+                That matters - because it means the system is shaped by real behaviour, not assumptions.
+              </p>
+            </Reveal>
+
+            <Reveal as="div" className="heritage-stat" delay={140}>
+              <Spotlight as="div">
+                <div className="heritage-card">
+                  <span className="mono">In market</span>
+                  <div className="big-stat">
+                    <CountUp to={25} /><sup>y</sup>
+                  </div>
+                  <p>Of focused experience in financial services education.</p>
+                  <ul>
+                    <li><Calendar width={14} height={14} /> Designed across cohorts</li>
+                    <li><Briefcase width={14} height={14} /> Built around banking + insurance reality</li>
+                    <li><Workflow width={14} height={14} /> Refined through real delivery</li>
+                    <li><BarChart3 width={14} height={14} /> Shaped by completion data</li>
+                  </ul>
+                </div>
+              </Spotlight>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* BUILT FOR REAL STUDENTS - editorial-grid, mirrors students-side CPSLearn */}
       <section>
         <div className="container">
@@ -164,44 +202,6 @@ export default function OrganisationsCPSLearn() {
                 CPSLearn supports the delivery environment needed for accredited and occupational
                 education programmes.
               </p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* HERITAGE - split: text + dark stat card */}
-      <section>
-        <div className="container">
-          <div className="cpslearn-heritage">
-            <Reveal as="div" className="heritage-text">
-              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-purple)" }} /> Heritage</span>
-              <h2 style={{ marginTop: 16 }}>Not just another learning platform.</h2>
-              <p style={{ marginTop: 24, fontSize: 17, color: "var(--muted)", lineHeight: 1.6 }}>
-                CPSLearn is not a repackaged third-party system. It&apos;s been built and refined over more
-                than two decades, based on how students actually move through programmes in banking,
-                insurance, investment and leadership.
-              </p>
-              <p style={{ marginTop: 16, fontSize: 17, color: "var(--ink)", lineHeight: 1.6, fontWeight: 500 }}>
-                That matters - because it means the system is shaped by real behaviour, not assumptions.
-              </p>
-            </Reveal>
-
-            <Reveal as="div" className="heritage-stat" delay={140}>
-              <Spotlight as="div">
-                <div className="heritage-card">
-                  <span className="mono">In market</span>
-                  <div className="big-stat">
-                    <CountUp to={25} /><sup>y</sup>
-                  </div>
-                  <p>Of focused experience in financial services education.</p>
-                  <ul>
-                    <li><Calendar width={14} height={14} /> Designed across cohorts</li>
-                    <li><Briefcase width={14} height={14} /> Built around banking + insurance reality</li>
-                    <li><Workflow width={14} height={14} /> Refined through real delivery</li>
-                    <li><BarChart3 width={14} height={14} /> Shaped by completion data</li>
-                  </ul>
-                </div>
-              </Spotlight>
             </Reveal>
           </div>
         </div>

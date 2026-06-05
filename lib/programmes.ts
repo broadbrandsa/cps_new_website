@@ -181,7 +181,7 @@ export const PROGRAMMES: Record<string, Programme> = {
       "<strong>Brandon Hall award-winning methodology</strong> - internationally recognised approach",
       "<strong>Built for working leaders</strong> - fully online, study in evenings and weekends",
       "<strong>Direct application</strong> - every module ends in workplace-applied competency",
-      "<strong>NQF 6 credential</strong> recognised across financial services",
+      "<strong>NQF 6 credential</strong> recognised across financial services and broader",
     ],
     modules: [
       "Self as Leader",

@@ -191,7 +191,7 @@ export default function OrganisationsProgrammes() {
       </section>
 
       {/* SECTION 1: OCCUPATIONAL QUALIFICATIONS - QCTO-aligned, workplace-integrated */}
-      <section>
+      <section id="occupational">
         <div className="container">
           <Reveal as="div" className="section-head">
             <div className="left">
@@ -307,7 +307,7 @@ export default function OrganisationsProgrammes() {
       </section>
 
       {/* SECTION 2: HIGHER EDUCATION QUALIFICATIONS - HCIB + ACL for cohorts */}
-      <section>
+      <section id="higher-education">
         <div className="container">
           <Reveal as="div" className="section-head">
             <div className="left">
@@ -353,7 +353,7 @@ export default function OrganisationsProgrammes() {
       </section>
 
       {/* SECTION 3: SKILLS PROGRAMMES */}
-      <section className="section-tinted">
+      <section id="skills" className="section-tinted">
         <div className="container">
           <Reveal as="div" className="section-head">
             <div className="left">

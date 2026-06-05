@@ -6105,3 +6105,16 @@ video.flagship-hero-video {
   margin-bottom: 2px;
 }
 .footer-col a:hover .footer-email-label { color: rgba(255, 255, 255, 0.70); }
+
+/* Org-home Primary Workforce Programmes - 3 category cards with equal height.
+   .prog-card.featured already has a flex column layout with prog-desc using
+   margin-bottom: auto to push meta+cta to the bottom. .prog-category-card
+   adds a generous min-height so each card has visible breathing room even
+   if one has less copy than the others. */
+.prog-category-grid .prog-category-card {
+  min-height: 420px;
+  height: 100%;
+}
+.prog-category-grid { align-items: stretch; }
+.prog-category-grid > .spotlight { display: flex; height: 100%; }
+.prog-category-grid > .spotlight > .prog-category-card { flex: 1; }

@@ -296,130 +296,73 @@ export default function OrganisationsHome() {
             </Link>
           </Reveal>
 
-          <div className="prog-grid">
+          <div className="prog-grid cols-3 prog-category-grid">
             <Spotlight as="div">
-              <Link href="/programmes/business-banking-practitioner" className="prog-card featured" style={{ display: "flex" }}>
+              <Link href="/organisations/programmes#occupational" className="prog-card featured prog-category-card" style={{ display: "flex" }}>
                 <div className="prog-card-top">
                   <div className="pill-row">
-                    <span className="pill pill-blue">Business Banking</span>
-                    <span className="pill">NQF 6</span>
-                    <span className="pill">QCTO</span>
+                    <span className="pill pill-blue">QCTO</span>
+                    <span className="pill">Workplace-integrated</span>
                   </div>
                 </div>
-                <h3 className="prog-title">Business Banking Practitioner</h3>
-                <p className="prog-desc">A workplace-integrated qualification for organisations developing SME and commercial banking professionals.</p>
-                <p className="prog-desc" style={{ fontSize: 13, color: "rgba(255,255,255,0.65)", marginTop: -8 }}>
-                  <strong style={{ color: "rgba(255,255,255,0.85)" }}>Why organisations use it:</strong> Business banking teams need more than product knowledge - they need relationship capability, client insight and confidence in business growth conversations.
+                <h3 className="prog-title">Occupational Qualifications (Learnerships)</h3>
+                <p className="prog-desc">
+                  QCTO-aligned occupational qualifications delivered as workplace-integrated
+                  learnerships. Built around real workforce capability in banking, insurance,
+                  investment and risk.
                 </p>
                 <div className="prog-meta">
-                  <div><strong>NQF 6</strong><span>QCTO</span></div>
-                  <div><strong>18 months</strong><span>workplace</span></div>
-                  <div><strong>202</strong><span>credits</span></div>
+                  <div><strong>6</strong><span>programmes</span></div>
+                  <div><strong>NQF 5-6</strong><span>QCTO</span></div>
+                  <div><strong>12-18 mo</strong><span>workplace</span></div>
                 </div>
-                <span className="prog-cta">View programme <ArrowRight width={14} height={14} /></span>
+                <span className="prog-cta">Explore occupational pathways <ArrowRight width={14} height={14} /></span>
               </Link>
             </Spotlight>
 
             <Spotlight as="div">
-              <Link href="/programmes/investment-advisor" className="prog-card featured" style={{ display: "flex" }}>
+              <Link href="/organisations/programmes#higher-education" className="prog-card featured prog-category-card" style={{ display: "flex" }}>
                 <div className="prog-card-top">
                   <div className="pill-row">
-                    <span className="pill pill-blue">Investment</span>
-                    <span className="pill">NQF 6</span>
-                    <span className="pill">QCTO</span>
+                    <span className="pill pill-blue">Higher Education</span>
+                    <span className="pill">CHE accredited</span>
                   </div>
                 </div>
-                <h3 className="prog-title">Investment Advisor</h3>
-                <p className="prog-desc">A qualification pathway for organisations developing investment, wealth and client portfolio advisory capability.</p>
-                <p className="prog-desc" style={{ fontSize: 13, color: "rgba(255,255,255,0.65)", marginTop: -8 }}>
-                  <strong style={{ color: "rgba(255,255,255,0.85)" }}>Why organisations use it:</strong> Investment advice requires technical knowledge, judgement and client trust. This programme supports teams in advisory and wealth environments.
+                <h3 className="prog-title">Higher Education Qualifications</h3>
+                <p className="prog-desc">
+                  CHE-accredited higher-education credentials available for cohort delivery via
+                  employer sponsorship. Suited to entry-level banking talent and emerging-leader
+                  pipelines.
                 </p>
                 <div className="prog-meta">
-                  <div><strong>NQF 6</strong><span>QCTO</span></div>
-                  <div><strong>18 months</strong><span>workplace</span></div>
-                  <div><strong>213</strong><span>credits</span></div>
+                  <div><strong>2</strong><span>programmes</span></div>
+                  <div><strong>NQF 5-6</strong><span>CHE accredited</span></div>
+                  <div><strong>12 months</strong><span>blended / online</span></div>
                 </div>
-                <span className="prog-cta">View programme <ArrowRight width={14} height={14} /></span>
+                <span className="prog-cta">Explore HE qualifications <ArrowRight width={14} height={14} /></span>
               </Link>
             </Spotlight>
 
             <Spotlight as="div">
-              <Link href="/programmes/long-term-insurance-advisor" className="prog-card featured" style={{ display: "flex" }}>
+              <Link href="/organisations/programmes#skills" className="prog-card featured prog-category-card" style={{ display: "flex" }}>
                 <div className="prog-card-top">
                   <div className="pill-row">
-                    <span className="pill pill-blue">Insurance</span>
-                    <span className="pill">NQF 5</span>
-                    <span className="pill">QCTO</span>
+                    <span className="pill pill-purple">Skills</span>
+                    <span className="pill">3-6 months</span>
                   </div>
                 </div>
-                <h3 className="prog-title">Long-Term Insurance Advisor</h3>
-                <p className="prog-desc">A qualification pathway for organisations developing long-term insurance advisor capability.</p>
-                <p className="prog-desc" style={{ fontSize: 13, color: "rgba(255,255,255,0.65)", marginTop: -8 }}>
-                  <strong style={{ color: "rgba(255,255,255,0.85)" }}>Why organisations use it:</strong> Regulated insurance environments need advisors who understand compliance, client needs and long-term advisory responsibilities.
+                <h3 className="prog-title">Skills Programmes</h3>
+                <p className="prog-desc">
+                  Short, focused programmes that target specific capability shifts in sales,
+                  leadership, client experience and digital change. Designed and deployed in
+                  weeks rather than quarters.
                 </p>
                 <div className="prog-meta">
-                  <div><strong>NQF 5</strong><span>QCTO</span></div>
-                  <div><strong>12 months</strong><span>workplace</span></div>
-                  <div><strong>180</strong><span>credits</span></div>
+                  <div><strong>8</strong><span>programmes</span></div>
+                  <div><strong>3-6 mo</strong><span>duration</span></div>
+                  <div><strong>Cohort</strong><span>delivery</span></div>
                 </div>
-                <span className="prog-cta">View programme <ArrowRight width={14} height={14} /></span>
-              </Link>
-            </Spotlight>
-
-            <Spotlight as="div">
-              <Link href="/programmes/foundations-of-value-selling" className="prog-card featured" style={{ display: "flex" }}>
-                <div className="prog-card-top">
-                  <div className="pill-row">
-                    <span className="pill pill-blue">Sales</span>
-                    <span className="pill">Skills Programme</span>
-                  </div>
-                </div>
-                <h3 className="prog-title">Foundations of Value Selling</h3>
-                <p className="prog-desc">A focused programme for client-facing teams that need to shift from transactional selling to value-led client conversations.</p>
-                <p className="prog-desc" style={{ fontSize: 13, color: "rgba(255,255,255,0.65)", marginTop: -8 }}>
-                  <strong style={{ color: "rgba(255,255,255,0.85)" }}>Why organisations use it:</strong> It helps teams build stronger client conversations, improve relationship quality and move beyond product-led selling.
-                </p>
-                <div className="prog-meta">
-                  <div><strong>3–6 mo</strong><span>duration</span></div>
-                  <div><strong>Skills</strong><span>programme</span></div>
-                </div>
-                <span className="prog-cta">Discuss team programme <ArrowRight width={14} height={14} /></span>
-              </Link>
-            </Spotlight>
-
-            <Spotlight as="div">
-              <Link href="/programmes/relationship-management" className="prog-card featured" style={{ display: "flex" }}>
-                <div className="prog-card-top">
-                  <div className="pill-row">
-                    <span className="pill pill-blue">Relationship Management</span>
-                    <span className="pill">Skills Programme</span>
-                  </div>
-                </div>
-                <h3 className="prog-title">Relationship Manager Development Programme</h3>
-                <p className="prog-desc">A focused programme for relationship managers who need to deepen client partnerships and support business growth conversations.</p>
-                <div className="prog-meta">
-                  <div><strong>3–6 mo</strong><span>duration</span></div>
-                  <div><strong>Skills</strong><span>programme</span></div>
-                </div>
-                <span className="prog-cta">Discuss team programme <ArrowRight width={14} height={14} /></span>
-              </Link>
-            </Spotlight>
-
-            <Spotlight as="div">
-              <Link href="/programmes/branch-manager-development" className="prog-card featured" style={{ display: "flex" }}>
-                <div className="prog-card-top">
-                  <div className="pill-row">
-                    <span className="pill pill-purple">Leadership / Operations</span>
-                    <span className="pill">Skills Programme</span>
-                  </div>
-                </div>
-                <h3 className="prog-title">Branch Manager Development Programme</h3>
-                <p className="prog-desc">A focused programme for branch leaders and operational managers who need to strengthen people leadership, performance management and operational delivery.</p>
-                <div className="prog-meta">
-                  <div><strong>3–6 mo</strong><span>duration</span></div>
-                  <div><strong>Skills</strong><span>programme</span></div>
-                </div>
-                <span className="prog-cta">Discuss team programme <ArrowRight width={14} height={14} /></span>
+                <span className="prog-cta">Explore skills programmes <ArrowRight width={14} height={14} /></span>
               </Link>
             </Spotlight>
           </div>

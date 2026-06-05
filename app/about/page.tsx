@@ -71,10 +71,10 @@ export default function AboutPage() {
             <Reveal as="div" className="ceo-portrait">
               <div className="ceo-photo">
                 <Image
-                  src="/indira.avif"
+                  src="/team/indira.jpg"
                   alt="Dr Indira Bhagaloo, CEO of Cornerstone Performance Solutions"
-                  width={640}
-                  height={640}
+                  width={1200}
+                  height={1200}
                   priority
                   sizes="(max-width: 880px) 280px, 320px"
                 />
@@ -113,6 +113,66 @@ export default function AboutPage() {
                 <div><strong>26y</strong><span>Financial Services</span></div>
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* MEET THE TEAM - all staff banner + 13-portrait grid */}
+      <section className="team-section">
+        <div className="container">
+          <Reveal as="div" className="section-head">
+            <div className="left">
+              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-blue)" }} /> The team</span>
+              <h2>The people behind CPS.</h2>
+              <p>
+                A small band of doers - educators, learning designers, programme managers and
+                delivery specialists - building learning experiences that move people forward.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal as="div" className="team-banner">
+            <Image
+              src="/team/all-staff.jpg"
+              alt="The Cornerstone Performance Solutions team"
+              width={2400}
+              height={1500}
+              sizes="(max-width: 1100px) 100vw, 1100px"
+            />
+          </Reveal>
+
+          <div className="team-grid">
+            {[
+              { slug: "indira",  name: "Dr Indira Bhagaloo", role: "Chief Executive Officer" },
+              { slug: "cliff",   name: "Cliff",   role: "Team" },
+              { slug: "dylan",   name: "Dylan",   role: "Team" },
+              { slug: "jade",    name: "Jade",    role: "Team" },
+              { slug: "karen-b", name: "Karen B", role: "Team" },
+              { slug: "karen-v", name: "Karen V", role: "Team" },
+              { slug: "lizzie",  name: "Lizzie",  role: "Team" },
+              { slug: "pauline", name: "Pauline", role: "Team" },
+              { slug: "pontsho", name: "Pontsho", role: "Team" },
+              { slug: "sma",     name: "Sma",     role: "Team" },
+              { slug: "susan",   name: "Susan",   role: "Team" },
+              { slug: "thando",  name: "Thando",  role: "Team" },
+              { slug: "wanda",   name: "Wanda",   role: "Team" },
+            ].map((m, i) => (
+              <Reveal key={m.slug} as="div" className="team-card" delay={i * 50}>
+                <div className="team-photo">
+                  <Image
+                    src={`/team/${m.slug}.jpg`}
+                    alt={`Portrait of ${m.name}`}
+                    width={600}
+                    height={750}
+                    sizes="(max-width: 720px) 50vw, (max-width: 1100px) 33vw, 220px"
+                  />
+                </div>
+                <div className="team-meta">
+                  <h3>{m.name}</h3>
+                  <span className="team-role">{m.role}</span>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

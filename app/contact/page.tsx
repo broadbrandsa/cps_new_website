@@ -124,7 +124,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="mono" style={{ color: "rgba(255,255,255,0.6)" }}>Email</div>
-                  <a style={{ color: "white", fontWeight: 500 }} href="mailto:organisations@cps.co.za">organisations@cps.co.za</a>
+                  <a style={{ color: "white", fontWeight: 500 }} href="mailto:succeed@cps.co.za">succeed@cps.co.za</a>
                 </div>
                 <div>
                   <div className="mono" style={{ color: "rgba(255,255,255,0.6)" }}>Address</div>

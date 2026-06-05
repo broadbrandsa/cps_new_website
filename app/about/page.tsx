@@ -143,19 +143,19 @@ export default function AboutPage() {
 
           <div className="team-grid">
             {[
-              { slug: "indira",  name: "Dr Indira Bhagaloo", role: "Chief Executive Officer" },
-              { slug: "cliff",   name: "Cliff",   role: "Team" },
-              { slug: "dylan",   name: "Dylan",   role: "Team" },
-              { slug: "jade",    name: "Jade",    role: "Team" },
-              { slug: "karen-b", name: "Karen B", role: "Team" },
-              { slug: "karen-v", name: "Karen V", role: "Team" },
-              { slug: "lizzie",  name: "Lizzie",  role: "Team" },
-              { slug: "pauline", name: "Pauline", role: "Team" },
-              { slug: "pontsho", name: "Pontsho", role: "Team" },
-              { slug: "sma",     name: "Sma",     role: "Team" },
-              { slug: "susan",   name: "Susan",   role: "Team" },
-              { slug: "thando",  name: "Thando",  role: "Team" },
-              { slug: "wanda",   name: "Wanda",   role: "Team" },
+              { slug: "indira",    name: "Dr Indira Bhagaloo", role: "Chief Executive Officer" },
+              { slug: "cliff",     name: "Cliff Brunette",     role: "Executive: Learning & Teaching - People & Culture" },
+              { slug: "karen-b",   name: "Karen Blore",        role: "Executive: Strategy & Technology" },
+              { slug: "karen-v",   name: "Karen Vester",       role: "Registrar & Educational Compliance Lead" },
+              { slug: "susan",     name: "Susan Nel",          role: "Learning Operations Lead" },
+              { slug: "pontsho",   name: "Pontsho Talana",     role: "Student Support Team Leader" },
+              { slug: "wanda",     name: "Wanda Qinisile",     role: "Business Development Segment Lead" },
+              { slug: "jade",      name: "Jade Lovedale",      role: "Faculty Manager" },
+              { slug: "lizzie",    name: "Lizzie Jacobs",      role: "Project Manager" },
+              { slug: "dylan",     name: "Dylan Alho",         role: "Sales Manager" },
+              { slug: "pauline",   name: "Pauline Williams",   role: "Implementation Manager" },
+              { slug: "thando",    name: "Thando Motlhabane",  role: "Implementation Manager" },
+              { slug: "simangele", name: "Simangele Gumede",   role: "Training and Workplace Operations Officer" },
             ].map((m, i) => (
               <Reveal key={m.slug} as="div" className="team-card" delay={i * 50}>
                 <div className="team-photo">

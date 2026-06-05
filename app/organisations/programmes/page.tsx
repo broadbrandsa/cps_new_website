@@ -87,22 +87,13 @@ const skillsProgrammes: Card[] = [
   },
 ];
 
-const additionalQualifications: Card[] = [
-  {
-    slug: "advanced-certificate-leadership",
-    pills: [{ label: "Leadership", cls: "pill-purple" }, { label: "NQF 6" }, { label: "Higher Education" }],
-    title: "Advanced Certificate in Leadership",
-    desc: "Available as a leadership development option for cohorts. A higher-education qualification for professionals taking on greater responsibility.",
-    audience: "Leadership development cohorts",
-    meta: [
-      { val: "NQF 6", lbl: "CHE accredited" },
-      { val: "12 months", lbl: "online" },
-    ],
-    cta: "Discuss for cohorts",
-  },
+// Additional occupational (QCTO + legacy) qualifications beyond the primary
+// three (BBP, IA, LTIA). Rendered as a secondary grid beneath the featured
+// trio in the Occupational qualifications section.
+const additionalOccupational: Card[] = [
   {
     slug: "agile-banking-professional",
-    pills: [{ label: "Banking", cls: "pill-blue" }, { label: "Occupational Qualification" }],
+    pills: [{ label: "Banking", cls: "pill-blue" }, { label: "Occupational" }],
     title: "Agile Banking Professional",
     desc: "A workplace-integrated occupational qualification for active banking employees.",
     audience: "Active banking employees",
@@ -114,7 +105,7 @@ const additionalQualifications: Card[] = [
   },
   {
     slug: "insurance-underwriter",
-    pills: [{ label: "Insurance", cls: "pill-blue" }, { label: "Occupational Qualification" }],
+    pills: [{ label: "Insurance", cls: "pill-blue" }, { label: "Occupational" }],
     title: "Insurance Underwriter",
     desc: "A qualification pathway for underwriting capability in short-term and long-term insurance environments.",
     audience: "Underwriting teams",
@@ -136,15 +127,34 @@ const additionalQualifications: Card[] = [
     ],
     cta: "View programme",
   },
+];
+
+// Higher-education (CHE-accredited) qualifications - available for cohort
+// delivery via organisational sponsorship.
+const heQualifications: Card[] = [
   {
     slug: "higher-certificate-banking",
-    pills: [{ label: "Banking", cls: "pill-blue" }, { label: "NQF 5" }, { label: "Student pathway" }],
+    pills: [{ label: "Banking", cls: "pill-blue" }, { label: "NQF 5" }, { label: "Higher Education" }],
     title: "Higher Certificate in Banking",
-    desc: "A student-side qualification that may be relevant for entry-level banking cohorts. Not a primary B2B product.",
-    audience: "Entry-level banking cohorts (student pathway)",
+    desc: "A 12-month, CHE-accredited foundation for banking careers. Relevant for entry-level banking cohorts and graduate intake programmes.",
+    audience: "Entry-level banking cohorts",
     meta: [
-      { val: "NQF 5", lbl: "higher education" },
+      { val: "NQF 5", lbl: "CHE accredited" },
       { val: "12 months", lbl: "blended" },
+      { val: "120", lbl: "credits" },
+    ],
+    cta: "View programme",
+  },
+  {
+    slug: "advanced-certificate-leadership",
+    pills: [{ label: "Leadership", cls: "pill-purple" }, { label: "NQF 6" }, { label: "Higher Education" }],
+    title: "Advanced Certificate in Leadership",
+    desc: "A 12-month, CHE-accredited leadership credential. Suitable for emerging-leader cohorts, succession pipelines and high-potential talent.",
+    audience: "Leadership development cohorts",
+    meta: [
+      { val: "NQF 6", lbl: "CHE accredited" },
+      { val: "12 months", lbl: "online" },
+      { val: "120", lbl: "credits" },
     ],
     cta: "View programme",
   },
@@ -180,17 +190,17 @@ export default function OrganisationsProgrammes() {
         </div>
       </section>
 
-      {/* SECTION 1: PRIMARY WORKFORCE QUALIFICATIONS - 3 cards leading with BBP, IA, LTIA */}
+      {/* SECTION 1: OCCUPATIONAL QUALIFICATIONS - QCTO-aligned, workplace-integrated */}
       <section>
         <div className="container">
           <Reveal as="div" className="section-head">
             <div className="left">
-              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-purple)" }} /> Primary Workforce Qualifications</span>
-              <h2>Three occupational qualifications built around real workforce capability.</h2>
+              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-purple)" }} /> Occupational qualifications</span>
+              <h2>Workplace-integrated qualifications built around real capability.</h2>
               <p>
-                Workplace-integrated, QCTO-aligned qualifications designed around the kind of capability
-                organisations actually need to build: business banking, investment advisory and long-term
-                insurance.
+                QCTO-aligned occupational qualifications (current and legacy) designed around the kind of
+                capability organisations actually need to build: business banking, investment advisory,
+                long-term insurance, and specialist pathways.
               </p>
             </div>
           </Reveal>
@@ -263,10 +273,86 @@ export default function OrganisationsProgrammes() {
               </Link>
             </Spotlight>
           </div>
+
+          {/* Additional occupational qualifications - QCTO + legacy */}
+          <div className="prog-grid" style={{ marginTop: 32 }}>
+            {additionalOccupational.map((c, i) => (
+              <Reveal key={c.slug} delay={i * 80}>
+                <Link href={`/programmes/${c.slug}`} className="prog-card secondary">
+                  <div className="prog-card-top">
+                    <div className="pill-row">
+                      {c.pills.map((p, j) => (
+                        <span key={j} className={`pill ${p.cls ?? ""}`.trim()}>{p.label}</span>
+                      ))}
+                    </div>
+                  </div>
+                  {c.audience && (
+                    <div className="prog-audience"><span className="mono">For: {c.audience}</span></div>
+                  )}
+                  <h3 className="prog-title">{c.title}</h3>
+                  <p className="prog-desc">{c.desc}</p>
+                  {c.meta && (
+                    <div className="prog-meta">
+                      {c.meta.map((m, j) => (
+                        <div key={j}><strong>{m.val}</strong><span>{m.lbl}</span></div>
+                      ))}
+                    </div>
+                  )}
+                  <span className="prog-cta">{c.cta} <ArrowRight width={12} height={12} /></span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* SECTION 2: SKILLS AND CAPABILITY PROGRAMMES */}
+      {/* SECTION 2: HIGHER EDUCATION QUALIFICATIONS - HCIB + ACL for cohorts */}
+      <section>
+        <div className="container">
+          <Reveal as="div" className="section-head">
+            <div className="left">
+              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-blue)" }} /> Higher Education qualifications</span>
+              <h2>CHE-accredited credentials for cohort delivery.</h2>
+              <p>
+                CHE-accredited higher-education qualifications. Available for cohort delivery in support
+                of strategic capability and leadership development, often via employer sponsorship of
+                early-career or high-potential talent.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="prog-grid">
+            {heQualifications.map((c, i) => (
+              <Reveal key={c.slug} delay={i * 80}>
+                <Link href={`/programmes/${c.slug}`} className="prog-card secondary">
+                  <div className="prog-card-top">
+                    <div className="pill-row">
+                      {c.pills.map((p, j) => (
+                        <span key={j} className={`pill ${p.cls ?? ""}`.trim()}>{p.label}</span>
+                      ))}
+                    </div>
+                  </div>
+                  {c.audience && (
+                    <div className="prog-audience"><span className="mono">For: {c.audience}</span></div>
+                  )}
+                  <h3 className="prog-title">{c.title}</h3>
+                  <p className="prog-desc">{c.desc}</p>
+                  {c.meta && (
+                    <div className="prog-meta">
+                      {c.meta.map((m, j) => (
+                        <div key={j}><strong>{m.val}</strong><span>{m.lbl}</span></div>
+                      ))}
+                    </div>
+                  )}
+                  <span className="prog-cta">{c.cta} <ArrowRight width={12} height={12} /></span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: SKILLS PROGRAMMES */}
       <section className="section-tinted">
         <div className="container">
           <Reveal as="div" className="section-head">
@@ -298,51 +384,6 @@ export default function OrganisationsProgrammes() {
                   )}
                   <h3 className="prog-title" style={{ fontSize: 15 }}>{c.title}</h3>
                   <p className="prog-desc" style={{ fontSize: 13 }}>{c.desc}</p>
-                  <span className="prog-cta">{c.cta} <ArrowRight width={12} height={12} /></span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3: ADDITIONAL QUALIFICATION PATHWAYS */}
-      <section>
-        <div className="container">
-          <Reveal as="div" className="section-head">
-            <div className="left">
-              <span className="eyebrow"><span className="dot" /> Additional Qualification Pathways</span>
-              <h2>Other qualifications available for cohort delivery.</h2>
-              <p>
-                Additional student-side qualifications and specialist pathways that may be relevant
-                depending on your cohort and capability goals.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="prog-grid">
-            {additionalQualifications.map((c, i) => (
-              <Reveal key={c.slug} delay={i * 80}>
-                <Link href={`/programmes/${c.slug}`} className="prog-card secondary">
-                  <div className="prog-card-top">
-                    <div className="pill-row">
-                      {c.pills.map((p, j) => (
-                        <span key={j} className={`pill ${p.cls ?? ""}`.trim()}>{p.label}</span>
-                      ))}
-                    </div>
-                  </div>
-                  {c.audience && (
-                    <div className="prog-audience"><span className="mono">For: {c.audience}</span></div>
-                  )}
-                  <h3 className="prog-title">{c.title}</h3>
-                  <p className="prog-desc">{c.desc}</p>
-                  {c.meta && (
-                    <div className="prog-meta">
-                      {c.meta.map((m, j) => (
-                        <div key={j}><strong>{m.val}</strong><span>{m.lbl}</span></div>
-                      ))}
-                    </div>
-                  )}
                   <span className="prog-cta">{c.cta} <ArrowRight width={12} height={12} /></span>
                 </Link>
               </Reveal>

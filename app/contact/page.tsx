@@ -45,9 +45,6 @@ export default function ContactPage() {
                 <a href="tel:+27117891957" className="contact-link primary">
                   <Phone /> +27 11 789 1957
                 </a>
-                <a href="mailto:support@cps.co.za" className="contact-link">
-                  <Mail /> support@cps.co.za
-                </a>
                 <a href="mailto:applications@cps.co.za" className="contact-link">
                   <Mail /> applications@cps.co.za
                 </a>
@@ -97,7 +94,7 @@ export default function ContactPage() {
                   </li>
                   <li style={{ color: "var(--muted)", fontSize: 14, paddingLeft: 18, position: "relative" }}>
                     <span style={{ position: "absolute", left: 0, top: 8, width: 6, height: 6, borderRadius: "50%", background: "var(--cps-blue)" }} />
-                    Whether you would like an info pack, a call back, or to apply
+                    Whether you would like a call back or to apply
                   </li>
                 </ul>
                 <div style={{ marginTop: 24 }}>
@@ -147,6 +144,9 @@ export default function ContactPage() {
                 <label className="sr-only" htmlFor="contact-email">Work email</label>
                 <input id="contact-email" name="email" placeholder="Work email" type="email" required autoComplete="email" />
 
+                <label className="sr-only" htmlFor="contact-phone">Phone number</label>
+                <input id="contact-phone" name="phone" placeholder="Phone number" type="tel" autoComplete="tel" />
+
                 <label className="sr-only" htmlFor="contact-org">Organisation</label>
                 <input id="contact-org" name="organisation" placeholder="Organisation" autoComplete="organization" />
 
@@ -159,7 +159,7 @@ export default function ContactPage() {
                   <option>Insurance</option>
                   <option>Brokers</option>
                   <option>Investment / wealth</option>
-                  <option>Education partner</option>
+                  <option>Risk &amp; compliance</option>
                   <option>Other</option>
                 </select>
 
@@ -178,7 +178,6 @@ export default function ContactPage() {
                 <label className="sr-only" htmlFor="contact-prefer">Preferred contact method</label>
                 <select id="contact-prefer" name="preferred" defaultValue="Email">
                   <option>Email</option>
-                  <option>Phone</option>
                   <option>Phone</option>
                 </select>
 

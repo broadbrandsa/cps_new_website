@@ -62,18 +62,10 @@ export default async function ProgrammeDetailPage({ params }: { params: Promise<
               <p className="lede">{p.lede}</p>
               <div style={{ marginTop: 32, display: "flex", gap: 12, flexWrap: "wrap" }}>
                 <a href="#pd-cta-bottom" className="btn btn-yellow btn-lg">{primaryCtaLabel}</a>
-                {isSkillsProgramme ? (
+                {isSkillsProgramme && (
                   <Link href="/programmes" className="liquid-glass btn-lg" style={{ borderRadius: 14, padding: "14px 22px", display: "inline-flex", alignItems: "center" }}>
                     Compare programmes
                   </Link>
-                ) : (
-                  <a
-                    href={`mailto:organisations@cps.co.za?subject=${encodeURIComponent(`Info pack: ${p.title}`)}`}
-                    className="liquid-glass btn-lg"
-                    style={{ borderRadius: 14, padding: "14px 22px", display: "inline-flex", alignItems: "center" }}
-                  >
-                    Email for info pack
-                  </a>
                 )}
               </div>
             </div>

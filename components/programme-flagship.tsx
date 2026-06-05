@@ -42,9 +42,7 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
   const applicationsClose = p.meta.find((m) => /applications close|close/i.test(m.lbl))?.val;
 
   const mailSubject = `Application: ${p.title}`;
-  const mailInfoSubject = `Info pack: ${p.title}`;
   const applyHref = `mailto:applications@cps.co.za?subject=${encodeURIComponent(mailSubject)}`;
-  const infoHref = `mailto:applications@cps.co.za?subject=${encodeURIComponent(mailInfoSubject)}`;
   const shortTitle = p.shortTitle ?? p.title;
 
   // Persona icons - used in "Who it's for"
@@ -94,9 +92,6 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
             <div className="flagship-hero-actions">
               <a href="#apply" className={`flagship-cta-primary accent-${accent}`}>
                 Apply now <ArrowRight />
-              </a>
-              <a href={infoHref} className="flagship-cta-secondary">
-                Email for info pack
               </a>
             </div>
 
@@ -408,9 +403,6 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
             <a href={applyHref} className={`flagship-sticky-cta accent-${accent}`}>
               Apply now <ArrowRight />
             </a>
-            <a href={infoHref} className="flagship-sticky-secondary">
-              Email for info pack
-            </a>
             <p className="flagship-sticky-note">
               Speak to admissions on{" "}
               <a href="tel:+27117891957">+27 11 789 1957</a> or{" "}
@@ -435,9 +427,6 @@ export function FlagshipProgrammeDetail({ p }: { p: Programme }) {
             <div className="flagship-apply-actions">
               <a href={applyHref} className="flagship-apply-cta-primary">
                 Apply now <ArrowRight />
-              </a>
-              <a href={infoHref} className="flagship-apply-cta-secondary">
-                Email for info pack
               </a>
             </div>
           </Spotlight>

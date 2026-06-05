@@ -57,7 +57,7 @@ export default function StudentsProgrammes() {
               <Link href="/programmes/higher-certificate-banking" className="prog-card hero-card" style={{ display: "flex" }}>
                 <div className="prog-card-top">
                   <div className="pill-row">
-                    <span className="pill pill-yellow">Primary programme</span>
+                    <span className="pill pill-yellow">Primary Focus</span>
                     <span className="pill">Banking</span>
                     <span className="pill">NQF 5</span>
                   </div>
@@ -99,7 +99,7 @@ export default function StudentsProgrammes() {
               <Link href="/programmes/advanced-certificate-leadership" className="prog-card companion-card" style={{ display: "flex" }}>
                 <div className="prog-card-top">
                   <div className="pill-row">
-                    <span className="pill pill-yellow">Primary programme</span>
+                    <span className="pill pill-yellow">Primary Focus</span>
                     <span className="pill">Leadership</span>
                     <span className="pill">NQF 6</span>
                   </div>

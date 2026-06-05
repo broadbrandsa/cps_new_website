@@ -205,45 +205,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* INSPIRED BY REUVEN FEUERSTEIN - asymmetric quote with attribution card */}
-      <section className="feuerstein-section">
-        <div className="container">
-          <div className="feuerstein-grid">
-            <Reveal as="div" className="feuerstein-quote-col">
-              <span className="eyebrow"><span className="dot" style={{ background: "var(--cps-purple)" }} /> Inspiration</span>
-              <h2 className="feuerstein-display">
-                Inspired by
-                <br />
-                <em>Reuven Feuerstein.</em>
-              </h2>
-              <blockquote className="feuerstein-pull">
-                <p>
-                  Thinking is a skill that can be modified through mediation.
-                </p>
-                <cite>- Reuven Feuerstein</cite>
-              </blockquote>
-            </Reveal>
-
-            <Reveal as="div" className="feuerstein-body" delay={160}>
-              <div className="feuerstein-card">
-                <span className="mono">Why this matters</span>
-                <p>
-                  The work of Professor Reuven Feuerstein has been a foundational inspiration for
-                  Cornerstone. Feuerstein demonstrated that cognitive ability is not fixed - that
-                  thinking itself is a skill that can be developed, strengthened, and refined through
-                  deliberate mediation.
-                </p>
-                <p>
-                  This insight powers our approach to education. Rather than simply delivering content,
-                  we mediate learning - guiding students through experiences that develop deeper
-                  cognitive structures and lasting capability.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
       {/* WHAT WE STAND FOR - three value cards with brand accents */}
       <section className="section-tinted">
         <div className="container">

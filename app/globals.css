@@ -6090,3 +6090,17 @@ video.flagship-hero-video {
   .team-card:hover .team-photo { transform: none; box-shadow: none; }
   .team-card:hover .team-photo img { transform: none; }
 }
+
+/* Footer Get-in-touch email labels - small mono "Students" / "Organisations"
+   tag above each email link so visitors can tell which inbox to use. */
+.footer-col a .footer-email-label {
+  display: block;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 2px;
+}
+.footer-col a:hover .footer-email-label { color: rgba(255, 255, 255, 0.70); }

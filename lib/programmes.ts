@@ -106,7 +106,6 @@ export const PROGRAMMES: Record<string, Programme> = {
       "Banking specialisation pathway",
     ],
     modulesNote: "Seven modules build foundational banking competence over 12 months.",
-    pathways: ["Personal Banking", "Business Banking", "Banking Operations", "Business Management"],
     audience: [
       "<strong>Matric graduates</strong> looking for a clear path into banking",
       "<strong>Career changers</strong> moving into financial services from another sector",

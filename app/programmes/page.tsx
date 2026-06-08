@@ -3,12 +3,46 @@ import type { Metadata } from "next";
 import { ArrowRight } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
 import { Spotlight } from "@/components/spotlight";
+import { getStudentProgrammes, valueStreamLabel, type Programme } from "@/lib/programmes";
 
 export const metadata: Metadata = {
   title: "Programmes for Students",
   description:
-    "Explore CPS qualifications and professional development programmes across banking, insurance, investment, leadership and workplace capability.",
+    "Three CPS Higher Education qualifications for South African students: Higher Certificate in Banking, Higher Certificate in Banking - Business Banking, and Advanced Certificate in Leadership.",
 };
+
+const students = getStudentProgrammes();
+
+function StudentProgrammeCard({ p }: { p: Programme }) {
+  const nqf = p.meta.find((m) => /nqf/i.test(m.lbl))?.val;
+  const credits = p.meta.find((m) => /credit/i.test(m.lbl))?.val;
+  const monthly = p.meta.find((m) => /monthly/i.test(m.lbl))?.val;
+  const duration = p.meta.find((m) => /duration/i.test(m.lbl))?.val;
+  const cardClass = p.accent === "purple" ? "companion-card" : "hero-card";
+  return (
+    <Spotlight as="div">
+      <Link href={`/programmes/${p.slug}`} className={`prog-card ${cardClass}`} style={{ display: "flex" }}>
+        <div className="prog-card-top">
+          <div className="pill-row">
+            <span className="pill pill-yellow">Primary Focus</span>
+            <span className={`pill ${p.valueStream === "universal" ? "pill-purple" : "pill-blue"}`}>
+              {valueStreamLabel(p.valueStream)}
+            </span>
+            {nqf && <span className="pill">NQF {nqf}</span>}
+          </div>
+        </div>
+        <h3 className="prog-title">{p.title}</h3>
+        <p className="prog-desc">{p.lede}</p>
+        <div className="prog-meta">
+          {monthly && <div><strong>{monthly}</strong><span>per month</span></div>}
+          {duration && <div><strong>{duration}</strong><span>blended / online</span></div>}
+          {credits && <div><strong>NQF {nqf}</strong><span>{credits} credits</span></div>}
+        </div>
+        <span className="prog-cta">View {p.shortTitle ?? p.title} <ArrowRight /></span>
+      </Link>
+    </Spotlight>
+  );
+}
 
 export default function StudentsProgrammes() {
   return (
@@ -26,115 +60,38 @@ export default function StudentsProgrammes() {
           </div>
           <div style={{ marginTop: 24, maxWidth: 880 }}>
             <span className="eyebrow"><span className="dot" /> Student Programmes</span>
-            <h1>Two pathways. Pick the one that fits your next step.</h1>
+            <h1>Three pathways. Pick the one that fits your next step.</h1>
             <p style={{ marginTop: 24, fontSize: 18 }}>
-              Two 12-month higher-education qualifications designed for working South African
-              professionals. One builds banking foundations. The other builds leadership capability.
-              Both are recognised, structured for completion, and end in a credential employers know.
+              Three 12-month higher-education qualifications designed for working South African
+              professionals. Two banking pathways - a general foundation and a business-banking
+              specialisation - plus a leadership credential. All three are CHE-accredited and end in
+              a credential employers know.
             </p>
           </div>
         </div>
       </section>
 
-      {/* SECTION 1: PRIMARY STUDENT PROGRAMMES - programme + audience-fit pairs */}
+      {/* PRIMARY STUDENT PROGRAMMES - 3-card grid */}
       <section>
         <div className="container">
           <Reveal as="div" className="section-head">
             <div className="left">
               <span className="eyebrow"><span className="dot" /> Primary Student Programmes</span>
-              <h2>Two flagship pathways - equal weight, different directions.</h2>
+              <h2>Three flagship pathways for ambitious South African professionals.</h2>
               <p>
-                Our two primary student programmes serve different career goals: a banking foundation, and a
-                leadership credential. Both are 12 months, both are higher-education qualifications, and both
-                are designed for working South African professionals. Each programme sits next to a quick
-                guide to help you decide where to start.
+                All three programmes are 12 months, CHE-accredited and designed for working
+                students. Choose the banking foundation, the business-banking specialisation, or
+                the leadership credential.
               </p>
             </div>
           </Reveal>
 
-          <div className="prog-featured-pair">
-            <Spotlight as="div">
-              <Link href="/programmes/higher-certificate-banking" className="prog-card hero-card" style={{ display: "flex" }}>
-                <div className="prog-card-top">
-                  <div className="pill-row">
-                    <span className="pill pill-yellow">Primary Focus</span>
-                    <span className="pill">Banking</span>
-                    <span className="pill">NQF 5</span>
-                  </div>
-                </div>
-                <h3 className="prog-title">Higher Certificate in Banking</h3>
-                <p className="prog-desc">
-                  A 12-month qualification for people who want to enter or grow in banking. HCIB builds
-                  foundational banking knowledge, practical financial services understanding and a
-                  recognised qualification pathway.
-                </p>
-                <div className="prog-meta">
-                  <div><strong>R2,480</strong><span>per month</span></div>
-                  <div><strong>12 months</strong><span>blended</span></div>
-                  <div><strong>NQF 5</strong><span>120 credits</span></div>
-                </div>
-                <span className="prog-cta">View HCIB <ArrowRight /></span>
-              </Link>
-            </Spotlight>
-
-            <Reveal as="div" className="audience-card pathway-card" delay={120}>
-              <div className="head-row">
-                <h3>Choose HCIB if&hellip;</h3>
-                <span className="tag pill pill-blue">Banking · NQF 5</span>
-              </div>
-              <p style={{ color: "var(--muted)", fontSize: 14, marginBottom: 16 }}>
-                You want to enter banking, formalise your banking knowledge, or build a recognised
-                foundation in financial services.
-              </p>
-              <span className="mono" style={{ marginBottom: 8, display: "block" }}>Best for</span>
-              <ul>
-                <li>Banking career starters</li>
-                <li>Junior banking professionals</li>
-                <li>Career changers entering financial services</li>
-                <li>Students wanting an NQF Level 5 banking qualification</li>
-              </ul>
-            </Reveal>
-
-            <Spotlight as="div">
-              <Link href="/programmes/advanced-certificate-leadership" className="prog-card companion-card" style={{ display: "flex" }}>
-                <div className="prog-card-top">
-                  <div className="pill-row">
-                    <span className="pill pill-yellow">Primary Focus</span>
-                    <span className="pill">Leadership</span>
-                    <span className="pill">NQF 6</span>
-                  </div>
-                </div>
-                <h3 className="prog-title">Advanced Certificate in Leadership</h3>
-                <p className="prog-desc">
-                  A 12-month qualification for professionals who want to strengthen leadership capability,
-                  formalise experience and move toward higher-responsibility roles.
-                </p>
-                <div className="prog-meta">
-                  <div><strong>R2,688</strong><span>per month</span></div>
-                  <div><strong>12 months</strong><span>online</span></div>
-                  <div><strong>NQF 6</strong><span>CHE accredited</span></div>
-                </div>
-                <span className="prog-cta">View ACL6 <ArrowRight /></span>
-              </Link>
-            </Spotlight>
-
-            <Reveal as="div" className="audience-card pathway-card" delay={240}>
-              <div className="head-row">
-                <h3>Choose ACL6 if&hellip;</h3>
-                <span className="tag pill pill-purple">Leadership · NQF 6</span>
-              </div>
-              <p style={{ color: "var(--muted)", fontSize: 14, marginBottom: 16 }}>
-                You already have workplace experience and want to strengthen your leadership capability,
-                improve decision-making and prepare for more senior responsibility.
-              </p>
-              <span className="mono" style={{ marginBottom: 8, display: "block" }}>Best for</span>
-              <ul>
-                <li>Emerging leaders</li>
-                <li>Team leaders</li>
-                <li>Professionals preparing for management growth</li>
-                <li>Students wanting an NQF Level 6 leadership qualification</li>
-              </ul>
-            </Reveal>
+          <div className="prog-grid student-prog-grid">
+            {students.map((p) => (
+              <Reveal key={p.slug}>
+                <StudentProgrammeCard p={p} />
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

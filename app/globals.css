@@ -6118,3 +6118,29 @@ video.flagship-hero-video {
 .prog-category-grid { align-items: stretch; }
 .prog-category-grid > .spotlight { display: flex; height: 100%; }
 .prog-category-grid > .spotlight > .prog-category-card { flex: 1; }
+
+/* ---------- STUDENT PROGRAMMES — 3-card flagship grid ----------
+   Three CHE-accredited HE programmes (HCIB / HCIBB / ACL) rendered as
+   equal-height hero-style cards. Replaces the older 2x2 pair + pathway
+   layout now that the catalogue has three primaries. */
+.student-prog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+.student-prog-grid > .spotlight { display: flex; height: 100%; }
+.student-prog-grid > .spotlight > .prog-card { flex: 1; width: 100%; min-height: 460px; }
+@media (max-width: 1100px) { .student-prog-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 720px)  { .student-prog-grid { grid-template-columns: 1fr; } }
+
+/* ---------- WORKFORCE PROGRAMME CARDS (org-side, light surface) ----------
+   Equal-height cards across each section's grid so the four section
+   layouts (HE / OQ / OSP / SSP) all read tidy regardless of copy length. */
+.workforce-card {
+  min-height: 320px;
+}
+.workforce-card.workforce-card-short {
+  min-height: 220px;
+}
+.prog-grid > .spotlight > .workforce-card { width: 100%; flex: 1; }

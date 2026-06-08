@@ -21,6 +21,14 @@ export type ProgrammeMeta = {
 
 export type ProgrammeFAQ = { q: string; a: string };
 
+/** Value stream classification used across the workforce-programmes listing. */
+export type ValueStream = "banking" | "fpi" | "universal";
+
+export type SalesChannel = "b2b" | "b2bc";
+
+/** Qualification type - drives the section grouping on /organisations/programmes. */
+export type QualType = "HE" | "OQ";
+
 export type Programme = {
   slug: string;
   cat: ProgrammeCategory;
@@ -43,30 +51,57 @@ export type Programme = {
    *  Also acts as the poster image while .heroVideo is loading. */
   heroImage?: string;
   /** Optional hero background video. When set, replaces the photo on the
-   *  flagship hero. Use a muted, loopable MP4. Autoplay-muted is allowed by
-   *  browsers; prefers-reduced-motion users keep the static heroImage. */
+   *  flagship hero. Use a muted, loopable MP4. */
   heroVideo?: string;
-  /** Playback rate for heroVideo (1 = native speed). Useful to slow stock
-   *  footage to a calmer, more cinematic pace. */
+  /** Playback rate for heroVideo (1 = native speed). */
   heroVideoSpeed?: number;
   /** Brand accent for the flagship template - blue, purple, or green. */
   accent?: "blue" | "purple" | "green";
   /** FAQ data for the flagship template. */
   faqs?: ProgrammeFAQ[];
-  /** Small explanatory note rendered as a footnote beneath the About
-   *  paragraph. HTML allowed - typically used to expand on a term or
-   *  acronym mentioned in the about copy (e.g. "Brandon Hall recognition"). */
+  /** Small explanatory note rendered as a footnote beneath the About paragraph. */
   aboutFootnote?: string;
+  /** Qualification type - HE (Higher Education) or OQ (Occupational). */
+  qualType: QualType;
+  /** Value stream classification. */
+  valueStream: ValueStream;
+  /** Sales channel - b2b only or b2b+b2c (B2B&C). B2B&C programmes appear on
+   *  both student and org sides; B2B-only programmes appear only on org side. */
+  salesChannel: SalesChannel;
+  /** SAQA ID (string to allow leading zeros / LP-prefixed compound IDs). */
+  saqaId?: string;
+};
+
+/** Short programmes (OSP credit-bearing + SSP no-credit) - list-only on
+ *  /organisations/programmes, no individual detail pages. */
+export type ShortProgrammeKind = "OSP" | "SSP";
+export type ShortProgramme = {
+  id: string;
+  kind: ShortProgrammeKind;
+  title: string;
+  desc: string;
+  nqfLevel?: string;
+  valueStream: ValueStream;
+  industry: string;
 };
 
 /**
- * Authoritative programme data, sourced from cps.co.za/qualifications.
- * Five accredited qualifications + eight skills programmes.
+ * Authoritative programme data. Only programmes from the client's June 2026
+ * data feed are listed - teach-out qualifications (Core Banking and Financial
+ * Services, Agile Banking Professional, Leadership Agility in Financial
+ * Services) are intentionally omitted.
+ *
+ * B2B&C programmes appear on both /programmes (students) and
+ * /organisations/programmes. B2B-only programmes appear on org side only.
  */
 export const PROGRAMMES: Record<string, Programme> = {
-  // ---------- HIGHER EDUCATION QUALIFICATIONS ----------
+  // ============== HE (HIGHER EDUCATION) QUALIFICATIONS - 3 programmes, B2B&C ==============
   "higher-certificate-banking": {
     slug: "higher-certificate-banking",
+    qualType: "HE",
+    valueStream: "banking",
+    salesChannel: "b2bc",
+    saqaId: "111129",
     cat: "banking",
     kind: "qualification",
     title: "Higher Certificate in Banking",
@@ -150,8 +185,103 @@ export const PROGRAMMES: Record<string, Programme> = {
     ],
   },
 
+  "higher-certificate-banking-business-banking": {
+    slug: "higher-certificate-banking-business-banking",
+    qualType: "HE",
+    valueStream: "banking",
+    salesChannel: "b2bc",
+    saqaId: "111129",
+    cat: "banking",
+    kind: "qualification",
+    title: "Higher Certificate in Banking - Business Banking",
+    shortTitle: "HCIBB",
+    pills: [
+      { label: "Business Banking", cls: "pill-blue" },
+      { label: "NQF 5" },
+      { label: "Higher Education" },
+      { label: "120 credits" },
+    ],
+    lede: "Get the qualification and skills that South Africa's major banks need to grow business banking professionals.",
+    meta: [
+      { lbl: "Monthly", val: "R2,480", big: true, yellow: true },
+      { lbl: "Duration", val: "12 months" },
+      { lbl: "NQF Level", val: "5" },
+      { lbl: "Credits", val: "120" },
+      { lbl: "Start date", val: "01 Oct 2026" },
+      { lbl: "Applications close", val: "17 Sept 2026" },
+      { lbl: "SAQA ID", val: "111129" },
+      { lbl: "Awarded by", val: "Higher Education (CHE)" },
+    ],
+    about:
+      "The Higher Certificate in Banking - Business Banking is a 12-month, NQF Level 5 higher education qualification that gives students the complete skill set South African banks value most. Whether students are starting fresh or advancing their career, the seven modules transform how they think about business banking, and how banks think about them. Designed for matric graduates, bank staff, and anyone who needs learning that works around work, family and life.",
+    benefits: [
+      "<strong>Recognised by SA's biggest banks</strong> for entry-level recruitment",
+      "<strong>Business banking specialisation</strong> - commercial banking client advisory and business acumen",
+      "<strong>Study anywhere, anytime</strong> - flexible online learning on tablet, laptop or computer",
+      "<strong>NQF 5 CHE-accredited</strong> with clear progression to NQF 6 qualifications",
+    ],
+    modules: [
+      "Academic Literacy (10 credits)",
+      "Economics (15 credits)",
+      "Foundational Banking Practice (20 credits)",
+      "Financial Accounting (15 credits)",
+      "Ethics and Compliance in Banking (20 credits)",
+      "Client Solutioning in Banking (20 credits)",
+      "Business Banking specialisation (20 credits)",
+    ],
+    modulesNote: "Six core modules (100 credits) plus the Business Banking specialisation (20 credits).",
+    audience: [
+      "<strong>Matric graduates</strong> with a strong interest in commercial banking",
+      "<strong>Bank staff</strong> wanting to formalise commercial banking knowledge",
+      "<strong>Career changers</strong> moving into business banking roles",
+    ],
+    outcomes: [
+      "Business banking client advisor roles",
+      "Relationship banking for SME and commercial clients",
+      "Commercial banking analyst positions",
+      "Progression into NQF 6 business banking qualifications",
+    ],
+    flagship: true,
+    heroImage: "/brooke-cagle-JBwcenOuRCg-unsplash.jpg",
+    heroVideo: "/14324724_1280_720_24fps.mp4",
+    heroVideoSpeed: 0.75,
+    accent: "blue",
+    faqs: [
+      {
+        q: "How is this different from the standard Higher Certificate in Banking?",
+        a: "HCIB - Business Banking shares the same six core banking modules and same SAQA registration (111129) as the standard HCIB. The seventh module specialises in business banking - covering commercial banking principles, financial analysis, lending and client advisory for business and SME clients.",
+      },
+      {
+        q: "Do I need business banking experience already?",
+        a: "No. The programme is designed both as a gateway for newcomers and as a formal credential for staff already in client-facing or business banking roles. Matric or equivalent is the entry requirement.",
+      },
+      {
+        q: "Is there an upfront fee?",
+        a: "There is no upfront fee. A R300 application fee is payable upon completing your application - not after acceptance. Tuition is billed monthly at R2,480 over the 12-month duration.",
+      },
+      {
+        q: "Can my employer sponsor this programme?",
+        a: "Yes. Many banks sponsor HCIB - Business Banking for new client-facing hires and graduate-intake cohorts. Speak to admissions if you'd like to bring this to your employer, or if your employer is already enrolling cohorts.",
+      },
+      {
+        q: "Will I be able to study while I work?",
+        a: "Yes - the programme is delivered through CPSLearn with flexible, mobile-friendly access designed for working professionals and students balancing work, family and life.",
+      },
+      {
+        q: "What happens after I apply?",
+        a: "Our admissions team will be in touch within 3 business days to confirm your application, walk you through the requirements, and answer any questions before you commit.",
+      },
+    ],
+    aboutFootnote:
+      "<strong>HCIB and HCIB - Business Banking share SAQA ID 111129.</strong> They differ in the seventh specialisation module - this version focuses specifically on commercial and business banking. Choose this version if you're heading into client-facing business banking roles.",
+  },
+
   "advanced-certificate-leadership": {
     slug: "advanced-certificate-leadership",
+    qualType: "HE",
+    valueStream: "universal",
+    salesChannel: "b2bc",
+    saqaId: "120160",
     cat: "leadership",
     kind: "qualification",
     title: "Advanced Certificate in Leadership",
@@ -193,7 +323,7 @@ export const PROGRAMMES: Record<string, Programme> = {
     ],
     modulesNote: "Six modules across leadership agility, decision making and applied behaviour.",
     audience: [
-      "<strong>Mid-career professionals</strong> 3–7 years into financial services",
+      "<strong>Mid-career professionals</strong> 3-7 years into financial services",
       "<strong>Newly promoted team leads</strong> stepping into formal management",
       "<strong>High-potential employees</strong> on succession or talent pipelines",
     ],
@@ -211,7 +341,7 @@ export const PROGRAMMES: Record<string, Programme> = {
     faqs: [
       {
         q: "Do I need prior leadership experience?",
-        a: "ACL is designed for professionals 3–7 years into their career - typically newly promoted team leads, mid-career professionals, or high-potential employees on a succession track. Formal leadership experience helps, but the programme is built to formalise emerging leadership capability, not to require it upfront.",
+        a: "ACL is designed for professionals 3-7 years into their career - typically newly promoted team leads, mid-career professionals, or high-potential employees on a succession track. Formal leadership experience helps, but the programme is built to formalise emerging leadership capability, not to require it upfront.",
       },
       {
         q: "Is there an upfront fee?",
@@ -236,9 +366,13 @@ export const PROGRAMMES: Record<string, Programme> = {
     ],
   },
 
-  // ---------- OCCUPATIONAL QUALIFICATIONS (QCTO) ----------
+  // ============== OQ (OCCUPATIONAL QUALIFICATIONS) - 6 programmes, B2B only ==============
   "business-banking-practitioner": {
     slug: "business-banking-practitioner",
+    qualType: "OQ",
+    valueStream: "banking",
+    salesChannel: "b2b",
+    saqaId: "120117",
     cat: "banking",
     kind: "qualification",
     title: "Business Banking Practitioner",
@@ -247,101 +381,85 @@ export const PROGRAMMES: Record<string, Programme> = {
       { label: "Business Banking", cls: "pill-blue" },
       { label: "NQF 6" },
       { label: "QCTO" },
-      { label: "202 credits" },
     ],
     lede:
-      "Build business banking professionals who win relationships through insight. An 18-month occupational qualification grounded in real business banking practice.",
+      "Build business banking professionals who win relationships through insight. A 12-month occupational qualification grounded in real business banking practice.",
     meta: [
       { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "Duration", val: "18 months" },
+      { lbl: "Duration", val: "12 months" },
       { lbl: "NQF Level", val: "6" },
-      { lbl: "Credits", val: "202" },
       { lbl: "SAQA ID", val: "120117" },
       { lbl: "Awarded by", val: "QCTO" },
-      { lbl: "Format", val: "Workplace-integrated" },
     ],
     about:
-      "The Business Banking Practitioner qualification is for bankers working with SME, commercial and mid-market clients. It develops the credit, risk, advisory and relationship capability needed to handle business portfolios with confidence. Workplace evidence is integrated into the qualification through a structured logbook.",
+      "The Business Banking Practitioner qualification is a workplace-integrated NQF Level 6 occupational qualification (QCTO accredited, SAQA ID 120117) for organisations developing SME and commercial banking professionals. It builds the relationship capability, client insight and business-growth conversation skills business banking teams need.",
     benefits: [
-      "<strong>Built for working business bankers</strong> with active client portfolios",
-      "<strong>Credit and risk fundamentals</strong> applied to SA SME context",
-      "<strong>Relationship-led advisory</strong> at the heart of the curriculum",
-      "<strong>QCTO occupational qualification</strong> - recognised pathway into senior commercial banking",
-    ],
-    modules: [
-      "Business Banking Fundamentals",
-      "Credit Analysis & Risk",
-      "SME & Commercial Lending",
-      "Relationship Management",
-      "Compliance & Regulatory Environment",
-      "Applied Portfolio Project",
+      "<strong>Workplace-integrated</strong> learning, designed to apply as it builds",
+      "<strong>QCTO accredited</strong> occupational qualification (NQF 6)",
+      "<strong>Built for business banking teams</strong> in regulated environments",
+      "<strong>12-month cohort delivery</strong> through CPSLearn",
     ],
     audience: [
-      "<strong>Business bankers</strong> managing SME and commercial portfolios",
-      "<strong>Relationship managers</strong> in business and commercial banking",
-      "<strong>Credit analysts</strong> moving into client-facing roles",
+      "<strong>Business banking teams</strong> developing client capability",
+      "<strong>Commercial banking professionals</strong> moving into advisory roles",
+      "<strong>SME banking specialists</strong> deepening relationship skills",
     ],
     outcomes: [
-      "Senior business banker positions",
-      "Relationship manager roles in commercial banking",
-      "Pathway to corporate banking and credit specialisations",
+      "Business banking practitioner roles",
+      "Commercial banking client advisory positions",
+      "SME relationship banking",
     ],
   },
 
-  "investment-advisor": {
-    slug: "investment-advisor",
-    cat: "investment",
+  "insurance-underwriter": {
+    slug: "insurance-underwriter",
+    qualType: "OQ",
+    valueStream: "fpi",
+    salesChannel: "b2b",
+    saqaId: "117329",
+    cat: "insurance",
     kind: "qualification",
-    title: "Investment Advisor",
-    shortTitle: "IA",
+    title: "Insurance Agent: Insurance Underwriter",
+    shortTitle: "Insurance Underwriter",
     pills: [
-      { label: "Investment", cls: "pill-blue" },
-      { label: "NQF 6" },
+      { label: "Insurance", cls: "pill-blue" },
+      { label: "NQF 5" },
       { label: "QCTO" },
-      { label: "213 credits" },
     ],
     lede:
-      "Develop strategic investment partners your clients trust through volatility. An 18-month occupational qualification for wealth and investment professionals.",
+      "A QCTO-aligned occupational qualification for organisations developing underwriting capability in short-term and long-term insurance environments.",
     meta: [
       { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "Duration", val: "18 months" },
-      { lbl: "NQF Level", val: "6" },
-      { lbl: "Credits", val: "213" },
-      { lbl: "SAQA ID", val: "105021" },
+      { lbl: "Duration", val: "12 months" },
+      { lbl: "NQF Level", val: "5" },
+      { lbl: "SAQA ID", val: "117329" },
       { lbl: "Awarded by", val: "QCTO" },
-      { lbl: "Format", val: "Workplace-integrated" },
     ],
     about:
-      "The Investment Advisor qualification is for professionals working with wealth, investment portfolios and structured products. It builds on prior advisory experience and develops the technical and ethical capability needed for higher-stakes client conversations - with workplace evidence carrying real weight in the assessment.",
+      "An NQF Level 5 occupational qualification (QCTO accredited, SAQA ID 117329) for underwriting teams in regulated insurance environments. Workplace-integrated and designed for delivery via organisational cohorts.",
     benefits: [
-      "<strong>NQF 6 credential</strong> recognised in wealth and investment",
-      "<strong>Designed for working professionals</strong> already in advisory roles",
-      "<strong>Practical case-based learning</strong> grounded in SA market context",
-      "<strong>Pathway into specialist designations</strong> in wealth management",
-    ],
-    modules: [
-      "Investment Theory & Markets",
-      "Portfolio Construction",
-      "Tax & Estate Planning Foundations",
-      "Behavioural Finance",
-      "Regulatory & Ethical Practice",
-      "Client Advisory Process",
+      "<strong>Workplace-integrated</strong> learning for active underwriting teams",
+      "<strong>QCTO accredited</strong> occupational qualification (NQF 5)",
+      "<strong>Regulated industry alignment</strong> across short and long-term insurance",
+      "<strong>12-month cohort delivery</strong>",
     ],
     audience: [
-      "<strong>Practising investment advisors</strong> seeking formal qualification",
-      "<strong>Wealth managers</strong> at independent and tied firms",
-      "<strong>Bankers</strong> moving into investment-side roles",
+      "<strong>Underwriting teams</strong> in short or long-term insurance environments",
+      "<strong>Junior insurance professionals</strong> moving into underwriting",
     ],
     outcomes: [
-      "Investment advisor positions at wealth firms",
-      "Wealth manager and portfolio analyst roles",
-      "Bank investment-advisory roles",
-      "Pathway to CFP and other specialist designations",
+      "Insurance underwriter positions",
+      "Underwriting analyst roles",
+      "Progression into senior underwriting capability",
     ],
   },
 
   "long-term-insurance-advisor": {
     slug: "long-term-insurance-advisor",
+    qualType: "OQ",
+    valueStream: "fpi",
+    salesChannel: "b2b",
+    saqaId: "105022",
     cat: "insurance",
     kind: "qualification",
     title: "Long-Term Insurance Advisor",
@@ -350,356 +468,162 @@ export const PROGRAMMES: Record<string, Programme> = {
       { label: "Insurance", cls: "pill-blue" },
       { label: "NQF 5" },
       { label: "QCTO" },
-      { label: "180 credits" },
     ],
     lede:
-      "Develop trusted advisors who win clients and grow books sustainably. A 12-month occupational qualification for advisors entering long-term insurance.",
+      "A QCTO-aligned occupational qualification for organisations developing long-term insurance advisor capability.",
     meta: [
       { lbl: "Pricing", val: "Enquire", yellow: true },
       { lbl: "Duration", val: "12 months" },
       { lbl: "NQF Level", val: "5" },
-      { lbl: "Credits", val: "180" },
       { lbl: "SAQA ID", val: "105022" },
       { lbl: "Awarded by", val: "QCTO" },
-      { lbl: "Format", val: "Workplace-integrated" },
     ],
     about:
-      "The Long-Term Insurance Advisor qualification gives you the regulated credential and practical capability to advise clients on long-term insurance products. Workplace-integrated delivery means your day job becomes part of your evidence portfolio.",
+      "An NQF Level 5 occupational qualification (QCTO accredited, SAQA ID 105022) for advisors in regulated long-term insurance environments. Workplace-integrated and designed for delivery via organisational cohorts.",
     benefits: [
-      "<strong>Regulator-recognised</strong> credential for long-term insurance advisors",
-      "<strong>Workplace-integrated</strong> - your live work counts as evidence",
-      "<strong>Industry-experienced facilitators</strong> who have sold the product themselves",
-      "<strong>QCTO occupational qualification</strong> - formal credibility across SA insurance",
-    ],
-    modules: [
-      "Insurance Principles",
-      "Long-term Insurance Products",
-      "Regulatory Environment (FAIS, FICA, POPIA)",
-      "Needs Analysis & Client Advice",
-      "Underwriting Fundamentals",
-      "Claims & Policy Lifecycle",
+      "<strong>Regulated long-term insurance</strong> compliance alignment",
+      "<strong>QCTO accredited</strong> occupational qualification (NQF 5)",
+      "<strong>Workplace-integrated</strong> for active advisor teams",
+      "<strong>12-month cohort delivery</strong>",
     ],
     audience: [
-      "<strong>New advisors</strong> entering long-term insurance",
-      "<strong>Existing advisors</strong> needing the regulated qualification",
-      "<strong>Career changers</strong> moving into insurance from banking or sales",
+      "<strong>Long-term insurance advisors</strong> in regulated environments",
+      "<strong>Broker networks</strong> developing advisor capability",
     ],
     outcomes: [
-      "Long-term insurance advisor roles",
-      "Independent broker positions",
-      "Bancassurance advisory roles",
-      "Foundation for further insurance specialisations",
+      "Long-term insurance advisor positions",
+      "Compliance-aligned advisory roles",
+      "Progression into senior advisor capability",
     ],
   },
 
-  "agile-banking-professional": {
-    slug: "agile-banking-professional",
-    cat: "banking",
+  "investment-advisor": {
+    slug: "investment-advisor",
+    qualType: "OQ",
+    valueStream: "fpi",
+    salesChannel: "b2b",
+    saqaId: "105021",
+    cat: "investment",
     kind: "qualification",
-    title: "Agile Banking Professional",
-    shortTitle: "ABP",
+    title: "Investment Advisor",
+    shortTitle: "Investment Advisor",
     pills: [
-      { label: "Banking", cls: "pill-blue" },
-      { label: "NQF 5" },
-      { label: "Occupational Qualification" },
+      { label: "Investment", cls: "pill-blue" },
+      { label: "NQF 6" },
+      { label: "QCTO" },
     ],
     lede:
-      "A banking-focused qualification pathway for professionals developing stronger capability in modern banking environments.",
+      "A QCTO-aligned occupational qualification for organisations developing investment, wealth and client portfolio advisory capability.",
     meta: [
       { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "NQF Level", val: "5" },
-      { lbl: "Format", val: "Workplace-integrated" },
+      { lbl: "Duration", val: "12 months" },
+      { lbl: "NQF Level", val: "6" },
+      { lbl: "SAQA ID", val: "105021" },
       { lbl: "Awarded by", val: "QCTO" },
     ],
     about:
-      "The Agile Banking Professional qualification is a workplace-integrated occupational pathway. It is designed for active banking employees who want to formalise their experience, develop stronger banking capability and earn a recognised NQF Level 5 credential - typically supported by their employer.",
+      "An NQF Level 6 occupational qualification (QCTO accredited, SAQA ID 105021) for advisors in investment, wealth and client portfolio environments. Workplace-integrated and designed for delivery via organisational cohorts.",
     benefits: [
-      "<strong>Workplace-integrated</strong> - your day-to-day work counts as evidence",
-      "<strong>Employer-led enrolment</strong> - typically supported by your bank",
-      "<strong>Recognised credential</strong> - a formal NQF Level 5 banking qualification",
-      "<strong>Designed for working professionals</strong> who want to keep moving while studying",
-    ],
-    modules: [
-      "Banking Operations Fundamentals",
-      "Customer Service in Banking",
-      "Compliance & Risk in Practice",
-      "Digital Banking Channels",
-      "Workplace Project Portfolio",
+      "<strong>Technical and advisory capability</strong> for investment teams",
+      "<strong>QCTO accredited</strong> occupational qualification (NQF 6)",
+      "<strong>Workplace-integrated</strong> for active advisor teams",
+      "<strong>12-month cohort delivery</strong>",
     ],
     audience: [
-      "<strong>Active banking employees</strong> in operations and customer-facing roles",
-      "<strong>Branch and contact-centre staff</strong> needing formal credentials",
-      "<strong>Employer-sponsored students</strong> on bank skills programmes",
+      "<strong>Investment advisors</strong> and wealth managers",
+      "<strong>Client portfolio teams</strong> developing technical capability",
     ],
     outcomes: [
-      "Formal NQF 5 banking credential",
-      "Progression into specialist banking roles",
-      "Foundation for further qualifications",
-    ],
-  },
-
-  "insurance-underwriter": {
-    slug: "insurance-underwriter",
-    cat: "insurance",
-    kind: "qualification",
-    title: "Insurance Underwriter",
-    shortTitle: "IU",
-    pills: [
-      { label: "Insurance", cls: "pill-blue" },
-      { label: "NQF 5" },
-      { label: "Occupational Qualification" },
-    ],
-    lede:
-      "A qualification pathway for professionals building underwriting capability in insurance environments.",
-    meta: [
-      { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "NQF Level", val: "5" },
-      { lbl: "Format", val: "Workplace-integrated" },
-      { lbl: "Awarded by", val: "QCTO" },
-    ],
-    about:
-      "The Insurance Underwriter qualification develops the technical and judgement capability that underwriting demands. It blends product knowledge, regulatory grounding and risk assessment into a coherent qualification recognised across South African insurance.",
-    benefits: [
-      "<strong>Technical depth</strong> in product, regulation and risk",
-      "<strong>Judgement-focused</strong> - case-based learning, not rote",
-      "<strong>Designed for working underwriters</strong> with active books",
-      "<strong>Recognised pathway</strong> into senior underwriting roles",
-    ],
-    modules: [
-      "Insurance Principles & Markets",
-      "Underwriting Fundamentals",
-      "Risk Assessment & Pricing",
-      "Regulatory Environment",
-      "Reinsurance Basics",
-      "Applied Underwriting Practice",
-    ],
-    audience: [
-      "<strong>Working underwriters</strong> in short-term or long-term insurance",
-      "<strong>Insurance graduates</strong> entering underwriting careers",
-      "<strong>Claims professionals</strong> moving into underwriting",
-    ],
-    outcomes: [
-      "Senior underwriter positions",
-      "Specialist underwriting in commercial lines",
-      "Pathway to underwriting management",
+      "Investment advisor positions",
+      "Client portfolio management roles",
+      "Wealth advisory progression",
     ],
   },
 
   "organisational-risk-practitioner": {
     slug: "organisational-risk-practitioner",
+    qualType: "OQ",
+    valueStream: "universal",
+    salesChannel: "b2b",
+    saqaId: "94222",
     cat: "risk",
     kind: "qualification",
     title: "Organisational Risk Practitioner",
-    shortTitle: "ORP",
+    shortTitle: "Organisational Risk Practitioner",
     pills: [
       { label: "Risk", cls: "pill-purple" },
       { label: "NQF 6" },
-      { label: "Occupational Qualification" },
+      { label: "QCTO" },
     ],
     lede:
-      "A qualification pathway for professionals developing organisational risk capability in regulated business environments.",
+      "An NQF 6 occupational qualification for risk practitioners in financial services and regulated industries.",
     meta: [
-      { lbl: "Pricing", val: "Employer-led", yellow: true },
+      { lbl: "Pricing", val: "Enquire", yellow: true },
+      { lbl: "Duration", val: "12 months" },
       { lbl: "NQF Level", val: "6" },
-      { lbl: "Format", val: "Workplace-integrated" },
+      { lbl: "SAQA ID", val: "94222" },
       { lbl: "Awarded by", val: "QCTO" },
     ],
     about:
-      "The Organisational Risk Practitioner qualification develops the formal capability that today's risk landscape demands. Designed for practitioners in banking, insurance and regulated industries, it integrates workplace evidence with structured learning into a single QCTO-awarded credential.",
+      "An NQF Level 6 occupational qualification (QCTO accredited, SAQA ID 94222) for risk, compliance and assurance teams in regulated financial services and broader regulated industries. Workplace-integrated.",
     benefits: [
-      "<strong>NQF 6 occupational qualification</strong> - recognised in regulated industries",
-      "<strong>Workplace logbook</strong> integration - your live work is your evidence",
-      "<strong>Cross-domain</strong> - operational, compliance, conduct and enterprise risk",
-      "<strong>Pathway into</strong> senior risk and compliance leadership",
-    ],
-    modules: [
-      "Risk Frameworks & Standards (ISO 31000)",
-      "Operational & Compliance Risk",
-      "Conduct & Market Risk",
-      "Enterprise Risk Management",
-      "Risk Reporting & Governance",
-      "Workplace Risk Project",
+      "<strong>Regulated industry alignment</strong> for risk and compliance teams",
+      "<strong>QCTO accredited</strong> occupational qualification (NQF 6)",
+      "<strong>Workplace-integrated</strong> for active risk practitioners",
+      "<strong>12-month cohort delivery</strong>",
     ],
     audience: [
-      "<strong>Active risk practitioners</strong> in banking and insurance",
-      "<strong>Compliance officers</strong> broadening into enterprise risk",
-      "<strong>Internal audit staff</strong> moving into risk management",
+      "<strong>Risk practitioners</strong> in financial services",
+      "<strong>Compliance and assurance teams</strong> in regulated industries",
     ],
     outcomes: [
-      "Senior risk and compliance positions",
-      "Risk specialist roles in financial services",
-      "Pathway into risk leadership and governance",
+      "Organisational risk practitioner positions",
+      "Risk and compliance specialist roles",
+      "Progression into senior risk leadership",
     ],
   },
 
-  // ---------- SKILLS PROGRAMMES (3–6 months, no NQF / no published price) ----------
-  "foundations-of-value-selling": {
-    slug: "foundations-of-value-selling",
-    cat: "sales",
-    kind: "skills-programme",
-    title: "Foundations of Value Selling",
+  "insurance-claims-administrator": {
+    slug: "insurance-claims-administrator",
+    qualType: "OQ",
+    valueStream: "fpi",
+    salesChannel: "b2b",
+    saqaId: "99668",
+    cat: "insurance",
+    kind: "qualification",
+    title: "Insurance Claims Administrator",
+    shortTitle: "Insurance Claims Administrator",
     pills: [
-      { label: "Skills Programme" },
-      { label: "3–6 months" },
-      { label: "Sales", cls: "pill-blue" },
+      { label: "Insurance", cls: "pill-blue" },
+      { label: "NQF 4" },
+      { label: "QCTO" },
     ],
     lede:
-      "Transform sales approaches to create lasting client relationships. A short, applied programme for client-facing teams ready to move from transactional to consultative.",
+      "A QCTO-aligned occupational qualification for organisations developing insurance claims administration and assessment capability.",
     meta: [
-      { lbl: "Format", val: "Skills Programme" },
-      { lbl: "Duration", val: "3–6 months" },
       { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "Designed for", val: "Client-facing teams" },
+      { lbl: "Duration", val: "12 months" },
+      { lbl: "NQF Level", val: "4" },
+      { lbl: "SAQA ID", val: "99668" },
+      { lbl: "Awarded by", val: "QCTO" },
     ],
     about:
-      "Foundations of Value Selling shifts client-facing teams from transactional engagement to consultative selling. Designed and deployed in weeks rather than quarters, it builds the conversational and discovery competencies required to grow share-of-wallet sustainably.",
-  },
-  "relationship-management": {
-    slug: "relationship-management",
-    cat: "skills",
-    kind: "skills-programme",
-    title: "Relationship Manager Development Programme",
-    pills: [
-      { label: "Skills Programme" },
-      { label: "3–6 months" },
-      { label: "Banking", cls: "pill-blue" },
+      "An NQF Level 4 occupational qualification (QCTO accredited, SAQA ID 99668) for claims administration and assessment teams in regulated insurance environments. Workplace-integrated cohort delivery.",
+    benefits: [
+      "<strong>Claims administration capability</strong> across insurance lines",
+      "<strong>QCTO accredited</strong> occupational qualification (NQF 4)",
+      "<strong>Workplace-integrated</strong> for active claims teams",
+      "<strong>12-month cohort delivery</strong>",
     ],
-    lede:
-      "Develop trusted advisors your clients depend on for business growth. Built for RMs handling portfolios where retention and depth-of-relationship are the metric.",
-    meta: [
-      { lbl: "Format", val: "Skills Programme" },
-      { lbl: "Duration", val: "3–6 months" },
-      { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "Designed for", val: "Relationship managers" },
+    audience: [
+      "<strong>Claims administration teams</strong> in short and long-term insurance",
+      "<strong>Junior insurance professionals</strong> moving into claims roles",
     ],
-    about:
-      "The Relationship Manager Development Programme strengthens the advisory and behavioural skills that move RMs from product-pushers to genuine business partners - measured by client retention, account depth and net-new revenue.",
-  },
-  "thrive-track-workplace-development": {
-    slug: "thrive-track-workplace-development",
-    cat: "skills",
-    kind: "skills-programme",
-    title: "Thrive Track Workplace Development",
-    pills: [
-      { label: "Skills Programme" },
-      { label: "3–6 months" },
-      { label: "Early career" },
+    outcomes: [
+      "Insurance claims administrator positions",
+      "Claims assessor roles",
+      "Progression into senior claims capability",
     ],
-    lede:
-      "Launch careers with practical skills and workplace confidence. An entry-level programme that turns potential into performance - fast.",
-    meta: [
-      { lbl: "Format", val: "Skills Programme" },
-      { lbl: "Duration", val: "3–6 months" },
-      { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "Designed for", val: "Early-career hires" },
-    ],
-    about:
-      "Thrive Track is a workplace-integrated development programme for early-career hires. It bridges the gap between academic theory and the day-to-day skills, behaviours and confidence required to add value in week one.",
-  },
-  "branch-manager-development": {
-    slug: "branch-manager-development",
-    cat: "skills",
-    kind: "skills-programme",
-    title: "Branch Manager Development Programme",
-    pills: [
-      { label: "Skills Programme" },
-      { label: "3–6 months" },
-      { label: "Leadership", cls: "pill-purple" },
-    ],
-    lede:
-      "Build branch leadership that drives performance through disruption. For new and experienced branch managers leading teams in volatile retail-banking conditions.",
-    meta: [
-      { lbl: "Format", val: "Skills Programme" },
-      { lbl: "Duration", val: "3–6 months" },
-      { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "Designed for", val: "Branch leaders" },
-    ],
-    about:
-      "The Branch Manager Development Programme equips frontline retail-banking leaders with the operational, performance-management and people-leadership skills required to deliver consistently - even under pressure from digital transformation, channel shift and changing customer expectations.",
-  },
-  "digital-transformation": {
-    slug: "digital-transformation",
-    cat: "skills",
-    kind: "skills-programme",
-    title: "Digital Transformation Programme",
-    pills: [
-      { label: "Skills Programme" },
-      { label: "3–6 months" },
-      { label: "Digital", cls: "pill-purple" },
-    ],
-    lede:
-      "Build digital transformation capability that delivers business results. For teams running operating-model change in financial services.",
-    meta: [
-      { lbl: "Format", val: "Skills Programme" },
-      { lbl: "Duration", val: "3–6 months" },
-      { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "Designed for", val: "Transformation teams" },
-    ],
-    about:
-      "The Digital Transformation Programme is for cross-functional teams responsible for redesigning how an organisation operates - replatforming, channel modernisation, data uplift and digital capability. It focuses on the disciplines that turn slideware into measurable outcomes.",
-  },
-  "digital-innovation": {
-    slug: "digital-innovation",
-    cat: "skills",
-    kind: "skills-programme",
-    title: "Digital Innovation Programme",
-    pills: [
-      { label: "Skills Programme" },
-      { label: "3–6 months" },
-      { label: "Innovation", cls: "pill-purple" },
-    ],
-    lede:
-      "Build implementation capability that transforms operational performance. Practical innovation methods for product, ops and tech leaders.",
-    meta: [
-      { lbl: "Format", val: "Skills Programme" },
-      { lbl: "Duration", val: "3–6 months" },
-      { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "Designed for", val: "Product, ops and tech leaders" },
-    ],
-    about:
-      "The Digital Innovation Programme equips product, operations and technology leaders with applied methods for testing, validating and scaling new propositions - without losing the discipline that financial services demands.",
-  },
-  "sales-and-client-experience": {
-    slug: "sales-and-client-experience",
-    cat: "sales",
-    kind: "skills-programme",
-    title: "Sales and Client Experience Excellence",
-    pills: [
-      { label: "Skills Programme" },
-      { label: "3–6 months" },
-      { label: "CX", cls: "pill-blue" },
-    ],
-    lede:
-      "Develop client experience capability that differentiates your organisation. For service-driven businesses where CX is the competitive edge.",
-    meta: [
-      { lbl: "Format", val: "Skills Programme" },
-      { lbl: "Duration", val: "3–6 months" },
-      { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "Designed for", val: "Service & sales teams" },
-    ],
-    about:
-      "Sales and Client Experience Excellence builds the cultural and behavioural fabric required to deliver consistently differentiated CX - from first contact through resolution. Aligned to the metrics your executives care about.",
-  },
-  "principles-of-sustainable-investments": {
-    slug: "principles-of-sustainable-investments",
-    cat: "skills",
-    kind: "skills-programme",
-    title: "Principles of Sustainable Investments",
-    pills: [
-      { label: "Skills Programme" },
-      { label: "3–6 months" },
-      { label: "ESG", cls: "pill-blue" },
-    ],
-    lede:
-      "Build ESG advisory capability across your investment team. Practical sustainable-finance grounding for advisors and analysts.",
-    meta: [
-      { lbl: "Format", val: "Skills Programme" },
-      { lbl: "Duration", val: "3–6 months" },
-      { lbl: "Pricing", val: "Enquire", yellow: true },
-      { lbl: "Designed for", val: "Advisors & analysts" },
-    ],
-    about:
-      "Principles of Sustainable Investments equips advisors and analysts with the frameworks, regulatory grounding and client-conversation skills required to integrate ESG considerations into wealth and investment portfolios.",
   },
 };
 
@@ -709,14 +633,166 @@ export function getProgramme(slug: string): Programme | undefined {
   return PROGRAMMES[slug];
 }
 
-export function getRelatedProgrammes(slug: string, n = 3): Programme[] {
-  const current = PROGRAMMES[slug];
-  if (!current) return [];
-  const others = Object.values(PROGRAMMES).filter((p) => p.slug !== slug);
-  // Prefer same kind first (qualification ↔ qualification, skills ↔ skills),
-  // then same category, then anything else.
-  const sameKind = others.filter((p) => p.kind === current.kind && p.cat === current.cat);
-  const sameKindOtherCat = others.filter((p) => p.kind === current.kind && p.cat !== current.cat);
-  const rest = others.filter((p) => p.kind !== current.kind);
-  return [...sameKind, ...sameKindOtherCat, ...rest].slice(0, n);
+/** Student-facing programmes - B2B&C only. Used by /programmes (students). */
+export function getStudentProgrammes(): Programme[] {
+  return Object.values(PROGRAMMES).filter((p) => p.salesChannel === "b2bc");
+}
+
+/** All programmes (B2B + B2B&C). Used by /organisations/programmes. */
+export function getOrgProgrammes(): Programme[] {
+  return Object.values(PROGRAMMES);
+}
+
+/** ============== SHORT PROGRAMMES (OSP + SSP) - org-side only, list-only ============== */
+export const SHORT_PROGRAMMES: ShortProgramme[] = [
+  // -------- OSP (Credit-Bearing Skills Programmes, Registered) --------
+  {
+    id: "digital-innovation-transformation",
+    kind: "OSP",
+    title: "Digital Innovation: Transformation",
+    desc: "Develop digital innovation capability for transformation leads driving change in banking environments.",
+    nqfLevel: "6",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "digital-innovation-accelerator",
+    kind: "OSP",
+    title: "Digital Innovation: Accelerator",
+    desc: "Build accelerator-level digital innovation capability for senior practitioners shaping digital strategy.",
+    nqfLevel: "7",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+
+  // -------- SSP (No-credit Strategic Skills Programmes) --------
+  {
+    id: "foundations-of-value-selling",
+    kind: "SSP",
+    title: "Foundations of Value Selling",
+    desc: "Move client-facing teams from transactional selling to value-led client conversations.",
+    valueStream: "universal",
+    industry: "Sales",
+  },
+  {
+    id: "rm-affluent-market-banker",
+    kind: "SSP",
+    title: "RM for Affluent Market Banker",
+    desc: "Develop relationship management capability for bankers serving affluent client portfolios.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "rm-bcc-market-banker",
+    kind: "SSP",
+    title: "RM for BCC Market Bankers",
+    desc: "Develop relationship management capability for business and commercial client (BCC) market bankers.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "portfolio-management-portfolio-managers",
+    kind: "SSP",
+    title: "Portfolio Management for Portfolio Managers",
+    desc: "Build portfolio management capability for active portfolio managers across client books.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "relationship-management-sme",
+    kind: "SSP",
+    title: "Relationship Management for SME",
+    desc: "Add relationship management capability for SME-focused banking teams.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "relationship-management-private-bankers",
+    kind: "SSP",
+    title: "Relationship Management for Private Bankers",
+    desc: "Deepen relationship management capability for teams serving private banking clients.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "thrive-track-workplace-development",
+    kind: "SSP",
+    title: "Thrive Track Workplace Development",
+    desc: "Workplace readiness, confidence and practical capability for early-career hires across all sectors.",
+    valueStream: "universal",
+    industry: "Universal",
+  },
+  {
+    id: "principles-of-sustainable-investments",
+    kind: "SSP",
+    title: "Principles of Sustainable Investments",
+    desc: "Build foundational ESG and sustainable investment capability for advisory and investment teams.",
+    valueStream: "fpi",
+    industry: "Investments",
+  },
+  {
+    id: "branch-manager-development-programme",
+    kind: "SSP",
+    title: "Branch Manager Development Programme",
+    desc: "Strengthen people leadership, performance management and operational delivery for branch leaders.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "digital-transformation-consultants",
+    kind: "SSP",
+    title: "Digital Transformation Consultants",
+    desc: "Equip consultants to drive digital transformation engagements inside banking environments.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "digital-transformation-leaders",
+    kind: "SSP",
+    title: "Digital Transformation Leaders",
+    desc: "Equip leaders to drive digital transformation strategy and execution across banking teams.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "sales-cx-call-centre",
+    kind: "SSP",
+    title: "Sales and Client Experience: Call Centre",
+    desc: "Strengthen sales and client experience capability for call-centre banking teams.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "sales-cx-branch",
+    kind: "SSP",
+    title: "Sales and Client Experience: Branch",
+    desc: "Strengthen sales and client experience capability for branch banking teams.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "sales-outbound-call-centre",
+    kind: "SSP",
+    title: "Sales: Outbound Call Centre",
+    desc: "Build outbound call-centre sales capability for banking client acquisition and retention.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+  {
+    id: "business-banking-foundation-programme",
+    kind: "SSP",
+    title: "Business Banking Foundation Programme",
+    desc: "Foundational business banking capability for teams new to commercial banking environments.",
+    valueStream: "banking",
+    industry: "Banking",
+  },
+];
+
+/** Display label for the value stream tag on programme cards. */
+export function valueStreamLabel(vs: ValueStream): string {
+  switch (vs) {
+    case "banking":   return "Banking";
+    case "fpi":       return "FP&I";
+    case "universal": return "Universal";
+  }
 }

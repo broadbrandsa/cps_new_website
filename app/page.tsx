@@ -13,6 +13,7 @@ import { HeroVideo } from "@/components/hero-video";
 import { Reveal } from "@/components/reveal";
 import { CountUp } from "@/components/count-up";
 import { Spotlight } from "@/components/spotlight";
+import { getStudentProgrammes, valueStreamLabel } from "@/lib/programmes";
 
 export default function StudentsHome() {
   return (
@@ -125,18 +126,17 @@ export default function StudentsHome() {
         </div>
       </section>
 
-      {/* FEATURED STUDENT PROGRAMMES - 2 primary equal + 6 secondary */}
+      {/* FEATURED STUDENT PROGRAMMES - 3 primary cards (HCIB, HCIBB, ACL) */}
       <section>
         <div className="container">
           <Reveal as="div" className="section-head">
             <div className="left">
               <span className="eyebrow"><span className="dot" /> Featured student programmes</span>
-              <h2>Two primary pathways. Specialist options for your next step.</h2>
+              <h2>Three primary pathways. Pick the one that fits your next step.</h2>
               <p>
-                Start with one of our two flagship student pathways: banking foundations or leadership
-                development. Both are 12-month higher education qualifications designed for working
-                South African professionals. Additional qualifications are available for students building
-                specialist capability in insurance, investment, business banking and risk.
+                Three 12-month higher-education qualifications designed for working South African
+                professionals. Two banking pathways - a general foundation and a business-banking
+                specialisation - plus a leadership credential. All three are CHE-accredited.
               </p>
             </div>
             <Link href="/programmes" className="liquid-glass btn-lg" style={{ borderRadius: 14, padding: "14px 22px", display: "inline-flex", alignItems: "center", gap: 8 }}>
@@ -144,63 +144,38 @@ export default function StudentsHome() {
             </Link>
           </Reveal>
 
-          {/* Primary pair - equal weight */}
-          <div className="prog-featured-pair">
-            <Spotlight as="div">
-              <Link href="/programmes/higher-certificate-banking" className="prog-card hero-card" style={{ display: "flex" }}>
-                <div className="prog-card-top">
-                  <div className="pill-row">
-                    <span className="pill pill-yellow">Primary Focus</span>
-                    <span className="pill">Banking</span>
-                    <span className="pill">NQF 5</span>
-                  </div>
-                </div>
-                <h3 className="prog-title">Higher Certificate in Banking</h3>
-                <p className="prog-desc">
-                  A 12-month qualification for people who want to enter or grow in banking. HCIB builds
-                  the foundation employers expect: banking knowledge, client understanding, financial
-                  literacy, ethics, compliance and practical problem-solving.
-                </p>
-                <p className="prog-desc" style={{ fontSize: 14, marginTop: -12, marginBottom: 24 }}>
-                  This is the right starting point if you want a recognised banking qualification and a
-                  clearer pathway into South Africa&apos;s financial services sector.
-                </p>
-                <div className="prog-meta">
-                  <div><strong>R2,480</strong><span>per month</span></div>
-                  <div><strong>12 months</strong><span>blended</span></div>
-                  <div><strong>NQF 5</strong><span>120 credits</span></div>
-                </div>
-                <span className="prog-cta">View HCIB <ArrowRight /></span>
-              </Link>
-            </Spotlight>
-
-            <Spotlight as="div">
-              <Link href="/programmes/advanced-certificate-leadership" className="prog-card companion-card" style={{ display: "flex" }}>
-                <div className="prog-card-top">
-                  <div className="pill-row">
-                    <span className="pill pill-yellow">Primary Focus</span>
-                    <span className="pill">Leadership</span>
-                    <span className="pill">NQF 6</span>
-                  </div>
-                </div>
-                <h3 className="prog-title">Advanced Certificate in Leadership</h3>
-                <p className="prog-desc">
-                  A 12-month qualification for professionals who are ready to move from experience into
-                  recognised leadership capability. ACL6 helps you strengthen decision-making, lead teams
-                  with more confidence and prepare for higher-responsibility roles.
-                </p>
-                <p className="prog-desc" style={{ fontSize: 14, marginTop: -12, marginBottom: 24 }}>
-                  This is the right next step if you already have workplace experience and want a
-                  qualification that supports leadership progression.
-                </p>
-                <div className="prog-meta">
-                  <div><strong>R2,688</strong><span>per month</span></div>
-                  <div><strong>12 months</strong><span>online</span></div>
-                  <div><strong>NQF 6</strong><span>CHE accredited</span></div>
-                </div>
-                <span className="prog-cta">View ACL6 <ArrowRight /></span>
-              </Link>
-            </Spotlight>
+          {/* 3-card equal-height grid - same component pattern as /programmes */}
+          <div className="prog-grid student-prog-grid">
+            {getStudentProgrammes().map((p) => {
+              const nqf     = p.meta.find((m) => /nqf/i.test(m.lbl))?.val;
+              const credits = p.meta.find((m) => /credit/i.test(m.lbl))?.val;
+              const monthly = p.meta.find((m) => /monthly/i.test(m.lbl))?.val;
+              const duration = p.meta.find((m) => /duration/i.test(m.lbl))?.val;
+              const cardClass = p.accent === "purple" ? "companion-card" : "hero-card";
+              return (
+                <Spotlight as="div" key={p.slug}>
+                  <Link href={`/programmes/${p.slug}`} className={`prog-card ${cardClass}`} style={{ display: "flex" }}>
+                    <div className="prog-card-top">
+                      <div className="pill-row">
+                        <span className="pill pill-yellow">Primary Focus</span>
+                        <span className={`pill ${p.valueStream === "universal" ? "pill-purple" : "pill-blue"}`}>
+                          {valueStreamLabel(p.valueStream)}
+                        </span>
+                        {nqf && <span className="pill">NQF {nqf}</span>}
+                      </div>
+                    </div>
+                    <h3 className="prog-title">{p.title}</h3>
+                    <p className="prog-desc">{p.lede}</p>
+                    <div className="prog-meta">
+                      {monthly && <div><strong>{monthly}</strong><span>per month</span></div>}
+                      {duration && <div><strong>{duration}</strong><span>blended / online</span></div>}
+                      {nqf && <div><strong>NQF {nqf}</strong><span>{credits ? `${credits} credits` : "CHE accredited"}</span></div>}
+                    </div>
+                    <span className="prog-cta">View {p.shortTitle ?? p.title} <ArrowRight /></span>
+                  </Link>
+                </Spotlight>
+              );
+            })}
           </div>
 
         </div>

@@ -220,34 +220,58 @@ export default function AboutPage() {
           </Reveal>
 
           <div className="values-grid">
-            <Reveal as="div" className="value-card value-yellow" delay={0}>
-              <span className="value-mark" aria-hidden><Sparkle /></span>
-              <span className="value-num">VALUE 01</span>
-              <h3>Learning That Emancipates</h3>
-              <p>
-                We pursue education that frees people from the disadvantage of limited opportunity,
-                unlocking potential that has always been there.
-              </p>
+            <Reveal as="div" className="value-card value-yellow value-flip" delay={0}>
+              <div className="value-flip-inner">
+                <div className="value-face value-face-front">
+                  <span className="value-mark" aria-hidden><Sparkle /></span>
+                  <span className="value-num">VALUE 01</span>
+                  <h3>Learning That Emancipates</h3>
+                  <p>
+                    We pursue education that frees people from the disadvantage of limited opportunity,
+                    unlocking potential that has always been there.
+                  </p>
+                  <span className="value-flip-hint" aria-hidden>Hover to reveal</span>
+                </div>
+                <div className="value-face value-face-back value-back-green" aria-hidden>
+                  <div className="value-badge" style={{ backgroundImage: "url('/badges/stewardship.png')" }} />
+                </div>
+              </div>
             </Reveal>
 
-            <Reveal as="div" className="value-card value-blue" delay={120}>
-              <span className="value-mark" aria-hidden><Lightbulb /></span>
-              <span className="value-num">VALUE 02</span>
-              <h3>Science as Love&apos;s Greatest Ally</h3>
-              <p>
-                We believe rigorous, evidence-based learning design is the most compassionate thing we
-                can do - because science ensures our care translates into real outcomes.
-              </p>
+            <Reveal as="div" className="value-card value-blue value-flip" delay={120}>
+              <div className="value-flip-inner">
+                <div className="value-face value-face-front">
+                  <span className="value-mark" aria-hidden><Lightbulb /></span>
+                  <span className="value-num">VALUE 02</span>
+                  <h3>Science as Love&apos;s Greatest Ally</h3>
+                  <p>
+                    We believe rigorous, evidence-based learning design is the most compassionate thing we
+                    can do - because science ensures our care translates into real outcomes.
+                  </p>
+                  <span className="value-flip-hint" aria-hidden>Hover to reveal</span>
+                </div>
+                <div className="value-face value-face-back value-back-blue" aria-hidden>
+                  <div className="value-badge" style={{ backgroundImage: "url('/badges/innovation.png')" }} />
+                </div>
+              </div>
             </Reveal>
 
-            <Reveal as="div" className="value-card value-purple" delay={240}>
-              <span className="value-mark" aria-hidden><Briefcase /></span>
-              <span className="value-num">VALUE 03</span>
-              <h3>Belief In Potential</h3>
-              <p>
-                Everything we build, every programme we design, and every student we serve is guided by
-                empathy, respect, and a deep belief in human potential.
-              </p>
+            <Reveal as="div" className="value-card value-purple value-flip" delay={240}>
+              <div className="value-flip-inner">
+                <div className="value-face value-face-front">
+                  <span className="value-mark" aria-hidden><Briefcase /></span>
+                  <span className="value-num">VALUE 03</span>
+                  <h3>Belief In Potential</h3>
+                  <p>
+                    Everything we build, every programme we design, and every student we serve is guided by
+                    empathy, respect, and a deep belief in human potential.
+                  </p>
+                  <span className="value-flip-hint" aria-hidden>Hover to reveal</span>
+                </div>
+                <div className="value-face value-face-back value-back-purple" aria-hidden>
+                  <div className="value-badge" style={{ backgroundImage: "url('/badges/authenticity.png')" }} />
+                </div>
+              </div>
             </Reveal>
           </div>
         </div>
